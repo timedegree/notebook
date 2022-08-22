@@ -82,24 +82,9 @@ extra_javascript:
   # js/scheme.js # this is in template 'base.html'
 
 plugins:
-  - rss
+  #- rss
   - search
-  - encryptcontent:  # now just for one page, need to be improved
-      title_prefix: "🔒 "
-      summary: '🔒 AAA School Bus Writeups'
-      placeholder: '在此输入密码     '
-      decryption_failure_message: '密码错误'
-      encryption_info_message: '请输入密码查看本篇文章（请联系我）'
-      remember_password: True 
-      default_expire_dalay: 48
-      encrypted_something:
-        mkdocs-encrypted-toc: [nav, class]
-  - git-revision-date-localized:
-      type: datetime
-      timezone: Asia/Shanghai
-      locale: zh
-      enable_creation_date: true
-
+  
 nav:
   - Home:
     - index.md

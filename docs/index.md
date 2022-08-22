@@ -1,17 +1,5 @@
-# Welcome to MkDocs
+#Hi! \_(:3⌋∠)_
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+这里是时度度捏，这个笔记本是才搭建起来的所以会看到里面暂时没有东西。接下来会持续更新。
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+这个笔记本会用来存些专业性较强的笔记。以便于和自己的博客区分开来。

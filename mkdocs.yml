@@ -67,4 +67,6 @@ nav:
     - cs/index.md
   - Mathematic:
     - math/index.md
+  - CTF:
+    - CTF/index.md
   

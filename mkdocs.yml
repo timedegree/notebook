@@ -105,3 +105,6 @@ nav:
     - index.md
   - Computer Science:
     - cs/index.md
+  - Mathematic:
+    - math/index.md
+  

@@ -56,35 +56,10 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/TonyCrane/
-    - icon: fontawesome/solid/rss
-      link: https://blog.tonycrane.cc/
-    - icon: fontawesome/solid/home
-      link: https://tonycrane.cc/
-  analytics:
-    provider: custom
-    property: G-DYETCPM289
-
-extra_css:
-  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
-  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
-  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  - css/tasklist.css
-  - css/custom.css
-  - css/card.css
-
-extra_javascript:
-  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
-  - js/katex.js
-  # js/scheme.js # this is in template 'base.html'
-
 plugins:
   #- rss
   - search
-  
+
 nav:
   - Home:
     - index.md

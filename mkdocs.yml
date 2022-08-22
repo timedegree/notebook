@@ -1,0 +1,32 @@
+site_name: 时度度的笔记本
+site_url: https://note.timedegree.cc/
+repo_name: TimeDegree/note
+repo_url: https://github.com/timedegree/notebook
+edit_uri: tree/master/docs
+site_description: 时度度（TimeDegree）的笔记本
+copyright: Copyright &copy; 2022 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+
+
+theme:
+  name: 'material'
+  language: 'zh'
+  icon: 
+    logo: material/notebook-outline
+  ustom_dir: overrides
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+  font:
+    text: JetBrains Mono
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+
+nav:
+  - Home:
+    - index.md
+  - Computer Science:
+    - cs/index.md

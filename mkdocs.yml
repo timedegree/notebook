@@ -32,7 +32,7 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - navigation.top
-    - navigation.instant
+    #- navigation.instant
     - header.autohide
   font:
     text: JetBrains Mono
@@ -101,6 +101,11 @@ extra_javascript:
 plugins:
   #- rss
   - search
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
 
 nav:
   - Home:

@@ -1,3 +1,1 @@
-#C/C++
-
-##Table of Contents
+# C/C++

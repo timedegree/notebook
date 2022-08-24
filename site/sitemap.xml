@@ -2,22 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://note.timedegree.cc/</loc>
-         <lastmod>2022-08-22</lastmod>
+         <lastmod>2022-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.timedegree.cc/CTF/</loc>
-         <lastmod>2022-08-22</lastmod>
+         <lastmod>2022-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.timedegree.cc/cs/</loc>
-         <lastmod>2022-08-22</lastmod>
+         <lastmod>2022-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/cs/pl/</loc>
+         <lastmod>2022-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/cs/pl/cpp/</loc>
+         <lastmod>2022-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/cs/pl/python/</loc>
+         <lastmod>2022-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/cs/pl/python/basic/</loc>
+         <lastmod>2022-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.timedegree.cc/math/</loc>
-         <lastmod>2022-08-22</lastmod>
+         <lastmod>2022-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/sd/</loc>
+         <lastmod>2022-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

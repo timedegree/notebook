@@ -2,7 +2,7 @@ site_name: 时度度的笔记本
 site_url: https://note.timedegree.cc/
 repo_name: TimeDegree/note
 repo_url: https://github.com/timedegree/notebook
-edit_uri: tree/master/docs
+edit_uri: tree/main/docs
 site_description: 时度度（TimeDegree）的笔记本
 copyright: Copyright &copy; 2022 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
 
@@ -12,18 +12,43 @@ theme:
   language: 'zh'
   icon: 
     logo: material/notebook-outline
-  ustom_dir: overrides
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  custom_dir: overrides
   features:
     - content.code.annotate
     - navigation.tracking
     - navigation.tabs
     - navigation.indexes
     - navigation.top
+    - navigation.instant
+    - header.autohide
   font:
     text: JetBrains Mono
     code: JetBrains Mono
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4 
+        name: Switch to dark mode
+    
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
 markdown_extensions:
   - toc:
@@ -56,6 +81,23 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+extra:
+ social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/timedegree
+
+extra_css:
+  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  #- css/tasklist.css
+  - css/custom.css
+  #- css/card.css
+
+extra_javascript:
+  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+  - js/katex.js
+
 plugins:
   #- rss
   - search
@@ -63,10 +105,19 @@ plugins:
 nav:
   - Home:
     - index.md
-  - Computer Science:
+  - Computer Science: 
     - cs/index.md
+    - 编程语言:
+      - cs/pl/index.md
+      - Python:
+        - cs/pl/python/index.md
+        - 基本语法: cs/pl/python/basic.md
+      - C/C++:
+        - cs/pl/cpp/index.md
   - Mathematic:
     - math/index.md
   - CTF:
     - CTF/index.md
+  - Miscellaneous: 
+    - sd/index.md
   

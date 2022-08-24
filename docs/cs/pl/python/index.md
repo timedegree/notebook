@@ -1,3 +1,3 @@
-#Computer Science
+#Python
 
 ##Table of Contents

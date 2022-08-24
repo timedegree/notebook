@@ -1,3 +1,3 @@
-#Computer Science
+#C/C++
 
 ##Table of Contents

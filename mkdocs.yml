@@ -119,6 +119,11 @@ nav:
         - 基本语法: cs/pl/python/basic.md
       - C/C++:
         - cs/pl/cpp/index.md
+      - Rust:
+        - cs/pl/Rust/index.md
+        - 前言: cs/pl/Rust/intro.md
+        - 语法: cs/pl/Rust/gram.md
+        - 附录: cs/pl/Rust/app.md
   - Mathematic:
     - math/index.md
   - CTF:

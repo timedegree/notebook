@@ -4,3 +4,4 @@
 - [Programming Language 编程语言](pl)
     - [C/C++](pl/cpp)
     - [Python](pl/python) 
+    - [Rust](pl/Rust/)

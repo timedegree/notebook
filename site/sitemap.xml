@@ -21,6 +21,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://note.timedegree.cc/cs/pl/Rust/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/cs/pl/Rust/app/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/cs/pl/Rust/gram/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.timedegree.cc/cs/pl/Rust/intro/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://note.timedegree.cc/cs/pl/cpp/</loc>
          <lastmod>2022-08-26</lastmod>
          <changefreq>daily</changefreq>

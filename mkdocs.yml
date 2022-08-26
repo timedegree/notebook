@@ -125,4 +125,7 @@ nav:
     - CTF/index.md
   - Miscellaneous: 
     - sd/index.md
+    - 乐理:
+      - sd/music/index.md
+      - sd/music/basic.md
   

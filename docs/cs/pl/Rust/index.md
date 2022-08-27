@@ -1,7 +1,7 @@
 # Rust
 
 !!! Abstract 
-    突然想玩一下Rust，所以就开了这么一个页面来整理一些用法。
+    看MK的小伙伴最近都在玩Rust，我也突然想玩一下，所以就开了这么一个页面来整理一下Rust的笔记。
 
 ## Table of Contents
 

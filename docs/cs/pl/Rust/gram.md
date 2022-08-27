@@ -1,8 +1,8 @@
 # 语法
 
-## 常见编程概念
+## 1 常见编程概念
 
-### 变量
+### 1.1 变量
 
 - 可变性
     - 以let直接声明变量默认为不可变变量
@@ -48,7 +48,7 @@ fn main() {
         let spaces = spaces.len();
         ~~~
 
-### 数据类型
+### 1.2 数据类型
 
 #### 标量（Scalar）
 
@@ -101,18 +101,21 @@ fn main() {
 ~~~
 
 ##### 数组
+
 和Python的列表类似，我们用方括号内逗号分隔的形式来声明数组，但数组长度不可变。如
 ~~~ Rust
 fn main() {
     let a = [1, 2, 3, 4, 5];
 }
 ~~~
+
 或是：
 ~~~ Rust
 fn main() {
 let a: [i32; 5] = [1, 2, 3, 4, 5];
 }
 ~~~
+
 在数组中各个元素相同时也可以这样定义
 ~~~ Rust
 fn main() {
@@ -121,3 +124,125 @@ let a = [3, 3, 3, 3, 3];
 //二者效果相同
 }
 ~~~
+
+数组访问通过索引实现，从0开始
+~~~ Rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+
+    let first = a[0];//值为1
+    let second = a[1];//值为2
+}
+~~~
+
+### 1.3 函数
+
+函数通过`fn`关键字来定义，在定义的同时需要给出参数的类型，多个参数使用逗号分隔，例如：
+~~~ Rust
+fn main() {
+    print_labeled_measurement(5, 'h');
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {}{}", value, unit_label);
+}
+~~~
+如果有返回值，返回值的类型也要在()后面用->指定。返回值可以在函数使用return指定，也可直接写在函数末尾不加“;”（此时为表达式而非语句）。
+~~~ Rust
+fn main() {
+    let x = plus_one(5);
+
+    println!("The value of x is: {}", x);
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+~~~
+同样的一个以{}包含的一段话也可以作为表达式，同样可以有返回值
+~~~ Rust
+fn main() {
+    let y = {
+        let x = 3;
+        x + 1
+    };//x+1作为表达式会将4绑定到y上
+
+    println!("The value of y is: {}", y);
+}
+~~~
+输出：
+~~~
+The value of y is: 4
+~~~
+
+### 1.4 控制流
+
+#### 分支
+和一般的if语句类似
+~~~ Rust
+fn main() {
+    if x=1 {
+        ······
+    } else if x=2 {
+        ······
+    } else {
+        ······
+    }
+}
+~~~
+
+但有一个有趣的用法，可以在let后加if语句，如：
+~~~ Rust
+fn main() {
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+
+    println!("The value of number is: {}", number);
+}
+~~~
+输出：
+~~~ 
+The value of number is: 5
+~~~
+
+#### 循环
+
+##### loop
+`loop`会不断循环直到遇到break，同时也可以在loop循环中返回值，如：
+~~~ Rust
+fn main() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {}", result);
+}
+~~~
+
+~~~
+The result is 20
+~~~
+
+##### while
+~~~ Rust
+while condition {
+    ...;
+}
+~~~
+##### for
+~~~ Rust
+for element in lst.iter() {
+    ...;
+}
+~~~
+!!! info
+    while和for与python相似这里就不细讲了
+
+## 2 所有权
+摆个烂，学校回来再写

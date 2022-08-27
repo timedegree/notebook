@@ -6,5 +6,5 @@
 ## Table of Contents
 
 - [Introduction 前言](intro.md)
-- [Gramar 语法](gram.md)
+- [Grammar 语法](gram.md)
 - [Appendix 附录](app.md)

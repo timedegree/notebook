@@ -1,248 +1,191 @@
 # 语法
 
-## 1 常见编程概念
+!!! Abstract
+    重新把笔记整理了一下，文字更加简洁了。~~但是其实笔记也才刚写不久。~~
 
-### 1.1 变量
-
-- 可变性
-    - 以let直接声明变量默认为不可变变量
-    - 要使用可变变量可以在变量名前加mut
-~~~ Rust
-let x = 5; //不可变
-let mut x = 5; //可变
-~~~
-- 常量声明 与C/C++类似，方式为：
-~~~ Rust
-//const 变量名: 数据类型 = 值
-const pi: f32 = 3.14159;
-~~~
-- 变量遮蔽 通过使用相同变量名与let来实现
-~~~ Rust
-fn main() {
-    let x = 5;//声明变量x以及x的值为5
-
-    let x = x + 1;//通过let将x的值变为6
-
-    {//进入内部作用域
-        let x = x * 2;//再次将x的值变为12
-        println!("The value of x in the inner scope is: {}", x);//输出结果为 12
-    }//离开内部作用域x的值变回6
-
-    println!("The value of x is: {}", x);//输出结果为6
-}
-~~~
-!!! warning
-    与mut不同,通过使用 let，我们可以对一个值进行一些转换，但在这些转换完成后，变量将是不可变的
-    
-    第二个不同，我们在使用let关键字时，有效地创建了一个新的变量，所以我们可以改变值的类型，但重复使用相同的名称。
-
-    !!! info "code"    
-        正确：
-        ~~~ Rust
-        let spaces = "   ";
-        let spaces = spaces.len();
-        ~~~
-        错误:
-        ~~~ Rust
-        let mut spaces = "   ";
-        let spaces = spaces.len();
-        ~~~
-
-### 1.2 数据类型
-
-#### 标量（Scalar）
-
-##### 整型
-
-| 长度      | 有符号 | 无符号 |
-| :-------------------------: | :----------------------: |:---------------------:|
-| 8-bit |i8 |u8 |
-| 16-bit | i16  |u16 |
-| 32-bit | i32  |u32 |
-| 64-bit | i64  |u64 |
-| 128-bit | i128  |u128 |
-| arch | isize  |usize |
+    !!! info "参考"
+        - [Rust语言圣经](course.rs)
+        - [翔哥的Rust笔记](https://note.tonycrane.cc/cs/pl/rust/basic/)
 
 
-isize和usize是根据系统而定（32/64）。
+## 1 变量
 
-同时整型的值也可以用不同进制表示（十六进制0x开头，八进制0o开头，二进制0b开头，单字节字符b开头（b’A’））。
+### 1.1 变量命名
 
-##### 浮点型
-单精度为f32,双精度为f64。
+- 原生标识符（raw identifiers）
+    - 不能使用已经存在的关键字
+    - 在关键字前加r#后可以使用
+- 命名规范：
 
-##### 布尔型
-bool，值为全小写true/false。
+|条目|惯例|
+|:--------|:--------:|
+|包 Crates|unclear|
+|模块 Modules|snake_case|
+|类型 Types|UpperCamelCase|
+|特征 Traits|UpperCamelCase|
+|枚举 Enumerations|UpperCamelCase|
+|结构体 Structs|UpperCamelCase|
+|函数 Functions|snake_case|
+|方法 Methods|snake_case|
+|通用构造器 General constructors|new or with_more_details|
+|转换构造器 Conversion constructors|from_some_other_type|
+|宏 Macros|snake_case!|
+|局部变量 Local variables|snake_case|
+|静态类型 Statics|SCREAMING_SNAKE_CASE|
+|常量 Constants|SCREAMING_SNAKE_CASE|
+|类型参数 Type parameters|	UpperCamelCase，通常使用一个大写字母: T|
+|生命周期 Lifetimes|通常使用小写字母: 'a，'de，'src|
+|Features|unclear but see C-FEATURE|
 
-##### 字符型
-char，大小为4字节(Unicode),单引号为字符，双引号为字符串。
+### 1.2 变量的绑定与可变性
 
-#### 复合类型（Compound）
+在rust中我们使用let进行变量绑定，如：
 
-##### 元组
-
-元组内的元素类型可以不同，但元组类型及元组长度与元组内各个元素有关，如
-~~~ Rust
-fn main() {
-    let tup: (i32, f64, u8) = (500, 6.4, 1);
-}
-~~~
-可以通过.加索引（索引从0开始）来访问元素：
-~~~ Rust
-fn main() {
-    let x: (i32, f64, u8) = (500, 6.4, 1);
-
-    let five_hundred = x.0;
-
-    let six_point_four = x.1;
-
-    let one = x.2;
-}
+~~~Rust
+let a = 233;
 ~~~
 
-##### 数组
+需要注意的是，使用let绑定变量默认是不可变的（immutable），使其可变需要在let后加mut，或是再次使用let改变其绑定的值，如：
 
-和Python的列表类似，我们用方括号内逗号分隔的形式来声明数组，但数组长度不可变。如
-~~~ Rust
-fn main() {
-    let a = [1, 2, 3, 4, 5];
-}
+~~~Rust
+let mut a =233;
+a = a + 1;
+
+let a = a + 1;
+\\二者等效
 ~~~
 
-或是：
+若是不使变量改为可变变量，编译器会发出警告。
+
+变量存在但没有使用也会警告，但可以在变量前加单下划线`_`来忽略警告。
+
+### 1.3 变量解构与结构式赋值
+
+与python中的解包类似
 ~~~ Rust
-fn main() {
-let a: [i32; 5] = [1, 2, 3, 4, 5];
-}
+let (a, mut b): (bool,bool) = (true, false);// a = true,不可变; b = false，可变
+let (a, b, c, d);
+(a, b) = (1, 2);// a = 1;b = 2
+[c, .., d, _] = [1, 2, 3, 4, 5]; // c = 1; d = 4
 ~~~
 
-在数组中各个元素相同时也可以这样定义
-~~~ Rust
-fn main() {
-let a = [3; 5];
-let a = [3, 3, 3, 3, 3];
-//二者效果相同
-}
+### 1.4 常量
+
+常量使用const来声明，命名规则使用全大写蛇底式，且不允许在const后加mut,可以在任意作用域下声明。
+~~~Rust
+const PI: f32 = 3.14159;
 ~~~
 
-数组访问通过索引实现，从0开始
-~~~ Rust
-fn main() {
-    let a = [1, 2, 3, 4, 5];
+### 1.5 变量遮蔽
 
-    let first = a[0];//值为1
-    let second = a[1];//值为2
-}
+Rust 允许声明相同的变量名，在后面声明的变量会遮蔽掉前面声明的变量，在可变性中已经提到过。即：
+~~~Rust
+let a = 233;
+let a = a + 1;
 ~~~
 
-### 1.3 函数
+## 2 基本数据类型
 
-函数通过`fn`关键字来定义，在定义的同时需要给出参数的类型，多个参数使用逗号分隔，例如：
+### 2.1 整型
+
+i+长度（有符号）、u+长度（无符号）
+
+- i8、i16、i32、i64、i128、u8、u16、u32、u64、u128
+- isize、usize 长度由 CPU 决定，32 位 CPU 则是 32 位，64 位 CPU 则是 64 位
+- 整型字面量中间可以插入 _
+- 字面量结尾可以接类型，例如`#!rust 10i32, 10_i32`
+- 字面量，十六进制 0x...、八进制 0o...、二进制 0b...、字节（仅 u8）b'A'
+- 整型默认使用 i32 类型
+- 使用 as 来转换类型，例如 `#!rust let a: u16 = 1_u8 as u16;`
+
+debug 模式编译时产生溢出会 panic，而在 release 模式下则不会 panic，按照补码循环溢出。但不能依赖这种行为，想要这样的效果应该标准库的一些方法：
+
+- wrapping_*\** 方法，按照补码循环溢出，例如 a.wrapping_add(1)
+- checked_*\** 方法，如果产生溢出了，则会返回 None
+- overflowing_*\** 方法，返回结果以及指示是否溢出的布尔值
+- saturating_*\** 方法，如果会溢出则保持在最大/最小值上
+
+#### 2.1.1 布尔型
+
+布尔型用bool来声明，值为`true`或`false`，占用一个字节
+
+### 2.2 浮点型
+
+- f32为单精度浮点型，f64为双精度浮点型
+- 避免在浮点数上测试相等性
+- 当结果在数学上可能存在未定义时，需要格外的小心
+- 可以使用`#!rust is_nan()`等方法来判断一个数值是否为NaN
+- 可以直接对数值使用方法，如`#!rust 3.14_f32.round()`
+
+### 2.3 数值运算
+
+- `+ - * / %`：加减乘除取模
+- `& | ^ ! << >>`：位运算
+- 同样类型才能进行计算、类型转换必须是显式的
+- 其它运算可以通过方法实现，.pow() 计算指数、.sqrt() 计算平方根、，.log() 取对数、.div_euclid() 整除、.div_floor() 等等
+
+### 2.4 序列
+
+Rust 提供了一个非常简洁的方式，用来生成连续的数值，但序列只允许用于数字或字符类型。
 ~~~ Rust
-fn main() {
-    print_labeled_measurement(5, 'h');
+for i in 1..=5 {
+    println!("{}",i);
 }
 
-fn print_labeled_measurement(value: i32, unit_label: char) {
-    println!("The measurement is: {}{}", value, unit_label);
-}
-~~~
-如果有返回值，返回值的类型也要在()后面用->指定。返回值可以在函数使用return指定，也可直接写在函数末尾不加“;”（此时为表达式而非语句）。
-~~~ Rust
-fn main() {
-    let x = plus_one(5);
-
-    println!("The value of x is: {}", x);
-}
-
-fn plus_one(x: i32) -> i32 {
-    x + 1
-}
-~~~
-同样的一个以{}包含的一段话也可以作为表达式，同样可以有返回值
-~~~ Rust
-fn main() {
-    let y = {
-        let x = 3;
-        x + 1
-    };//x+1作为表达式会将4绑定到y上
-
-    println!("The value of y is: {}", y);
-}
-~~~
-输出：
-~~~
-The value of y is: 4
-~~~
-
-### 1.4 控制流
-
-#### 分支
-和一般的if语句类似
-~~~ Rust
-fn main() {
-    if x=1 {
-        ······
-    } else if x=2 {
-        ······
-    } else {
-        ······
-    }
+for i in 'a'..='z' {
+    println!("{}",i);
 }
 ~~~
 
-但有一个有趣的用法，可以在let后加if语句，如：
-~~~ Rust
-fn main() {
-    let condition = true;
-    let number = if condition { 5 } else { 6 };
+### 2.5 字符型
 
-    println!("The value of number is: {}", number);
+在Rust中字符以char声明。
+
+- char占用4个字节内存
+- 使用单引号''括单个字符，双引号""括字符串
+- 直接存储Unicode，而非UTF-8
+
+### 2.6 单元型
+- 单元类型就是 ()，唯一的值也是 ()，完全不占用任何内存。
+-  main 函数就返回单元类型 ()
+
+### 2.7 语句与表达式
+
+- 简单来说，在一行代码后带分号的就是一个语句，而不带分号的是一个表达式，
+- 表达式有返回值,而语不会返回值
+- 表达式可以是语句的一部分，比如 `#!rust let a = if condition {5} else {6}`; 中 `#!rust if condition {5} else {6}` 就是一个表达式，而整体是一个语句
+- 函数调用是表达式，因为会有返回值，即使“无”返回值也会返回单元类型
+- 用大括号包裹的返回一个值的语句块也是表达式：
+~~~Rust
+let a = {
+    let b = 1;
+    b + 1
+};
+~~~
+
+### 2.8 函数
+
+~~~Rust
+fn add(i: i32, j: i32) -> i32 { //以fn声明函数,括号内写参数及其类型，后用箭头表示返回值
+   i + j //与return i + j等效
+ }
 }
 ~~~
-输出：
-~~~ 
-The value of number is: 5
-~~~
 
-#### 循环
-
-##### loop
-`loop`会不断循环直到遇到break，同时也可以在loop循环中返回值，如：
+- 定义函数使用关键字 fn
+- 函数名、参数名使用蛇底式命名
+- 必须显式指定参数类型，除了返回 () 外要显式指定返回值类型
+- 通过 ; 结尾的表达式返回一个 ()
+- 中途返回可以使用 return 关键字（带不带分号均可）
+- 永不返回的函数类型为 !（相当于 python 类型标注中的 NoReturn），称为发散函数，一般用于一定会抛出 panic 的函数或者无限循环：
 ~~~ Rust
-fn main() {
-    let mut counter = 0;
-
-    let result = loop {
-        counter += 1;
-
-        if counter == 10 {
-            break counter * 2;
-        }
-    };
-
-    println!("The result is {}", result);
+fn dead_end() -> ! {
+    panic!("...");
+}
+fn forever() -> ! {
+    loop { /*...*/ };
 }
 ~~~
 
-~~~
-The result is 20
-~~~
-
-##### while
-~~~ Rust
-while condition {
-    ...;
-}
-~~~
-##### for
-~~~ Rust
-for element in lst.iter() {
-    ...;
-}
-~~~
-!!! info
-    while和for与python相似这里就不细讲了
-
-## 2 所有权
-摆个烂，学校回来再写
+## 3 所有权
+~~摸了，之后再写~~

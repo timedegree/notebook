@@ -8,3 +8,11 @@
 - [Introduction 前言](intro.md)
 - [Grammar 语法](gram.md)
 - [Appendix 附录](app.md)
+
+## Reading List
+
+- [ ] [Rust语言圣经](https://course.rs/into-rust.html) (看到复合类型)
+- [ ] [The Rust Programming Language](https://rustwiki.orgen/book/title-page.html)
+- [ ] [Rusty Book](https://rusty.rs/about.html)
+- [ ] [Rust By Practice](https://practice.rs/)
+- [ ] [Rust算法教程](https://algos.rs/)

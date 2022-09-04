@@ -12,7 +12,7 @@
 ## Reading List
 
 - [ ] [Rust语言圣经](https://course.rs/into-rust.html) (看到复合类型)
-- [ ] [The Rust Programming Language](https://rustwiki.orgen/book/title-page.html)
+- [ ] [The Rust Programming Language](https://rustwiki.org/en/book/title-page.html)
 - [ ] [Rusty Book](https://rusty.rs/about.html)
 - [ ] [Rust By Practice](https://practice.rs/)
 - [ ] [Rust算法教程](https://algos.rs/)

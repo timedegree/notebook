@@ -3,8 +3,8 @@
 !!! Abstract
     重新把笔记整理了一下，文字更加简洁了。~~但是其实笔记也才刚写不久。~~
 
-    !!! info "参考"
-        - [Rust语言圣经](course.rs)
+    ??? info "参考"
+        - [Rust语言圣经](https://course.rs)
         - [翔哥的Rust笔记](https://note.tonycrane.cc/cs/pl/rust/basic/)
 
 

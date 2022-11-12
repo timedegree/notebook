@@ -127,6 +127,9 @@ nav:
         - 附录: cs/pl/Rust/app.md
   - Mathematic:
     - math/index.md
+    - Mathematical Analysis:
+      - math/maa/index.md
+      - 通用概念: math/maa/uc.md
   - CTF:
     - CTF/index.md
   - Miscellaneous: 

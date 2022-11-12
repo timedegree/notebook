@@ -9,4 +9,4 @@
 
 ## Table of Contents
 
--[Universal Concept 通用概念](uc.md)
+- [Universal Concept 通用概念](uc.md)

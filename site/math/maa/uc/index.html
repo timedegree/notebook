@@ -947,6 +947,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 补充
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 补充">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1 集合的势(基数类)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2 公理化集合论
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1255,6 +1282,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 补充
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 补充">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1 集合的势(基数类)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2 公理化集合论
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1454,9 +1508,9 @@ g \circ f:X \to Z
 <p>映射<span class="arithmatex">\(f:X \to Y,g:Y\to X\)</span>当且仅当<span class="arithmatex">\(g \circ f = e_X,f \circ g = e_Y\)</span>时，才为互逆的双射</p>
 <h3 id="35">3.5 作为关系的函数·函数的图像<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
 <h4 id="35a">3.5.a 关系<a class="headerlink" href="#35a" title="Permanent link">&para;</a></h4>
-<p>序偶<span class="arithmatex">\((x,y)\)</span>的任何集合称为关系<span class="arithmatex">\(R\)</span>。第一个元素<span class="arithmatex">\(x\)</span>的集合<span class="arithmatex">\(X\)</span>称为关系<span class="arithmatex">\(R\)</span>的定义域，第二个元素<span class="arithmatex">\(y\)</span>的集合<span class="arithmatex">\(Y\)</span>称为关系<span class="arithmatex">\(R\)</span>的值域。</p>
-<p>常把<span class="arithmatex">\((x,y)\in R\)</span>写作<span class="arithmatex">\(xRy\)</span>,并<span class="arithmatex">\(x\)</span>与<span class="arithmatex">\(y\)</span>之间的关系为<span class="arithmatex">\(R\)</span>。</p>
-<p>如果<span class="arithmatex">\(R \subset X^2\)</span>，就说在X上给定了关系R。</p>
+<p>序偶<span class="arithmatex">\((x,y)\)</span>的任何集合称为关系<span class="arithmatex">\(R\)</span>。第一个元素<span class="arithmatex">\(x\)</span>的集合<span class="arithmatex">\(X\)</span>称为关系<span class="arithmatex">\(\mathcal R\)</span>的定义域，第二个元素<span class="arithmatex">\(y\)</span>的集合<span class="arithmatex">\(Y\)</span>称为关系<span class="arithmatex">\(\mathcal R\)</span>的值域。</p>
+<p>常把<span class="arithmatex">\((x,y)\in \mathcal R\)</span>写作<span class="arithmatex">\(x\mathcal Ry\)</span>,并<span class="arithmatex">\(x\)</span>与<span class="arithmatex">\(y\)</span>之间的关系为<span class="arithmatex">\(\mathcal R\)</span>。</p>
+<p>如果<span class="arithmatex">\(\mathcal R \subset X^2\)</span>，就说在X上给定了关系<span class="arithmatex">\(\mathcal R\)</span>。</p>
 <p>偏序关系: 记为<span class="arithmatex">\(a \preceq b\)</span></p>
 <p>性质：</p>
 <ol>
@@ -1479,13 +1533,52 @@ a = b\)</span> (反对称性)</li>
 <div class="arithmatex">\[
 \Gamma := \{(x,y)\in X \times Y|y = f(x)\}
 \]</div>
+<h2 id="4">4. 补充<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 集合的势(基数类)<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>如果集合<span class="arithmatex">\(X\)</span>到集合<span class="arithmatex">\(Y\)</span>的双射存在，则称集合X与集合Y等势。
+记为<span class="arithmatex">\(X \sim Y\)</span>，称为等价关系。</p>
+<p>集合<span class="arithmatex">\(X\)</span>所在的类称为集合<span class="arithmatex">\(X\)</span>的势或基数类，记为<span class="arithmatex">\(card\ X\)</span>。如果<span class="arithmatex">\(X \sim Y\)</span>,即可以写出<span class="arithmatex">\(card\ X = card\ Y\)</span>。</p>
+<p>如果集合<span class="arithmatex">\(X\)</span>和集合<span class="arithmatex">\(Y\)</span>的某个子集等式，我们就说集合<span class="arithmatex">\(X\)</span>的基数类不大于集合<span class="arithmatex">\(Y\)</span>的基数类，并记为<span class="arithmatex">\(card\ X \le card\ Y\)</span>。于是:</p>
+<div class="arithmatex">\[
+(card\ X \le card\ Y) := (\exist Z \subset Y|card\ X = card\ Y)
+\]</div>
+<p>如果集合<span class="arithmatex">\(X \subset Y\)</span>,则显然<span class="arithmatex">\(card\ X \le card\ Y\)</span>。然而，结果表明，关系<span class="arithmatex">\(X \subset Y\)</span>并不影响<span class="arithmatex">\(card\ Y \le card\ X\)</span>，即使<span class="arithmatex">\(X\)</span>是<span class="arithmatex">\(Y\)</span>的真子集也如此。</p>
+<p>一个集合能够和自己的一部分等势，就称为无限集，否则为有限集。</p>
+<p>性质:</p>
+<ol>
+<li><span class="arithmatex">\((card\ X \le card\ Y) \wedge (card\ Y \le card \ Z) \Rightarrow (card\ X \le card\ Z)\)</span></li>
+<li><span class="arithmatex">\((card\ X \le card\ Y) \wedge (card\ Y \le card \ X) \Rightarrow (card\ X = card\ Y)\)</span> (施罗德-伯恩斯坦定理)</li>
+<li><span class="arithmatex">\(\forall X \forall Y(card\ X \le card\ Y) \vee (card\ Y \le card\ X)\)</span> (康托尔定理)</li>
+</ol>
+<p>可知基数类是线性有序的。</p>
+<p>如果<span class="arithmatex">\(card\ X \le card\ Y\)</span>，同时<span class="arithmatex">\(card\ X \ne card\ Y\)</span>，就说集合<span class="arithmatex">\(X\)</span>的势小于集合<span class="arithmatex">\(Y\)</span>的势，并记为<span class="arithmatex">\(card\ X &lt; card\ Y\)</span>。于是，</p>
+<div class="arithmatex">\[
+(card\ X &lt; card\ Y) := (card\ X \le card\ Y) \wedge (card\ X \ne card\ Y )
+\]</div>
+<p>定理:</p>
+<div class="arithmatex">\[
+card\ X  &lt; card\ \mathcal{P}(X) \ (\mathcal{P}(X)表示集合X的一切子集的集合)
+\]</div>
+<h3 id="42">4.2 公理化集合论<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<ol>
+<li>外延公理. 集合<span class="arithmatex">\(A\)</span>和集合<span class="arithmatex">\(B\)</span>相等，当且仅当它们所具有的各元素是相同的。</li>
+</ol>
+<div class="arithmatex">\[
+(A = B) \Leftrightarrow (\forall x (x \in A) \Leftrightarrow (x \in B))
+\]</div>
+<ol start="2">
+<li>分离公理. 任何集合<span class="arithmatex">\(A\)</span>和性质<span class="arithmatex">\(P\)</span>都对应一个集合B，其元素仅是<span class="arithmatex">\(A\)</span>中具有性质<span class="arithmatex">\(P\)</span>的各元素。</li>
+</ol>
+<p>即:如果<span class="arithmatex">\(A\)</span>是一个集合,则<span class="arithmatex">\(B = \{x\in A|P(x)\}\)</span>也是一个集合。</p>
+<p>由分离公理可知空集<span class="arithmatex">\(\emptyset\)</span>唯一。</p>
+<p>还可知，如果<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>为一个集合，则集合<span class="arithmatex">\(A\backslash B = \{x \in A|x \notin B\}\)</span>也为一个集合。<span class="arithmatex">\(M\)</span>为一个集合，A为它的子集，则<span class="arithmatex">\(C_M A\)</span>也为一个集合。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月12日 22:06:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月12日 22:14:24</span>
       
         <br>
         创建日期:

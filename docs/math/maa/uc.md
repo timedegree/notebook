@@ -123,11 +123,11 @@ $$
 ### 3.5 作为关系的函数·函数的图像
 
 #### 3.5.a 关系
-序偶$(x,y)$的任何集合称为关系$R$。第一个元素$x$的集合$X$称为关系$R$的定义域，第二个元素$y$的集合$Y$称为关系$R$的值域。
+序偶$(x,y)$的任何集合称为关系$R$。第一个元素$x$的集合$X$称为关系$\mathcal R$的定义域，第二个元素$y$的集合$Y$称为关系$\mathcal R$的值域。
 
-常把$(x,y)\in R$写作$xRy$,并$x$与$y$之间的关系为$R$。
+常把$(x,y)\in \mathcal R$写作$x\mathcal Ry$,并$x$与$y$之间的关系为$\mathcal R$。
 
-如果$R \subset X^2$，就说在X上给定了关系R。
+如果$\mathcal R \subset X^2$，就说在X上给定了关系$\mathcal R$。
 
 偏序关系: 记为$a \preceq b$
 
@@ -154,3 +154,57 @@ a = b$ (反对称性)
 $$
 \Gamma := \{(x,y)\in X \times Y|y = f(x)\}
 $$
+
+## 4. 补充
+
+### 4.1 集合的势(基数类)
+如果集合$X$到集合$Y$的双射存在，则称集合X与集合Y等势。
+记为$X \sim Y$，称为等价关系。
+
+集合$X$所在的类称为集合$X$的势或基数类，记为$card\ X$。如果$X \sim Y$,即可以写出$card\ X = card\ Y$。
+
+如果集合$X$和集合$Y$的某个子集等式，我们就说集合$X$的基数类不大于集合$Y$的基数类，并记为$card\ X \le card\ Y$。于是:
+
+$$
+(card\ X \le card\ Y) := (\exist Z \subset Y|card\ X = card\ Y)
+$$
+
+如果集合$X \subset Y$,则显然$card\ X \le card\ Y$。然而，结果表明，关系$X \subset Y$并不影响$card\ Y \le card\ X$，即使$X$是$Y$的真子集也如此。
+
+一个集合能够和自己的一部分等势，就称为无限集，否则为有限集。
+
+性质:
+
+1. $(card\ X \le card\ Y) \wedge (card\ Y \le card \ Z) \Rightarrow (card\ X \le card\ Z)$
+2. $(card\ X \le card\ Y) \wedge (card\ Y \le card \ X) \Rightarrow (card\ X = card\ Y)$ (施罗德-伯恩斯坦定理)
+3. $\forall X \forall Y(card\ X \le card\ Y) \vee (card\ Y \le card\ X)$ (康托尔定理)
+
+可知基数类是线性有序的。
+
+如果$card\ X \le card\ Y$，同时$card\ X \ne card\ Y$，就说集合$X$的势小于集合$Y$的势，并记为$card\ X < card\ Y$。于是，
+
+$$
+(card\ X < card\ Y) := (card\ X \le card\ Y) \wedge (card\ X \ne card\ Y )
+$$
+
+定理:
+
+$$
+card\ X  < card\ \mathcal{P}(X) \ (\mathcal{P}(X)表示集合X的一切子集的集合)
+$$
+
+### 4.2 公理化集合论
+
+1. 外延公理. 集合$A$和集合$B$相等，当且仅当它们所具有的各元素是相同的。
+
+$$
+(A = B) \Leftrightarrow (\forall x (x \in A) \Leftrightarrow (x \in B))
+$$
+
+2. 分离公理. 任何集合$A$和性质$P$都对应一个集合B，其元素仅是$A$中具有性质$P$的各元素。
+
+即:如果$A$是一个集合,则$B = \{x\in A|P(x)\}$也是一个集合。
+
+由分离公理可知空集$\emptyset$唯一。
+
+还可知，如果$A$和$B$为一个集合，则集合$A\backslash B = \{x \in A|x \notin B\}$也为一个集合。$M$为一个集合，A为它的子集，则$C_M A$也为一个集合。

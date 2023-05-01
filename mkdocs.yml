@@ -113,7 +113,7 @@ nav:
     - index.md
   - Computer Science: 
     - cs/index.md
-    - 编程语言:
+    - Programming Language:
       - cs/pl/index.md
       - Python:
         - cs/pl/python/index.md
@@ -130,11 +130,22 @@ nav:
     - Mathematical Analysis:
       - math/maa/index.md
       - 通用概念: math/maa/uc.md
+    - Concrete Mathematics:
+      - math/conm/index.md
   - CTF:
     - CTF/index.md
+  - Book List:
+    - bkl/index.md
+    - Literature: 
+      - bkl/lit/index.md
+    - Philosophy:
+      - bkl/phi/index.md
+    - Mathematic and Computer:
+      - bkl/macs/index.md
   - Miscellaneous: 
     - sd/index.md
-    - 乐理:
+    - Music Theory:
       - sd/music/index.md
       - sd/music/basic.md
+    - Hymmnos: sd/hymmnos.md
   

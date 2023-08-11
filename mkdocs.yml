@@ -134,6 +134,10 @@ nav:
       - math/conm/index.md
   - CTF:
     - CTF/index.md
+    - WriteUp:
+      - CTF/WriteUp/index.md
+      - CCBC13: CTF/WriteUp/CCBC13.md
+      - MoeCTF: CTF/WriteUp/MoeCTF2023.md
   - Book List:
     - bkl/index.md
     - Literature: 

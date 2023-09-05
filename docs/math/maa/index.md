@@ -11,5 +11,3 @@
 ## Table of Contents
 
 - [x] [Universal Concept 通用概念](uc.md)
-
-## 

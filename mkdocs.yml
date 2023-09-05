@@ -129,7 +129,7 @@ nav:
     - math/index.md
     - Mathematical Analysis:
       - math/maa/index.md
-      - 通用概念: math/maa/uc.md
+      - Universal Concept: math/maa/uc.md
     - Concrete Mathematics:
       - math/conm/index.md
   - CTF:

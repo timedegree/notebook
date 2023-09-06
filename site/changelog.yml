@@ -1,0 +1,43 @@
+- "2023":
+  - "2023-09-06":
+    - function: 新增网页统计功能
+    - function: 新增更新记录功能
+    - function: 新增友链功能
+  - "2023-09-05":
+    - newpage:
+        text: Mathematic > Mathematical Analysis > 新增 实数
+        href: /math/maa/rn/
+    - pageupdate:
+        text: Mathematic > Mathematical Analysis > 通用概念 补全
+        href: /math/maa/uc/
+  - "2023-8-11":
+    - pageupdate:
+        text: Miscellaneous > Hymmnos 新增感音句
+        href: /sd/hymmnos/
+    - newpage:
+        text: CTF > WriteUp > 新增 2个新页面 MoeCTF CCBC
+        href: /CTF/WriteUP/
+  - "2023-05-01":
+    - newpage:
+        text: Miscellaneous > 新增页面 Hymmnos
+        href: /sd/hymmnos/
+    - newpage:
+        text: Mathematic > 新增 Concrete Mathematics
+        href: /math/conm/
+    - newpage: 
+        text: 新增页面 Book List
+        href: /bkl/
+
+- "2022":
+  - "2022-11-12":
+    - refactor: Rust语法部分太乱,重新写了一下
+  - "2022-08-26":
+    - newpage:
+        text: Computer Science > Programming Language > 新增 Rust
+        href: /cs/pl/Rust/
+  - "2022-08-24":
+    - newpage:
+        text: Computer Science > Programming Language > 新增2个页面
+        href: /cs/pl/
+  - "2022-08-22":
+    - buildsite: 建站！

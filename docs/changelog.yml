@@ -32,6 +32,7 @@
   - "2022-11-12":
     - newpage:
         text: Mathematic > Mathematical Analysis > 新增 Universal Concept
+        href: /math/maa/uc/
     - refactor: Rust语法部分太乱,重新写了一下
   - "2022-08-26":
     - newpage:

@@ -1,3 +1,7 @@
+---
+stas: True
+---
+
 # Hymmnos 塔语
 
 无意之间发现了[塔语的歌](https://music.163.com/#/song?id=643625)，觉得好汀，实际上早在[warma](https://space.bilibili.com/53456)那就知道了塔语。但一直没有太过在意，感觉挺好玩的。那就来系统上的学习一下吧。

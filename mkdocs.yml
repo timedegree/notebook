@@ -111,7 +111,7 @@ plugins:
       exclude:
         - index.md
   - statistics:
-      page_check_metadata: 
+      page_check_metadata: stas
   - changelog:
 
 nav:

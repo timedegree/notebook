@@ -1,3 +1,7 @@
+---
+stas: True
+---
+
 # 前言
 
 ## Installation

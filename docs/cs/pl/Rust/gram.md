@@ -1,3 +1,7 @@
+---
+stas: True
+---
+
 # 语法
 
 !!! Abstract

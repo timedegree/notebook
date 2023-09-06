@@ -12,7 +12,7 @@ statistics: true
 
 <link rel="stylesheet" href="css/index.css">
 <div class="center-container">
-    <span class="note-text"></span>
+    <span class="note-text">Hi! _(:ɜ⌋∠)_</span>
 </div>
 
 !!! info "site.info"

@@ -1,5 +1,5 @@
 ---
-title: Hi! _(:ɜ⌋∠)_
+title: 
 hide:
     - date
     - toc

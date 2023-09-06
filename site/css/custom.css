@@ -1,5 +1,6 @@
 :root {
-  --md-text-font: "LXGW WenKai Screen","LXGW WenKai Screen"; 
+  --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+  --md-code-font: "JetBrains Mono";
 }
 
 .md-typeset h1, .md-typeset h2 {
@@ -25,7 +26,7 @@
 [data-md-color-scheme="default"] {
   --md-primary-fg-color: rgba(160, 223, 250,1);
   --md-primary-bg-color: #111111;
-  --md-typeset-a-color: rgb(144, 144, 144);;
+  --md-typeset-a-color: #555555;
   --md-footer-fg-color: #000000;
   --md-footer-bg-color: rgba(160, 223, 250,0.75);
   --md-footer-bg-color--dark: rgba(122, 153, 174,0.8);
@@ -34,6 +35,7 @@
   --md-code-bg-color: #fafafa;
   --md-timeline-bg-color:#efefef;
   --md-greet-color:rgba(122, 153, 174,0.8);
+  --md-code-fg-color: var(--md-typeset-color);
 }
 
 [data-md-color-scheme="slate"] {
@@ -218,6 +220,33 @@ input#mkdocs-content-password {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><g><line x1="0" y1="0" x2="100%" y2="100%" stroke="rgba(0, 0, 0, 0.85)" stroke-width="1"/></g><g><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgba(0, 0, 0, 0.85)" stroke-width="1"/></g></svg>');
 }
 
+.toc-tag {
+  background-color: #3f6ec6b0;
+  border-radius: 3px;
+  font-size: 80%;
+  padding: 3px;
+}
+
+.toc-tag-classnotes {
+  background-color: #e6ad5bb0;
+}
+
+.toc-tag-classnotes::before {
+  content: "课程笔记"
+}
+
+.toc-tag-reports {
+  background-color: #3f6ec6b0;
+}
+
+.toc-tag-reports::before {
+  content: "实验报告"
+}
+
 strong {
   color:#f25454
+}
+
+a.markdown-link {
+  color: var(--md-typeset-a-color); /* 设置Markdown链接的颜色 */
 }

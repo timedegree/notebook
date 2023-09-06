@@ -100,3 +100,61 @@ stas: True
     
     $\R$中的关系$\le$称为不等关系.
 
+如果一个集合某些元素之间的关系，满足公理$0_\le,1_\le,2_\le$,则该集合就称为**偏序集**;如果除此之外还满足公理$3_\le$,即集合的任何两个元素都是可比较的,该集合就称为**线性序集**
+
+!!! Note "($\mathrm{I}$,$\mathrm{III}$)加法和序关系的联系"
+    如果$x,y,z$是$\R$的元素,则
+    
+    $$
+        (x\le y) \Rightarrow (x+z\le y+z)
+    $$
+
+!!! Note "($\mathrm{II}$,$\mathrm{III}$)乘法和序关系的联系"
+    如果$x,y,z$是$\R$的元素,则
+
+    $$
+        (0\le x)\wedge (0\le y)\Rightarrow(0 \le x\cdot y)
+    $$
+
+!!! note "($\mathrm{IIII})$完备性公理"
+    如果$X$与$Y$是$\R$的非空子集,并且对于任何元素$x\in X,y\in Y$有$x\le y$,则存在$c\in \R$,使得对于任何元素$x\in X,y\in Y$有$x\le c \le y$.
+
+可以认为满足这些公理的任何集合$\R$是实数的一种表示,即通常所说的**实数模型**
+
+### 1.2 实数的某些一般的代数性质
+
+!!! note "a.加法公理的推理"
+    1. 在实数集中只有唯一的零元素.
+    
+    ??? Abstract "证明"
+        如果$0_1$与$0_2$都是$\R$中的零,则根据零的定义
+        
+        $$
+        0_1=0_1+0_2=0_2+0_1=0_2
+        $$
+    
+    2. 在实数集中,每个元素有唯一的相反元素
+    
+    ??? Abstract "证明"
+        如果$x_1$与$x_2$都是$x\in\R$的相反元素,则
+        
+        $$
+            x_1=x_1+0=x_1+(x+x_2)=(x_1+x)+x_2=0+x_2=x_2
+        $$
+    
+    3. 方程$a+x=b$在$\R$中有唯一解$x=b+(-a)$
+    
+    ??? Abstract "证明"
+        得自每个元素有唯一的相反元素:
+        
+        $$
+        \begin{equation*}
+	        \begin{split}
+		        (a+x = b )
+		        & \Leftrightarrow ((x+a)+(-a)=b+(-a))\\
+                & \Leftrightarrow (x+(a+(-a))=b+(-a))\\
+                & \Leftrightarrow (x+0=b+(-a))\\
+                & \Leftrightarrow x=b+(-a)\\
+	        \end{split}
+        \end{equation*} 
+        $$

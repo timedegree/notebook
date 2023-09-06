@@ -952,6 +952,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 实数的某些一般的代数性质
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1513,6 +1520,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 实数的某些一般的代数性质
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1538,7 +1552,7 @@
 
 <h1 id="_1">实数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 728 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1141 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
 <h2 id="1">1.实数系的公理系统和某些一般性质<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="11">1.1 实数集的定义<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
@@ -1627,6 +1641,68 @@
 <li><span class="arithmatex">\(\forall x \in \R \ \forall y \in \R\ (x\le y)\vee (y \le x)\)</span></li>
 </ol>
 <p><span class="arithmatex">\(\R\)</span>中的关系<span class="arithmatex">\(\le\)</span>称为不等关系.</p>
+</div>
+<p>如果一个集合某些元素之间的关系，满足公理<span class="arithmatex">\(0_\le,1_\le,2_\le\)</span>,则该集合就称为<strong>偏序集</strong>;如果除此之外还满足公理<span class="arithmatex">\(3_\le\)</span>,即集合的任何两个元素都是可比较的,该集合就称为<strong>线性序集</strong></p>
+<div class="admonition note">
+<p class="admonition-title">(<span class="arithmatex">\(\mathrm{I}\)</span>,<span class="arithmatex">\(\mathrm{III}\)</span>)加法和序关系的联系</p>
+<p>如果<span class="arithmatex">\(x,y,z\)</span>是<span class="arithmatex">\(\R\)</span>的元素,则</p>
+<div class="arithmatex">\[
+    (x\le y) \Rightarrow (x+z\le y+z)
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">(<span class="arithmatex">\(\mathrm{II}\)</span>,<span class="arithmatex">\(\mathrm{III}\)</span>)乘法和序关系的联系</p>
+<p>如果<span class="arithmatex">\(x,y,z\)</span>是<span class="arithmatex">\(\R\)</span>的元素,则</p>
+<div class="arithmatex">\[
+    (0\le x)\wedge (0\le y)\Rightarrow(0 \le x\cdot y)
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">(<span class="arithmatex">\(\mathrm{IIII})\)</span>完备性公理</p>
+<p>如果<span class="arithmatex">\(X\)</span>与<span class="arithmatex">\(Y\)</span>是<span class="arithmatex">\(\R\)</span>的非空子集,并且对于任何元素<span class="arithmatex">\(x\in X,y\in Y\)</span>有<span class="arithmatex">\(x\le y\)</span>,则存在<span class="arithmatex">\(c\in \R\)</span>,使得对于任何元素<span class="arithmatex">\(x\in X,y\in Y\)</span>有<span class="arithmatex">\(x\le c \le y\)</span>.</p>
+</div>
+<p>可以认为满足这些公理的任何集合<span class="arithmatex">\(\R\)</span>是实数的一种表示,即通常所说的<strong>实数模型</strong></p>
+<h3 id="12">1.2 实数的某些一般的代数性质<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">a.加法公理的推理</p>
+<ol>
+<li>在实数集中只有唯一的零元素.</li>
+</ol>
+<details class="abstract">
+<summary>证明</summary>
+<p>如果<span class="arithmatex">\(0_1\)</span>与<span class="arithmatex">\(0_2\)</span>都是<span class="arithmatex">\(\R\)</span>中的零,则根据零的定义</p>
+<div class="arithmatex">\[
+0_1=0_1+0_2=0_2+0_1=0_2
+\]</div>
+</details>
+<ol start="2">
+<li>在实数集中,每个元素有唯一的相反元素</li>
+</ol>
+<details class="abstract">
+<summary>证明</summary>
+<p>如果<span class="arithmatex">\(x_1\)</span>与<span class="arithmatex">\(x_2\)</span>都是<span class="arithmatex">\(x\in\R\)</span>的相反元素,则</p>
+<div class="arithmatex">\[
+    x_1=x_1+0=x_1+(x+x_2)=(x_1+x)+x_2=0+x_2=x_2
+\]</div>
+</details>
+<ol start="3">
+<li>方程<span class="arithmatex">\(a+x=b\)</span>在<span class="arithmatex">\(\R\)</span>中有唯一解<span class="arithmatex">\(x=b+(-a)\)</span></li>
+</ol>
+<details class="abstract">
+<summary>证明</summary>
+<p>得自每个元素有唯一的相反元素:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \begin{split}
+        (a+x = b )
+        &amp; \Leftrightarrow ((x+a)+(-a)=b+(-a))\\
+        &amp; \Leftrightarrow (x+(a+(-a))=b+(-a))\\
+        &amp; \Leftrightarrow (x+0=b+(-a))\\
+        &amp; \Leftrightarrow x=b+(-a)\\
+    \end{split}
+\end{equation*} 
+\]</div>
+</details>
 </div>
 
   <hr>

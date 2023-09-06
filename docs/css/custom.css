@@ -32,6 +32,7 @@
   --md-footer-fg-color--light: #000000;
   --md-footer-fg-color--lighter: #000000;
   --md-code-bg-color: #fafafa;
+  --md-timeline-bg-color:#efefef;
 }
 
 [data-md-color-scheme="slate"] {
@@ -51,6 +52,7 @@
   --md-footer-fg-color--light: #fff;
   --md-footer-fg-color--lighter: #fff;
   --md-code-bg-color: #1d1d1d;
+  --md-timeline-bg-color:#0d0d0d;
 }
 
 input.md-search__input {

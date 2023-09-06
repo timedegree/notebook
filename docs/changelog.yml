@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-09-06":
+    - function: 新增网页统计功能
+    - function: 新增更新记录功能
+    - function: 新增友链功能
   - "2023-09-05":
     - newpage:
         text: Mathematic > Mathematical Analysis > 新增 实数
@@ -6,9 +10,6 @@
     - pageupdate:
         text: Mathematic > Mathematical Analysis > 通用概念 补全
         href: /math/maa/uc/
-    - function: 新增网页统计功能
-    - function: 新增更新记录功能
-    - function: 新增友链功能
   - "2023-8-11":
     - pageupdate:
         text: Miscellaneous > Hymmnos 新增感音句

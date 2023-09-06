@@ -57,7 +57,7 @@
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
-    background-color: var(--md-primary-fg-color);
+    background-color: var(--md-timeline-bg-color);
     left: -10px;
     top: calc(50% - 10px);
 }
@@ -70,7 +70,7 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: var(--md-primary-fg-color);
+    background-color: var(--md-timeline-bg-color);
     background-clip: border-box;
     border-radius: .25rem;
     padding-top: 10px;

@@ -79,6 +79,7 @@
 
 !!! Note "($\mathrm{I}$,$\mathrm{II}$)加法与乘法的联系"
     乘法相对于加法满足分配律,即$\forall x,y,z\in\R$,
+    
     $$
         (x+y)\cdot z = x\cdot z +y\cdot z
     $$

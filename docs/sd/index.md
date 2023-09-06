@@ -7,3 +7,4 @@
 
 - [Music Theory](music)
     - [基础乐理](music/basic.md)
+- [Hymmnos](hymmnos.md)

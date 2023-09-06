@@ -4,7 +4,7 @@ repo_name: TimeDegree/note
 repo_url: https://github.com/timedegree/notebook
 edit_uri: tree/main/docs
 site_description: 时度度（TimeDegree）的笔记本
-copyright: Copyright &copy; 2022 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+copyright: Copyright &copy; 2022-2023 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
 
 
 theme:
@@ -93,6 +93,7 @@ extra_css:
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   #- css/tasklist.css
   - css/custom.css
+  - css/flink.css
   #- css/card.css
 
 extra_javascript:
@@ -100,17 +101,24 @@ extra_javascript:
   - js/katex.js
 
 plugins:
-  #- rss
+  - rss
   - search
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Shanghai
       locale: zh
       enable_creation_date: true
+      exclude:
+        - index.md
+  - statistics:
+      page_check_metadata: Home
+  - changelog:
 
 nav:
   - Home:
     - index.md
+    - links.md
+    - changelog.md
   - Computer Science: 
     - cs/index.md
     - Programming Language:
@@ -137,7 +145,7 @@ nav:
     - CTF/index.md
     - WriteUp:
       - CTF/WriteUp/index.md
-      - CCBC13: CTF/WriteUp/CCBC13.md
+      - CCBC1314: CTF/WriteUp/CCBC13.md
       - MoeCTF: CTF/WriteUp/MoeCTF2023.md
   - Book List:
     - bkl/index.md

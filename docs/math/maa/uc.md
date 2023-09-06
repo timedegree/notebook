@@ -283,7 +283,7 @@ $$
 4. $(\forall x > a)\ P := \forall x \ (x\in \mathbb{R} \wedge x>a \Rightarrow P(x))$
 5. $(\exist x > a)\ P := \exist x \ (x\in \mathbb{R} \wedge x>a \wedge P(x))$
    
-??? info "Example"
+??? Example "Example"
     $$
         (\lim\limits_{x \to a}f(x) = A) := \forall \varepsilon > 0\ \exist \delta > 0\ \forall x \in \mathbb{R}\ (0<|x-a|<\delta \Rightarrow |f(x)-A|<\varepsilon)
     $$
@@ -302,7 +302,7 @@ $$
 
     $\neg(P \Rightarrow Q) \Leftrightarrow P\  \wedge \ \neg Q$
 
-??? info "Example"
+??? Example "Example"
     $$
         \begin{equation*}
 	        \begin{split}

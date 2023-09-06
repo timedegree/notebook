@@ -87,6 +87,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../css/timeline.css">
+    
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
@@ -94,6 +96,8 @@
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="../../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../../css/flink.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -415,12 +419,20 @@
             
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -431,6 +443,34 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../links/" class="md-nav__link">
+        友链
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/" class="md-nav__link">
+        更新记录
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -1080,7 +1120,7 @@
   
     <li class="md-nav__item">
       <a href="../../../CTF/WriteUp/CCBC13/" class="md-nav__link">
-        CCBC13
+        CCBC1314
       </a>
     </li>
   
@@ -1499,7 +1539,7 @@
 <h1 id="_1">实数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="1">1.实数系的公理系统和某些一般性质<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="11">1.1 实数集的定义<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
-<p>如果以下四组条件成立,则集合<span class="arithmatex">\(\mathbb{R}\)</span>称为实数集,其元素称为实数，这些条件称为实数公理系统.</p>
+<p>如果以下四组条件成立,则集合<span class="arithmatex">\(\mathbb{R}\)</span>称为<strong>实数集</strong>,其元素称为<strong>实数</strong>，这些条件称为实数公理系统.</p>
 <div class="admonition note">
 <p class="admonition-title">(<span class="arithmatex">\(\mathrm{I}\)</span>) 加法公理</p>
 <p>定义了一个映射(加法运算)</p>
@@ -1532,7 +1572,7 @@
     x+y = y+x
 \]</div>
 </div>
-<p>如果在某集合<span class="arithmatex">\(G\)</span>上定义了满足公理<span class="arithmatex">\(1_+,2_+,3_+\)</span>的运算,我们就说在<span class="arithmatex">\(G\)</span>是给定了群结构,即<span class="arithmatex">\(G\)</span>是群.如果称该运算为加法,就称这个群为加法群.如果除此之外,还知道该运算满足交换律,即条件<span class="arithmatex">\(4_+\)</span>成立,就称这个群为交换群或阿贝尔群.所以<span class="arithmatex">\(\R\)</span>为加法阿贝尔群.</p>
+<p>如果在某集合<span class="arithmatex">\(G\)</span>上定义了满足公理<span class="arithmatex">\(1_+,2_+,3_+\)</span>的运算,我们就说在<span class="arithmatex">\(G\)</span>是给定了群结构,即<span class="arithmatex">\(G\)</span>是<strong>群</strong>.如果称该运算为加法,就称这个群为<strong>加法群</strong>.如果除此之外,还知道该运算满足交换律,即条件<span class="arithmatex">\(4_+\)</span>成立,就称这个群为<strong>交换群</strong>或<strong>阿贝尔群</strong>.所以<span class="arithmatex">\(\R\)</span>为加法阿贝尔群.</p>
 <div class="admonition note">
 <p class="admonition-title">(<span class="arithmatex">\(\mathrm{II}\)</span>) 乘法公理</p>
 <p>定义了一个映射(乘法运算)</p>
@@ -1564,7 +1604,26 @@
 <div class="arithmatex">\[
     x \cdot y = y\cdot x
 \]</div>
-<p>于是我们可以验证集合<span class="arithmatex">\(R\backslash 0\)</span>对于乘法运算是群</p>
+<p>于是我们可以验证集合<span class="arithmatex">\(\R\backslash 0\)</span>对于乘法运算是群</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">(<span class="arithmatex">\(\mathrm{I}\)</span>,<span class="arithmatex">\(\mathrm{II}\)</span>)加法与乘法的联系</p>
+<p>乘法相对于加法满足分配律,即<span class="arithmatex">\(\forall x,y,z\in\R\)</span>,
+$$
+    (x+y)\cdot z = x\cdot z +y\cdot z
+$$</p>
+</div>
+<p>如果在某集合<span class="arithmatex">\(G\)</span>上定义了满足上述全部公理的两种运算,则<span class="arithmatex">\(G\)</span>称为<strong>代数域</strong>,简称<strong>域</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">(<span class="arithmatex">\(\mathrm{III}\)</span>)序公理</p>
+<p><span class="arithmatex">\(\R\)</span>的元素之间存在关系<span class="arithmatex">\(\le\)</span>,即对于<span class="arithmatex">\(\R\)</span>的元素<span class="arithmatex">\(x,y\)</span>,可以确定<span class="arithmatex">\(x\le y\)</span>是否成立.此时,以下条件成立:</p>
+<ol start="0">
+<li><span class="arithmatex">\(\forall x \in \R \ (x\le x)\)</span></li>
+<li><span class="arithmatex">\((x \le y)\wedge(y\le x)\Rightarrow(x=y)\)</span></li>
+<li><span class="arithmatex">\((x\le y)\wedge(y\le z)\Rightarrow(x\le z)\)</span></li>
+<li><span class="arithmatex">\(\forall x \in \R \ \forall y \in \R\ (x\le y)\vee (y \le x)\)</span></li>
+</ol>
+<p><span class="arithmatex">\(\R\)</span>中的关系<span class="arithmatex">\(\le\)</span>称为不等关系.</p>
 </div>
 
   <hr>
@@ -1572,11 +1631,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月5日 20:30:51</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月5日 20:31:13</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月5日 20:30:51</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月5日 20:31:13</span>
       
     
   </small>
@@ -1607,7 +1666,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+      Copyright &copy; 2022-2023 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
     </div>
   
   

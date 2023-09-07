@@ -26,8 +26,8 @@ statistics: true
         - GitHub：https://github.com/timedegree/
 
 <!-- [:octicons-info-16: 关于我](about/) /  -->
-[:material-clock-time-two-outline: 最近更新](changelog/) / 
-[:octicons-link-16: 朋友们!](links/) / 
+[:material-clock-time-two-outline: 最近更新](changelog.md) / 
+[:octicons-link-16: 朋友们!](links.md) / 
 [:material-chart-line: 站点统计](javascript:toggle_statistics();)
 
 

@@ -10,7 +10,7 @@ copyright: Copyright &copy; 2022-2023 <a href="https://github.com/timedegree"  t
 theme:
   name: 'material'
   language: 'zh'
-  favicon: /assets/android-chrome-192x192.png
+  favicon: /assets/favicon-warma.png
   icon: 
     logo: material/notebook-outline
     admonition:
@@ -125,14 +125,14 @@ nav:
       - cs/pl/index.md
       - Python:
         - cs/pl/python/index.md
-        - 基本语法: cs/pl/python/basic.md
+        - Fundamental Grammar: cs/pl/python/basic.md
       - C/C++:
         - cs/pl/cpp/index.md
       - Rust:
         - cs/pl/Rust/index.md
-        - 前言: cs/pl/Rust/intro.md
-        - 语法: cs/pl/Rust/gram.md
-        - 附录: cs/pl/Rust/app.md
+        - Introduction: cs/pl/Rust/intro.md
+        - Grammar: cs/pl/Rust/gram.md
+        - Appendix: cs/pl/Rust/app.md
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:

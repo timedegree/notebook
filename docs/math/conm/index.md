@@ -1,3 +1,5 @@
 # 具体数学
 
-先放着，到时候补内容。
+## Table of Contents
+
+- [ ] [Recurrent Problems 递归问题](recpro.md)

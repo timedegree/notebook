@@ -5,3 +5,4 @@
     - [C/C++](pl/cpp)
     - [Python](pl/python) 
     - [Rust](pl/Rust/)
+- [Algorithm 算法](al)

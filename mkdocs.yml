@@ -133,6 +133,13 @@ nav:
         - Introduction: cs/pl/Rust/intro.md
         - Grammar: cs/pl/Rust/gram.md
         - Appendix: cs/pl/Rust/app.md
+    - Algorithm:
+      - cs/al/index.md
+    - Database Structure:
+      - cs/ds/index.md
+    - WriteUp:
+      - cs/wp/index.md
+      - CF Round 896 Div.2: cs/wp/cf896.md
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:
@@ -141,6 +148,7 @@ nav:
       - Real Number: math/maa/rn.md
     - Concrete Mathematics:
       - math/conm/index.md
+      - Recurrent Problems: recpro.md
   - CTF:
     - CTF/index.md
     - WriteUp:

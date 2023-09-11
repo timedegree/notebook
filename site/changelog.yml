@@ -1,4 +1,19 @@
 - "2023":
+  - "2023-09-11":
+    - newpage:
+        text: Computer Science > 新增 WriteUp
+        href: /cs/wp/
+    - newpage:
+        text: Computer Science > 新增 Database Structure
+        href: /cs/ds/
+  - "2023-09-10":
+    - newpage:
+        text: Computer Science > 新增 Algorithm
+        href: /cs/al/
+  - "2023-09-09":
+    - newpage:
+        text: Mathematic > Concrete Mathematics > 新增 Recurrent Problem
+        href: /math/conm/recpro/
   - "2023-09-06":
     - function: 新增网页统计功能
     - function: 新增更新记录功能

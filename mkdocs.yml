@@ -148,7 +148,7 @@ nav:
       - Real Number: math/maa/rn.md
     - Concrete Mathematics:
       - math/conm/index.md
-      - Recurrent Problems: recpro.md
+      - Recurrent Problems: math/conm/recpro.md
   - CTF:
     - CTF/index.md
     - WriteUp:

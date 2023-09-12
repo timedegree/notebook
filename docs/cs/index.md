@@ -6,3 +6,5 @@
     - [Python](pl/python) 
     - [Rust](pl/Rust/)
 - [Algorithm 算法](al)
+- [Database Structure 数据结构](ds)
+- [WriteUp 题解记录](wp)

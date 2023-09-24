@@ -246,3 +246,45 @@ stas: True
 
     ??? Abstract "证明"
         得自严格不等式的定义以及公理$1_\le$,$3_\le$.
+
+    2. 对于$\R$中的任何数$x$,$y$,$z$,
+
+    $$
+        \begin{array}{c}
+            (x<y)\wedge(y\le z)\Rightarrow(x<z)\\
+            (x\le y)\wedge(y<z)\Rightarrow(x<z)
+        \end{array}
+    $$
+
+    ??? Abstract "证明"
+        根据不等关系的传递性公理$2_{\le}$,我们有
+
+        $$  
+            (x\le y)\wedge(y<z)\Leftrightarrow(x\le y)\wedge(y\le z)\wedge(y\neq z)\Rightarrow(x\le z)
+        $$
+
+        剩余任务是验证$x\neq z$,但在相反情况下,
+
+        $$
+            (x\le y)\wedge(y < z)\Leftrightarrow(z\le y)\wedge(y<z)\Leftrightarrow(z\le y)\wedge(y\le z)\wedge(y\neq z)
+        $$
+        
+        根据公理$1_{\le}$,由此可知
+
+        $$
+            (y=z)\wedge(y\neq z)
+        $$
+        
+        这是矛盾.
+
+!!! note "加法和乘法与序关系的联系公理的推论"
+    
+    1. 对于$\R$中的任何数$x$,$y$,$z$,$w$,
+
+    $$
+        \begin{array}{c}
+        (x<y) \Rightarrow (x+z)<(y+z)\\
+        (0<x) \Rightarrow (-x<0)\\
+        (x)
+        \end{array}
+    $$

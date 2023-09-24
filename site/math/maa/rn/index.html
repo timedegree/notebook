@@ -1730,7 +1730,7 @@
 
 <h1 id="_1">实数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1525 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 5 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1699 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
 </div>
 <h2 id="1">1.实数系的公理系统和某些一般性质<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="11">1.1 实数集的定义<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
@@ -1975,6 +1975,44 @@
 <summary>证明</summary>
 <p>得自严格不等式的定义以及公理<span class="arithmatex">\(1_\le\)</span>,<span class="arithmatex">\(3_\le\)</span>.</p>
 </details>
+<ol start="2">
+<li>对于<span class="arithmatex">\(\R\)</span>中的任何数<span class="arithmatex">\(x\)</span>,<span class="arithmatex">\(y\)</span>,<span class="arithmatex">\(z\)</span>,</li>
+</ol>
+<div class="arithmatex">\[
+    \begin{array}{c}
+        (x&lt;y)\wedge(y\le z)\Rightarrow(x&lt;z)\\
+        (x\le y)\wedge(y&lt;z)\Rightarrow(x&lt;z)
+    \end{array}
+\]</div>
+<details class="abstract">
+<summary>证明</summary>
+<p>根据不等关系的传递性公理<span class="arithmatex">\(2_{\le}\)</span>,我们有</p>
+<div class="arithmatex">\[  
+    (x\le y)\wedge(y&lt;z)\Leftrightarrow(x\le y)\wedge(y\le z)\wedge(y\neq z)\Rightarrow(x\le z)
+\]</div>
+<p>剩余任务是验证<span class="arithmatex">\(x\neq z\)</span>,但在相反情况下,</p>
+<div class="arithmatex">\[
+    (x\le y)\wedge(y &lt; z)\Leftrightarrow(z\le y)\wedge(y&lt;z)\Leftrightarrow(z\le y)\wedge(y\le z)\wedge(y\neq z)
+\]</div>
+<p>根据公理<span class="arithmatex">\(1_{\le}\)</span>,由此可知</p>
+<div class="arithmatex">\[
+    (y=z)\wedge(y\neq z)
+\]</div>
+<p>这是矛盾.</p>
+</details>
+</div>
+<div class="admonition note">
+<p class="admonition-title">加法和乘法与序关系的联系公理的推论</p>
+<ol>
+<li>对于<span class="arithmatex">\(\R\)</span>中的任何数<span class="arithmatex">\(x\)</span>,<span class="arithmatex">\(y\)</span>,<span class="arithmatex">\(z\)</span>,<span class="arithmatex">\(w\)</span>,</li>
+</ol>
+<div class="arithmatex">\[
+    \begin{array}{c}
+    (x&lt;y) \Rightarrow (x+z)&lt;(y+z)\\
+    (0&lt;x) \Rightarrow (-x&lt;0)\\
+    (x)
+    \end{array}
+\]</div>
 </div>
 
   <hr>

@@ -1,8 +1,6 @@
 # Programming Language
 
 ## Table of Contents
-- [C/C++](cpp)
-- [Python](python)
 - [Rust](Rust)
     - [前言](Rust/intro.md)
     - [语法](Rust/gram.md)

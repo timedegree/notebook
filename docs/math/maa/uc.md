@@ -1,5 +1,6 @@
 ---
 stas: True
+comment: True
 ---
 
 # 通用概念

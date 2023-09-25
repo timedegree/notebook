@@ -1,5 +1,6 @@
 ---
 title: 友链
+comment: True
 ---
 
 <div class="flink-list">

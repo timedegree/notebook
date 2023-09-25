@@ -26,7 +26,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-  custom_dir: overrides
+  custom_dir: docs/resourses
   features:
     - content.code.annotate
     - navigation.tracking
@@ -123,11 +123,11 @@ nav:
     - cs/index.md
     - Programming Language:
       - cs/pl/index.md
-      - Python:
-        - cs/pl/python/index.md
-        - Fundamental Grammar: cs/pl/python/basic.md
-      - C/C++:
-        - cs/pl/cpp/index.md
+ #     - Python:
+ #       - cs/pl/python/index.md
+ #       - Fundamental Grammar: cs/pl/python/basic.md
+ #     - C/C++:
+ #       - cs/pl/cpp/index.md
       - Rust:
         - cs/pl/Rust/index.md
         - Introduction: cs/pl/Rust/intro.md
@@ -137,9 +137,6 @@ nav:
       - cs/al/index.md
     - Database Structure:
       - cs/ds/index.md
-    - WriteUp:
-      - cs/wp/index.md
-      - CF Round 896 Div.2: cs/wp/cf896.md
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:
@@ -154,19 +151,16 @@ nav:
     - WriteUp:
       - CTF/WriteUp/index.md
       - CCBC1314: CTF/WriteUp/CCBC13.md
-      - MoeCTF: CTF/WriteUp/MoeCTF2023.md
-  - Book List:
-    - bkl/index.md
-    - Literature: 
-      - bkl/lit/index.md
-    - Philosophy:
-      - bkl/phi/index.md
-    - Mathematic and Computer:
-      - bkl/macs/index.md
+      #- MoeCTF: CTF/WriteUp/MoeCTF2023.md
+  #- Book List:
+  #  - bkl/index.md
+  #  - Literature: 
+  #    - bkl/lit/index.md
+  #  - Philosophy:
+  #    - bkl/phi/index.md
+  #  - Mathematic and Computer:
+  #    - bkl/macs/index.md
   - Miscellaneous: 
     - sd/index.md
-    - Music Theory:
-      - sd/music/index.md
-      - sd/music/basic.md
     - Hymmnos: sd/hymmnos.md
   

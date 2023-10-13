@@ -36,6 +36,8 @@
   --md-timeline-bg-color:#efefef;
   --md-greet-color:rgba(122, 153, 174,0.8);
   --md-code-fg-color: var(--md-typeset-color);
+  --color-border-default: #efefef;
+  --color-border-primary: rgba(160, 223, 250,0.75);
 }
 
 [data-md-color-scheme="slate"] {

@@ -133,10 +133,9 @@ nav:
         - Introduction: cs/pl/Rust/intro.md
         - Grammar: cs/pl/Rust/gram.md
         - Appendix: cs/pl/Rust/app.md
-    - Algorithm:
-      - cs/al/index.md
-    - Database Structure:
-      - cs/ds/index.md
+    - Data Structure and Algorithm:
+      - cs/ald/index.md
+      - Bit Operation: cs/ald/bitcal.md
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:

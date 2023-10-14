@@ -10,20 +10,16 @@
       
       
       
-        <link rel="canonical" href="https://note.timedegree.cc/cs/ald/bitcal/">
+        <link rel="canonical" href="https://note.timedegree.cc/cs/ald/rnr/">
       
       
-        <link rel="prev" href="../">
-      
-      
-        <link rel="next" href="../../../math/">
       
       <link rel="icon" href="/assets/favicon-warma.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Bit Operation - 时度度的笔记本</title>
+        <title>递推与递归 - 时度度的笔记本</title>
       
     
     
@@ -161,7 +157,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bit Operation
+              递推与递归
             
           </span>
         </div>
@@ -275,15 +271,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../" class="md-tabs__link">
         Computer Science
       </a>
     </li>
@@ -469,16 +463,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
@@ -503,7 +495,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Computer Science
@@ -662,16 +654,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
       
       
         
@@ -694,7 +684,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           Data Structure and Algorithm
@@ -707,107 +697,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bit Operation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bitcal/" class="md-nav__link">
         Bit Operation
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    基础运算
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    快速幂
-  </a>
-  
-    <nav class="md-nav" aria-label="快速幂">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    普通快速幂
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    模重复平方法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    在乘法中使用快速幂思想
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    二进制状态压缩
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    成对变换
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lowbit" class="md-nav__link">
-    lowbit 运算
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1223,76 +1117,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    基础运算
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    快速幂
-  </a>
-  
-    <nav class="md-nav" aria-label="快速幂">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    普通快速幂
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    模重复平方法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    在乘法中使用快速幂思想
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    二进制状态压缩
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    成对变换
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lowbit" class="md-nav__link">
-    lowbit 运算
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1304,179 +1128,7 @@
               <article class="md-content__inner md-typeset">
                 
         
-<h1 id="_1">位运算<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 525 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 63 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
-</div>
-<h2 id="_2">基础运算<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">与</th>
-<th style="text-align: center;">或</th>
-<th style="text-align: center;">非</th>
-<th style="text-align: center;">异或</th>
-<th style="text-align: center;">左移</th>
-<th style="text-align: center;">右移</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">and,&amp;</td>
-<td style="text-align: center;">or,|</td>
-<td style="text-align: center;">not,~</td>
-<td style="text-align: center;">xor,^</td>
-<td style="text-align: center;">&lt;&lt;</td>
-<td style="text-align: center;">&gt;&gt;</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="_3">快速幂<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="_4">普通快速幂<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>我们可知任意一个正整数可以唯一表示为若干个指数不重复的二进制数,写为十进制下的多项式即为:</p>
-<div class="arithmatex">\[
-b = c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+ ...+c_02^0
-\]</div>
-<p>若我们要计算 <span class="arithmatex">\(a^b\)</span> ,则可化为:</p>
-<div class="arithmatex">\[
-a^b = a^{c_{k-1}\cdot 2^{k-1}}\cdot a^{c_{k-2}\cdot 2^{k-2}}\cdot ...\cdot a^{c_0*2^0}
-\]</div>
-<p>于是,代码如下:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">quick_power</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">power</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="n">b</span><span class="p">;</span><span class="n">b</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">power</span><span class="o">*=</span><span class="n">a</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">a</span><span class="o">*=</span><span class="n">a</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">power</span><span class="p">;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="_5">模重复平方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>与上述类似,但所需计算的值改为 <span class="arithmatex">\(a^b\mathrm{mod} p\)</span> .此时我们只需在每次做乘运算时对结果取模即可.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">quick_power</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">power</span><span class="o">=</span><span class="mi">1</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="n">b</span><span class="p">;</span><span class="n">b</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">power</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">power</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">power</span><span class="p">;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="_6">在乘法中使用快速幂思想<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>假如我们现在需要计算 <span class="arithmatex">\(a\cdot b\mod p\)</span>.</p>
-<h4 id="_7">方法一<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>使用快速幂的思想，把b用二进制表示,那么:</p>
-<div class="arithmatex">\[
-a =  c_{k-1}\cdot a \cdot 2^{k-1} + c_{k-2}\cdot a \cdot 2^{k-2} + ... + c_0\cdot a\cdot 2^0
-\]</div>
-<p>代码如下:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">mul</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">product</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="n">b</span><span class="p">;</span><span class="n">b</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ans</span><span class="o">+</span><span class="n">a</span><span class="p">)</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="o">%</span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
-</code></pre></div>
-<h4 id="_8">方法二<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>可知 <span class="arithmatex">\(a\cdot b \mod p = a\cdot b - \left \lfloor a\cdot b /p\right \rfloor \cdot p\)</span>.</p>
-<p>代码如下:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#define unsigned long long ull;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">ull</span><span class="w"> </span><span class="n">mul</span><span class="p">(</span><span class="n">ull</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">ull</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="n">ull</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="n">b</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">ull</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">ull</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">c</span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)(</span><span class="n">x</span><span class="o">%</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)(</span><span class="n">y</span><span class="o">%</span><span class="n">p</span><span class="p">);</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">ans</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
-</code></pre></div>
-<hr />
-<h2 id="_9">二进制状态压缩<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">操作</th>
-<th style="text-align: center;">运算</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">取出整数<span class="arithmatex">\(n\)</span>在二进制表示下的第<span class="arithmatex">\(k\)</span>位</td>
-<td style="text-align: center;"><span class="arithmatex">\((n&gt;&gt;k)\ \&amp;\ 1\)</span></td>
-</tr>
-<tr>
-<td style="text-align: center;">取出整数<span class="arithmatex">\(n\)</span>在二进制表示下的第<span class="arithmatex">\(0\sim k-1\)</span>位</td>
-<td style="text-align: center;"><span class="arithmatex">\(n\ \&amp;\ ((1&lt;&lt;k)-1)\)</span></td>
-</tr>
-<tr>
-<td style="text-align: center;">把整数<span class="arithmatex">\(n\)</span>在二进制表示下的第<span class="arithmatex">\(k\)</span>位取反</td>
-<td style="text-align: center;"><span class="arithmatex">\(n \ \mathrm{xor}\  (1 &lt;&lt; k)\)</span></td>
-</tr>
-<tr>
-<td style="text-align: center;">对整数<span class="arithmatex">\(n\)</span>在二进制表示下的第<span class="arithmatex">\(k\)</span>位赋值<span class="arithmatex">\(1\)</span></td>
-<td style="text-align: center;"><span class="arithmatex">\(n\ \mid\ (1&lt;&lt;k)\)</span></td>
-</tr>
-<tr>
-<td style="text-align: center;">对整数<span class="arithmatex">\(n\)</span>在二进制表示下的第<span class="arithmatex">\(k\)</span>位赋值<span class="arithmatex">\(0\)</span></td>
-<td style="text-align: center;"><span class="arithmatex">\(n\ \&amp; \ (~(1&lt;&lt;k))\)</span></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="_10">成对变换<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<ul>
-<li><span class="arithmatex">\(n\)</span> 为偶数时, <span class="arithmatex">\(n \ \mathrm{xor}\ 1\)</span> 等于 <span class="arithmatex">\(n+1\)</span>.</li>
-<li><span class="arithmatex">\(n\)</span> 为奇数时, <span class="arithmatex">\(n \ \mathrm{xor}\ 1\)</span> 等于 <span class="arithmatex">\(n-1\)</span>.</li>
-</ul>
-<hr />
-<h2 id="lowbit">lowbit 运算<a class="headerlink" href="#lowbit" title="Permanent link">&para;</a></h2>
-<p><span class="arithmatex">\(\mathrm{lowbit}(n)\)</span> 定义为<strong>非负整数 <span class="arithmatex">\(n\)</span> 在二进制表示下最低位的 <span class="arithmatex">\(1\)</span> 及其后边所有的 <span class="arithmatex">\(0\)</span> 构成的数值</strong>.例如 <span class="arithmatex">\(n = 10\)</span> 的二进制表示为 <span class="arithmatex">\({(1010)}_{2}\)</span> ,则 <span class="arithmatex">\(\mathrm{lowbit}(n) = 2 = {(10)}_2\)</span>.</p>
-<p>公式推导:</p>
-<p>设 <span class="arithmatex">\(n&gt;0\)</span> , <span class="arithmatex">\(n\)</span> 的第 <span class="arithmatex">\(k\)</span> 位是 <span class="arithmatex">\(1\)</span> ,第 <span class="arithmatex">\(0\sim k-1\)</span> 位都是<span class="arithmatex">\(0\)</span>.
-为了实现 <span class="arithmatex">\(\mathrm{lowbit}\)</span> 运算,我们先把 <span class="arithmatex">\(n\)</span> 取反,再令 <span class="arithmatex">\(n = n + 1\)</span> ,此时因为进位,第 <span class="arithmatex">\(k\)</span> 位变为 <span class="arithmatex">\(1\)</span>,第 <span class="arithmatex">\(0\sim k-1\)</span>位都是 <span class="arithmatex">\(0\)</span> .</p>
-<p>在上面的取反加 <span class="arithmatex">\(1\)</span> 操作后, <span class="arithmatex">\(n\)</span> 的第 <span class="arithmatex">\(k+1\)</span> 到最高位恰好与原来相反,所以 <span class="arithmatex">\(n \&amp; (\sim n + 1)\)</span> 仅仅有第 <span class="arithmatex">\(k\)</span> 位为 <span class="arithmatex">\(1\)</span> ,其余位都为 <span class="arithmatex">\(0\)</span> .在补码表示下, <span class="arithmatex">\(\sim n = -1-n\)</span>,因此:</p>
-<div class="arithmatex">\[
-\mathrm{lowbit}(n) = n\ \&amp;\ (\sim n + 1) = n \ \&amp; \ (-n)
-\]</div>
-<p><span class="arithmatex">\(\mathrm{lowbit}\)</span> 运算配合 <span class="arithmatex">\(\mathrm{Hash}\)</span> 可以找出整数二进制表示下所有是 <span class="arithmatex">\(1\)</span> 的位.为了达到这个目的,我们只需不断把 <span class="arithmatex">\(n\)</span> 赋值为 <span class="arithmatex">\(n - \mathrm{lowbit}(n)\)</span> ,直到 <span class="arithmatex">\(n = 0\)</span>.</p>
-<p>代码如下:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">const</span><span class="w"> </span><span class="n">MAX_N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="n">MAX_N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">while</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">H</span><span class="p">[</span><span class="n">n</span><span class="o">&amp;-</span><span class="n">n</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="s">&quot; &quot;</span><span class="p">;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="p">;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
-</code></pre></div>
-<p>利用 <span class="arithmatex">\(\forall k \in [0,35]\)</span> , <span class="arithmatex">\(2^k \ \mathrm{mod}\ 37\)</span> 互不相等,且恰好取遍 <span class="arithmatex">\(1\sim 36\)</span>,可以改进代码.</p>
-<p>修改后代码如下:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">37</span><span class="p">];</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">36</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="n">H</span><span class="p">[(</span><span class="mf">1l</span><span class="n">l</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">37</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">while</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">H</span><span class="p">[(</span><span class="n">n</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">37</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="p">;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span>
-</code></pre></div>
+<h1 id="_1">递推与递归<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
         
         
               </article>

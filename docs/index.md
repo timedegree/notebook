@@ -1,5 +1,5 @@
 ---
-title: 
+title: Home
 hide:
     - date
     - toc

@@ -136,6 +136,7 @@ nav:
     - Data Structure and Algorithm:
       - cs/ald/index.md
       - Bit Operation: cs/ald/bitcal.md
+      - Recursion: cs/ald/rnr.md
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:

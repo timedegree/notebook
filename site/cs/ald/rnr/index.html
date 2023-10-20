@@ -1405,7 +1405,7 @@
 </code></pre></div>
 <h2 id="_6">等比数列求和<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>求 <span class="arithmatex">\(A^B\)</span> 的所有约数之和 <span class="arithmatex">\(\mathrm{mod} \ 9901\)</span>的值.</p>
+<p>求 <span class="arithmatex">\(A^B\)</span> 的所有约数之和 <span class="arithmatex">\(\mathrm{mod} \ 9901\)</span> 的值.</p>
 </blockquote>
 <p>对 <span class="arithmatex">\(A\)</span> 分解质因数,表示为 <span class="arithmatex">\(p_1^{c_1}\cdot p_2^{c_2} \cdot p_3^{c_3}\cdot...\cdot p_n^{c_n}\)</span> ,可知 <span class="arithmatex">\(A^B\)</span> 的质因数是 <span class="arithmatex">\(p_1^{B\cdot c_1}\cdot p_2^{B\cdot c_2} \cdot p_3^{B\cdot c_3}\cdot...\cdot p_n^{B\cdot c_n}\)</span> ,我们将其记作 <span class="arithmatex">\(p_1^{k_1}\cdot p_2^{k_2} \cdot p_3^{k_3}\cdot...\cdot p_n^{k_n}\)</span> ,其中 <span class="arithmatex">\(0\leq k_i \leq B\cdot c_i\)</span> .</p>
 <p>由生成函数的技巧,我们可知 <span class="arithmatex">\(A^B\)</span> 的约数之和为:</p>
@@ -1426,7 +1426,7 @@
 <div class="arithmatex">\[
 \mathrm{sum}(p,c) = (1+p^{\frac{c}{2}}) \cdot \mathrm{sum}(p,\frac{c}{2}-1) + p^c
 \]</div>
-<p>结合快速幂可在 <span class="arithmatex">\(\Omicron(\log c)\)</span>的时间复杂度中求出等比数列之和.</p>
+<p>结合快速幂可在 <span class="arithmatex">\(\Omicron(\log c)\)</span> 的时间复杂度中求出等比数列之和.</p>
 <p>代码如下:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ans</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">divisor_count</span><span class="p">[</span><span class="mi">50000010</span><span class="p">];</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">mod</span><span class="o">=</span><span class="mi">9901</span><span class="p">;</span>

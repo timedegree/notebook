@@ -139,7 +139,7 @@ int main()
 
 ## 等比数列求和
 
-> 求 $A^B$ 的所有约数之和 $\mathrm{mod} \ 9901$的值.
+> 求 $A^B$ 的所有约数之和 $\mathrm{mod} \ 9901$ 的值.
 
 对 $A$ 分解质因数,表示为 $p_1^{c_1}\cdot p_2^{c_2} \cdot p_3^{c_3}\cdot...\cdot p_n^{c_n}$ ,可知 $A^B$ 的质因数是 $p_1^{B\cdot c_1}\cdot p_2^{B\cdot c_2} \cdot p_3^{B\cdot c_3}\cdot...\cdot p_n^{B\cdot c_n}$ ,我们将其记作 $p_1^{k_1}\cdot p_2^{k_2} \cdot p_3^{k_3}\cdot...\cdot p_n^{k_n}$ ,其中 $0\leq k_i \leq B\cdot c_i$ .
 
@@ -169,7 +169,7 @@ $$
 \mathrm{sum}(p,c) = (1+p^{\frac{c}{2}}) \cdot \mathrm{sum}(p,\frac{c}{2}-1) + p^c
 $$
 
-结合快速幂可在 $\Omicron(\log c)$的时间复杂度中求出等比数列之和.
+结合快速幂可在 $\Omicron(\log c)$ 的时间复杂度中求出等比数列之和.
 
 代码如下:
 

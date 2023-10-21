@@ -160,11 +160,11 @@ $$
 若 $c$ 为奇数:
 
 $$
-\begin{array}{c}
-\mathrm{sum}(p,c) &=& (1+p+p^2+...+p^{\frac{c-1}{2}})+(p^{\frac{c+1}{2}}+...+p^c)\\
-&=& (1+p+p^2+...+p^{\frac{c-1}{2}})+p^{\frac{c+1}{2}}\cdot(1+p+p^2+...+p^{\frac{c-1}{2}})\\
-&=& (1+p^{\frac{c+1}{2}})\cdot \mathrm{sum}(p,\frac{c-1}{2})
-\end{array}
+\begin{align*}
+\mathrm{sum}(p,c) &= (1+p+p^2+...+p^{\frac{c-1}{2}})+(p^{\frac{c+1}{2}}+...+p^c)\\
+&= (1+p+p^2+...+p^{\frac{c-1}{2}})+p^{\frac{c+1}{2}}\cdot(1+p+p^2+...+p^{\frac{c-1}{2}})\\
+&= (1+p^{\frac{c+1}{2}})\cdot \mathrm{sum}(p,\frac{c-1}{2})
+\end{align*}
 $$
 
 若 $c$ 为偶数,类似的:

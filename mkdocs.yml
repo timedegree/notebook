@@ -26,7 +26,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-  custom_dir: docs/resourses
+  #custom_dir: docs/resourses
   features:
     - content.code.annotate
     - navigation.tracking

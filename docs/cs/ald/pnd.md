@@ -39,7 +39,7 @@ $$
 
 如图:
 
-<img src="./assets/pnd-2dpresum1.png">
+<img src="../assets/pnd-2dpresum1.png">
 
 容易得出以下递推式:
 

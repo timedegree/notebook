@@ -39,53 +39,7 @@ $$
 
 如图:
 
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-  .image-container {
-    display: flex; /* 使用 Flex 布局将图片水平排列 */
-    flex-wrap: wrap; /* 如果图片过多，换行显示 */
-  }
-
-  .image {
-    margin: 5px; /* 图片之间的间距 */
-  }
-
-  .caption {
-    text-align: center; /* 标识文本居中显示 */
-    font-size: 8px
-  }
-</style>
-</head>
-<body>
-
-<div class="image-container">
-  <div class="image">
-    <img src="../img/pnd-2dpresum1.png" height= 170px width = 170px>
-    <p class="caption">S[i-1][j]</p>
-  </div>
-
-  <div class="image">
-    <img src="../img/pnd-2dpresum2.png" height= 170px width = 170px>
-    <p class="caption">S[i][j-1]</p>
-  </div>
-
-  <div class="image">
-    <img src="../img/pnd-2dpresum3.png" height= 170px width = 170px>
-    <p class="caption">S[i-1][j] + S[i][j-1]</p>
-  </div>
-
-  <div class="image">
-    <img src="../img/pnd-2dpresum4.png" height= 170px width = 170px>
-    <p class="caption">S[i-1][j] + S[i][j-1] - S[i-1][j-1]</p>
-  </div>
-
-  <!-- 添加更多图片和标识 -->
-</div>
-
-</body>
-</html>
+<img src="./assets/pnd-2dpresum1.png">
 
 容易得出以下递推式:
 

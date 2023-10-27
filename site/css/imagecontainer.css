@@ -1,0 +1,13 @@
+.image-container {
+    display: flex; /* 使用 Flex 布局将图片水平排列 */
+    flex-wrap: wrap; /* 如果图片过多，换行显示 */
+}
+
+.image {
+    margin: 5px; /* 图片之间的间距 */
+}
+
+.caption {
+    text-align: center; /* 标识文本居中显示 */
+    font-size: 8px
+}

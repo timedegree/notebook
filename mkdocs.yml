@@ -138,6 +138,7 @@ nav:
       - Bit Operation: cs/ald/bitcal.md
       - Recursion: cs/ald/rnr.md
       - Prefix Sum and Difference: cs/ald/pnd.md
+      - High Accuracy: cs/ald/hac.md
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:

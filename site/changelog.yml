@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-11-7":
+    - newpage:
+        text: Computer Science > Data Structure and Algorithm > 新增 High Accuracy
+        href: /cs/ald/hac
   - "2023-10-28":
     - newpage:
         text: Computer Science > Data Structure and Algorithm > 新增 Prefix Sum and Difference

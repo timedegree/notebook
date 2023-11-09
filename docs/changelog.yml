@@ -1,4 +1,11 @@
 - "2023":
+  - "2023-11-9":
+    - newpage:
+        text: Computer Science > Data Structure and Algorithm > 新增 Binary Search
+        href: /cs/ald/bs
+    - pageupdate:
+        text: Computer Science > Data Structure and Algorithm > Bit Operation > 添加矩阵快速幂
+        href: /cs/ald/bitcal
   - "2023-11-7":
     - newpage:
         text: Computer Science > Data Structure and Algorithm > 新增 High Accuracy

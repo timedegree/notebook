@@ -139,6 +139,7 @@ nav:
       - Recursion: cs/ald/rnr.md
       - Prefix Sum and Difference: cs/ald/pnd.md
       - High Accuracy: cs/ald/hac.md
+      - Binary Search: cs/ald/bs.md
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:

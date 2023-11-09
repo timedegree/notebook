@@ -60,6 +60,115 @@ long long quick_power(long long a,long long b,long long p)
 }
 ```
 
+### 矩阵快速幂
+
+> 求斐波那契数列的第 $n$ 项.
+
+我们可知斐波那契数列的递推公式为
+
+$$
+\begin{align*}
+F_{n+2} =& F_{n+1} + F_n\\
+F_{n} =& F_n
+\end{align*}
+$$
+
+将其转化为矩阵就是
+
+$$
+\begin{bmatrix}
+F_{n+2}\\
+F_{n+1}
+\end{bmatrix} =
+\begin{bmatrix}
+F_{n+1}+F_{n}\\
+F_{n+1}
+\end{bmatrix} =
+\begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix}
+\begin{bmatrix}
+F_{n+1}\\
+F_{n}
+\end{bmatrix}
+$$
+
+于是 $F_n$ 可由有限次的矩阵的乘法表示出来
+
+$$
+\begin{bmatrix}
+F_{n}\\
+F_{n-1}
+\end{bmatrix} =
+{\begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix}}^{n-2}
+\begin{bmatrix}
+F_{2}\\
+F_{1}
+\end{bmatrix}
+$$
+
+代码如下:
+
+```cpp
+
+struct Matrix{
+    int value[3][3];
+
+    Matrix() { memset(value,0,sizeof value); }
+
+    Matrix operator*(const Matrix &b) const {
+        Matrix res;
+        for(int i=1;i<=2;i++)
+        {
+            for(int j=1;j<=2;j++)
+            {
+                for(int k=1;k<=2;k++)
+                {
+                    res.value[i][j] = (res.value[i][j] + value[i][k] * b.value[k][j]);
+                }
+            }
+        }
+        return res;
+            
+    }
+}ans,base;
+
+void init() {
+  base.value[1][1] = base.value[1][2] = base.value[2][1] = 1;
+  ans.value[1][1] = ans.value[1][2] = 1;
+}
+
+void quick_power(int x)
+{
+    for(;x;x>>=1)
+    {
+        if(x&1) ans = ans * base;
+        base = base * base;
+    }
+}
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    if(n<=2)
+    {
+        puts("1");
+        return 0;
+    }
+    init();
+    quick_power(n-1);
+
+    printf("%d",ans.value[2][1]);
+    return 0;
+}
+
+```
+
 ### 在乘法中使用快速幂思想
 
 假如我们现在需要计算 $a\cdot b\mod p$.

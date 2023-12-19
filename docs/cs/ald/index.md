@@ -14,6 +14,8 @@
 
 ### 算法
 
-- [位运算](bitcal.md)
-- [递推与递归](rnr.md)
-- [前缀和与差分](pnd.md)
+- [Bit Operation 位运算](bitcal.md)
+- [Recusion 递推与递归](rnr.md)
+- [Prefix Sum and Difference 前缀和与差分](pnd.md)
+- [High Accuracy 高精度](hac.md)
+- [Binary Search 二分](bs.md)

@@ -114,7 +114,6 @@ $$
 代码如下:
 
 ```cpp
-
 struct Matrix{
     int value[3][3];
 
@@ -163,7 +162,7 @@ int main()
     init();
     quick_power(n-1);
 
-    printf("%d",ans.value[2][1]);
+    printf("%d",ans.value[1][1]);
     return 0;
 }
 

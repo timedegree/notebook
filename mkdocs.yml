@@ -154,6 +154,7 @@ nav:
     - WriteUp:
       - CTF/WriteUp/index.md
       - CCBC1314: CTF/WriteUp/CCBC13.md
+      - GanCTF: CTF/WriteUp/GanCTF.md
       #- MoeCTF: CTF/WriteUp/MoeCTF2023.md
   #- Book List:
   #  - bkl/index.md

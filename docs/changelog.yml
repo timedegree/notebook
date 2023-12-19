@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-12-19":
+    - newpage:
+        text: CTF > WriteUp > 添加 GanCTF WriteUp
+        href: /CTF/WriteUp/GanCTF
   - "2023-11-9":
     - newpage:
         text: Computer Science > Data Structure and Algorithm > 新增 Binary Search

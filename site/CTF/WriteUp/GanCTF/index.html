@@ -2200,18 +2200,18 @@ ciphertext:307560071638 239326676862 0 247490407109 182290374773 425320511222 12
 <a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">enc</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">encrypt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 <a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">enc</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<p>根据代码我们可以列出如下方程
-$$
+<p>根据代码我们可以列出如下方程</p>
+<div class="arithmatex">\[
 \begin{array}{c}
-enc_0 &amp;=&amp; flag_0 \oplus flag_1 \oplus key_0\
-enc_1 &amp;=&amp; flag_1 \oplus flag_2 \oplus key_1\
-enc_2 &amp;=&amp; flag_2 \oplus flag_3 \oplus key_2\
-enc_3 &amp;=&amp; flag_3 \oplus flag_4 \oplus key_3\
-...   &amp;=&amp; ...\
+enc_0 &amp;=&amp; flag_0 \oplus flag_1 \oplus key_0\\
+enc_1 &amp;=&amp; flag_1 \oplus flag_2 \oplus key_1\\
+enc_2 &amp;=&amp; flag_2 \oplus flag_3 \oplus key_2\\
+enc_3 &amp;=&amp; flag_3 \oplus flag_4 \oplus key_3\\
+...   &amp;=&amp; ...\\
 enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 \end{array}
-$$
-构成了一个环，由于key已知，所以只要知道其中一个字符便能出所有解，脚本如下</p>
+\]</div>
+<p>构成了一个环，由于key已知，所以只要知道其中一个字符便能出所有解，脚本如下</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Crypto/flag.enc&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">enc</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">ord</span><span class="p">,</span><span class="n">enc</span><span class="p">)))</span>
@@ -2965,7 +2965,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月19日 10:44:24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月19日 10:53:52</span>
       
         <br>
         创建日期:

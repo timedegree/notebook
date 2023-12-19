@@ -350,6 +350,7 @@ enc.close()
 ```
 
 根据代码我们可以列出如下方程
+
 $$
 \begin{array}{c}
 enc_0 &=& flag_0 \oplus flag_1 \oplus key_0\\
@@ -360,6 +361,7 @@ enc_3 &=& flag_3 \oplus flag_4 \oplus key_3\\
 enc_{n-1} &=& flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 \end{array}
 $$
+
 构成了一个环，由于key已知，所以只要知道其中一个字符便能出所有解，脚本如下
 
 ```python

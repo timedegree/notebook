@@ -587,13 +587,10 @@ import urllib.request
 url = "http://47.76.55.63:23351/robots.txt"
 
 response = urllib.request.urlopen(url)
-
 content = response.read().decode('utf-8')
 
 urls = open("urldic.txt",'w')
-
 urls.write(content)
-
 urls.close()
 
 print(content)
@@ -919,8 +916,6 @@ else{
 }
 ```
 
-
-
 结合**dirsearch**的结果，查看**/user.php**文件,得到flag
 
 ![web1-flag](assets\web1-flag.png)
@@ -1114,7 +1109,7 @@ $uploadDir = dirname(__FILE__)."/../upload/";
 
 > 恭喜你，掌握了ssrf的基本原理，想要得到flag吗？那就**以get方式发送一个参数为wa_nt的请求**吧
 
-构造**url/flag.php?wa_nt**,发送，得到前半flag
+构造**url/flag.php?wa_nt=1**,发送，得到前半flag
 
 > flag5{66ff12b7-e4be-f1
 >
@@ -1300,7 +1295,7 @@ flag：
 00#01
 ```
 
-可以知道路径为**dssdsdssa”，运行程序验证成功
+可以知道路径为**dssdsdssa**，运行程序验证成功
 
 ![ez_maze-flag](assets\ez_maze-flag.png)
 

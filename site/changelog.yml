@@ -1,7 +1,13 @@
+- "2024":
+  - "2024-3-10":
+    - newpage:
+        text: CTF > Knowledge > 新增 Stack Overflow
+        href: /CTF/Knowledge/Stack_Overflow
+
 - "2023":
   - "2023-12-19":
     - newpage:
-        text: CTF > WriteUp > 添加 GanCTF WriteUp
+        text: CTF > WriteUp > 新增 GanCTF WriteUp
         href: /CTF/WriteUp/GanCTF
   - "2023-11-9":
     - newpage:

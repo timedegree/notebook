@@ -156,6 +156,8 @@ nav:
       - CCBC1314: CTF/WriteUp/CCBC13.md
       - GanCTF: CTF/WriteUp/GanCTF.md
       #- MoeCTF: CTF/WriteUp/MoeCTF2023.md
+    - Knowledge:
+      - Stack Overflow: CTF/Knowledge/Stack_Overflow.md
   #- Book List:
   #  - bkl/index.md
   #  - Literature: 

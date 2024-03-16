@@ -237,7 +237,7 @@ p.interactive()
 
 1. 先使用**__libc_csu_init**控制寄存器泄露**write**地址
 2. 使用**LibcSearcher**找到libc版本，得到基址
-3. 最后得到**system**和**/bin/sh**的地址得到权限
+3. 最后得到**system**和**/bin/sh**的地址，构造payload得到权限
    
 exp：
 

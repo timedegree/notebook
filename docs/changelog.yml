@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-3-10":
+    - newpage:
+        text: CTF > Knowledge > 新增 Defense
+        href: /CTF/Knowledge/Defense
   - "2024-3-16":
     - pageupdate:
         text: CTF > Knowledge > Stack Overflow > 新增 ret2csu

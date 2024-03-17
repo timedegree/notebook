@@ -158,6 +158,8 @@ nav:
       #- MoeCTF: CTF/WriteUp/MoeCTF2023.md
     - Knowledge:
       - Stack Overflow: CTF/Knowledge/Stack_Overflow.md
+      - Denfense: CTF/Knowledge/Defense.md
+      - Format String: CTF/Knowledge/Format_String.md
   #- Book List:
   #  - bkl/index.md
   #  - Literature: 

@@ -133,6 +133,8 @@ nav:
         - Introduction: cs/pl/Rust/intro.md
         - Grammar: cs/pl/Rust/gram.md
         - Appendix: cs/pl/Rust/app.md
+    - CSAPP:
+      - Machine-Level Representation of Programs: cs/csapp/chapter3.md
     - Data Structure and Algorithm:
       - cs/ald/index.md
       - Bit Operation: cs/ald/bitcal.md

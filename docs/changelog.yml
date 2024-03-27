@@ -3,6 +3,9 @@
     - pageupdate:
         text: CTF > Knowledge > Stack Overflow > 新增 ret2syscall
         href: /CTF/Knowledge/Stack_Overflow
+    - newpage:
+        text: Computer Science > CSAPP > 新增 Machine-Level Representation of Programs
+        href: /cs/csapp/chapter3
   - "2024-3-17":
     - newpage:
         text: CTF > Knowledge > 新增 Defense

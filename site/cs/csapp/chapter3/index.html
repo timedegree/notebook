@@ -13,13 +13,17 @@
         <link rel="canonical" href="https://note.timedegree.cc/cs/csapp/chapter3/">
       
       
+        <link rel="prev" href="../../pl/Rust/app/">
+      
+      
+        <link rel="next" href="../../ald/">
       
       <link rel="icon" href="/assets/favicon-warma.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>程序的机器级表示 - 时度度的笔记本</title>
+        <title>Machine-Level Representation of Programs - 时度度的笔记本</title>
       
     
     
@@ -157,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              程序的机器级表示
+              Machine-Level Representation of Programs
             
           </span>
         </div>
@@ -271,13 +275,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         Computer Science
       </a>
     </li>
@@ -463,19 +469,23 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
           
             
+          
+        
           
         
           
@@ -495,7 +505,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Computer Science
@@ -654,6 +664,223 @@
               
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          CSAPP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          CSAPP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Machine-Level Representation of Programs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Machine-Level Representation of Programs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 程序编码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 程序编码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1 机器级代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    3.1.2 代码示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 数据格式
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 数据格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-c-x86-64" class="md-nav__link">
+    3.2.1 C 语言数据类型在 x86-64 中的大小
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 访问信息
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 访问信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    3.3.1 整数寄存器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    3.3.2 操作数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    3.3.3 数据传输指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    3.3.4 压入与弹出栈数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4 算数与逻辑运算
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 算数与逻辑运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    3.4.1 加载有效地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342" class="md-nav__link">
+    3.4.2 一元和二元运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343" class="md-nav__link">
+    3.4.3 移位运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344" class="md-nav__link">
+    3.4.4 特殊的算术运算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     
     <li class="md-nav__item md-nav__item--nested">
@@ -661,7 +888,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
       
       
         
@@ -686,14 +913,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../ald/">Data Structure and Algorithm</a>
           
-            <label for="__nav_2_3">
+            <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           Data Structure and Algorithm
         </label>
@@ -1299,6 +1526,143 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 程序编码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 程序编码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1 机器级代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    3.1.2 代码示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 数据格式
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 数据格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-c-x86-64" class="md-nav__link">
+    3.2.1 C 语言数据类型在 x86-64 中的大小
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 访问信息
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 访问信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    3.3.1 整数寄存器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    3.3.2 操作数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    3.3.3 数据传输指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    3.3.4 压入与弹出栈数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4 算数与逻辑运算
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 算数与逻辑运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    3.4.1 加载有效地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342" class="md-nav__link">
+    3.4.2 一元和二元运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343" class="md-nav__link">
+    3.4.3 移位运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344" class="md-nav__link">
+    3.4.4 特殊的算术运算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1315,18 +1679,701 @@
   
 
 
-<h1 id="_1">程序的机器级表示<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">第三章 程序的机器级表示<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1726 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 13 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
+</div>
+<h2 id="31">3.1 程序编码<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<h3 id="311">3.1.1 机器级代码<a class="headerlink" href="#311" title="Permanent link">&para;</a></h3>
+<h4 id="_2">计算机系统的两种抽象<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>使用 <strong>ISA</strong> 定义机器级程序的格式与行为</li>
+<li>机器级程序使用虚拟地址，内存模型类似字节数组</li>
+</ul>
+<h4 id="_3">机器代码下可见的处理器状态<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>程序计数器</strong> CP 给出将要执行的指令在内存中的地址</li>
+<li><strong>整数寄存器</strong> 16 个寄存器被用来存储 64 位的值，值可以是地址或整数数据。<ul>
+<li>部分用来存储参数、局部变量和函数返回值</li>
+<li>部分用来记录重要的程序状态</li>
+</ul>
+</li>
+<li><strong>条件码寄存器</strong> 保存最近执行的算术或逻辑指令的状态信息。通常用来实现控制流或者数据流的条件变化</li>
+<li><strong>向量寄存器</strong> 存放一个或多个整数或浮点数</li>
+</ul>
+<h3 id="312">3.1.2 代码示例<a class="headerlink" href="#312" title="Permanent link">&para;</a></h3>
+<h4 id="_4">文中常用编译指令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>linux&gt; gcc -Og -S mstore.c # c编译器产生汇编代码，产生 mstore.s
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>linux&gt; gcc -Og -c mstore.c # c编译器编译并汇编代码，产生 mstore.o
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>linux&gt; objdump -d mstore.o # 查看汇编
+</code></pre></div>
+<h4 id="x86-64">x86-64 下机器码和反汇编代码特性<a class="headerlink" href="#x86-64" title="Permanent link">&para;</a></h4>
+<ul>
+<li>x86-64 的指令长度从 1 到 15 字节不等。常用指令的字节数较少</li>
+<li>从某个指定位置开始，可以将字节唯一的解码成机器指令。例如<em>pushq %rbx</em>是唯一以 53 开头的指令</li>
+<li>反汇编器基于机器码文件中的字节序列来确定汇编代码</li>
+<li>反汇编器与 gcc 两者产生的汇编代码略有不同</li>
+</ul>
+<h2 id="32">3.2 数据格式<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
+<h3 id="321-c-x86-64">3.2.1 C 语言数据类型在 x86-64 中的大小<a class="headerlink" href="#321-c-x86-64" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>C declaration</th>
+<th>Intel Data Type</th>
+<th>Assembly-code suffix</th>
+<th>Size (bytes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td>Byte</td>
+<td>b</td>
+<td>1</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Word</td>
+<td>w</td>
+<td>2</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Double word</td>
+<td>l</td>
+<td>4</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Quad word</td>
+<td>q</td>
+<td>8</td>
+</tr>
+<tr>
+<td>char *</td>
+<td>Quad word</td>
+<td>q</td>
+<td>8</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Single precision</td>
+<td>s</td>
+<td>4</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double precision</td>
+<td>l</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="33">3.3 访问信息<a class="headerlink" href="#33" title="Permanent link">&para;</a></h2>
+<h3 id="331">3.3.1 整数寄存器<a class="headerlink" href="#331" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">63</th>
+<th style="text-align: left;">31</th>
+<th style="text-align: left;">15</th>
+<th style="text-align: left;">7</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">%rax</td>
+<td style="text-align: left;">%eax</td>
+<td style="text-align: left;">%ax</td>
+<td style="text-align: left;">%al</td>
+<td>Return value</td>
+</tr>
+<tr>
+<td style="text-align: left;">%rbx</td>
+<td style="text-align: left;">%ebx</td>
+<td style="text-align: left;">%bx</td>
+<td style="text-align: left;">%bl</td>
+<td>Callee saved</td>
+</tr>
+<tr>
+<td style="text-align: left;">%rcx</td>
+<td style="text-align: left;">%ecx</td>
+<td style="text-align: left;">%cx</td>
+<td style="text-align: left;">%cl</td>
+<td>4th argument</td>
+</tr>
+<tr>
+<td style="text-align: left;">%rdx</td>
+<td style="text-align: left;">%edx</td>
+<td style="text-align: left;">%dx</td>
+<td style="text-align: left;">%dl</td>
+<td>3th argument</td>
+</tr>
+<tr>
+<td style="text-align: left;">%rsi</td>
+<td style="text-align: left;">%esi</td>
+<td style="text-align: left;">%si</td>
+<td style="text-align: left;">%sil</td>
+<td>2nd argument</td>
+</tr>
+<tr>
+<td style="text-align: left;">%rdi</td>
+<td style="text-align: left;">%edi</td>
+<td style="text-align: left;">%di</td>
+<td style="text-align: left;">%dil</td>
+<td>1st argument</td>
+</tr>
+<tr>
+<td style="text-align: left;">%rbp</td>
+<td style="text-align: left;">%ebp</td>
+<td style="text-align: left;">%bp</td>
+<td style="text-align: left;">%bpl</td>
+<td>Callee saved</td>
+</tr>
+<tr>
+<td style="text-align: left;">%rsp</td>
+<td style="text-align: left;">%esp</td>
+<td style="text-align: left;">%sp</td>
+<td style="text-align: left;">%spl</td>
+<td>Stack pointer</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r8</td>
+<td style="text-align: left;">%r8d</td>
+<td style="text-align: left;">%r8w</td>
+<td style="text-align: left;">%r8b</td>
+<td>5th argument</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r9</td>
+<td style="text-align: left;">%r9d</td>
+<td style="text-align: left;">%r9w</td>
+<td style="text-align: left;">%r9b</td>
+<td>6th argument</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r10</td>
+<td style="text-align: left;">%r10d</td>
+<td style="text-align: left;">%r10w</td>
+<td style="text-align: left;">%r10b</td>
+<td>Caller saved</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r11</td>
+<td style="text-align: left;">%r11d</td>
+<td style="text-align: left;">%r11w</td>
+<td style="text-align: left;">%r11b</td>
+<td>Caller saved</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r12</td>
+<td style="text-align: left;">%r12d</td>
+<td style="text-align: left;">%r12w</td>
+<td style="text-align: left;">%r12b</td>
+<td>Callee saved</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r13</td>
+<td style="text-align: left;">%r13d</td>
+<td style="text-align: left;">%r13w</td>
+<td style="text-align: left;">%r13b</td>
+<td>Callee saved</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r14</td>
+<td style="text-align: left;">%r14d</td>
+<td style="text-align: left;">%r14w</td>
+<td style="text-align: left;">%r14b</td>
+<td>Callee saved</td>
+</tr>
+<tr>
+<td style="text-align: left;">%r15</td>
+<td style="text-align: left;">%r15d</td>
+<td style="text-align: left;">%r15w</td>
+<td style="text-align: left;">%r15b</td>
+<td>Callee saved</td>
+</tr>
+</tbody>
+</table>
+<h3 id="332">3.3.2 操作数<a class="headerlink" href="#332" title="Permanent link">&para;</a></h3>
+<p>大多数指令有一个或多个<strong>操作数</strong>，用以指示一个操作中要使用的源数据值，以及放置结果的目的位置。源数据值以常数形式或是从寄存器或内存中读出。因此，操作数被分为三种类型</p>
+<ul>
+<li><strong>立即数</strong> 表示常数值，格式为 <span class="arithmatex">\(\$ Imm\)</span> ，<span class="arithmatex">\(Imm\)</span> 是标准 C 语言中表示的整数。</li>
+<li><strong>寄存器</strong> 表示某个寄存器的内容，格式为 <span class="arithmatex">\(r_a\)</span> </li>
+<li><strong>内存引用</strong> 根据计算出来的地址访问某个内存，格式为 <span class="arithmatex">\(Imm(r_b,r_i,s)\)</span> ，可得到多种寻址方式，<span class="arithmatex">\(s\)</span> 仅能为 <strong>1，2，4，8</strong></li>
+</ul>
+<h4 id="_5">操作数格式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th style="text-align: center;">Form</th>
+<th style="text-align: center;">Operand value</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Immediate</td>
+<td style="text-align: center;"><span class="arithmatex">\(\$Imm\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(Imm\)</span></td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td>Register</td>
+<td style="text-align: center;"><span class="arithmatex">\(r_a\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{R}[r_a]\)</span></td>
+<td>Register</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\(Imm\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[Imm]\)</span></td>
+<td>Absolute</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\((r_a)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[\mathsf{R}[r_a]]\)</span></td>
+<td>Indirect</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\(Imm(r_b)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[Imm+\mathsf{R}[r_b]]\)</span></td>
+<td>Base + displacement</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\((r_b,r_i)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[\mathsf{R}[r_b]+\mathsf{R}[r_i]]\)</span></td>
+<td>Indexed</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\(Imm(r_b,r_i)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[Imm+\mathsf{R}[r_b]+\mathsf{R}[r_i]]\)</span></td>
+<td>Indexed</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\((,r_i,s)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[\mathsf{R}[r_a] \cdot s]\)</span></td>
+<td>Scaled indexed</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\(Imm(,r_i,s)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[Imm + \mathsf{R}[r_a] \cdot s]\)</span></td>
+<td>Scaled indexed</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\((r_b,r_i,s)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[\mathsf{R}[r_b]+\mathsf{R}[r_i]\cdot s]\)</span></td>
+<td>Scaled indexed</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td style="text-align: center;"><span class="arithmatex">\(Imm(r_b,r_i,s)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{M}[Imm+\mathsf{R}[r_b]+\mathsf{R}[r_i] \cdot s]\)</span></td>
+<td>Scaled indexed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="333">3.3.3 数据传输指令<a class="headerlink" href="#333" title="Permanent link">&para;</a></h3>
+<ul>
+<li>分为源操作数和目标操作数</li>
+<li>源操作数为一个立即数、寄存器或内存地址，目标操作数为寄存器或内存地址</li>
+</ul>
+<p>数据传输指令分为三类</p>
+<ul>
+<li>简单数据传输指令</li>
+<li>零扩展数据传输指令</li>
+<li>符号扩展数据传输指令</li>
+</ul>
+<p>表如下：</p>
+<h4 id="_6">简单数据传输指令<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Effect</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MOV <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D \leftarrow S\)</span></td>
+<td style="text-align: left;">Move</td>
+</tr>
+<tr>
+<td>movb</td>
+<td></td>
+<td style="text-align: left;">Move byte</td>
+</tr>
+<tr>
+<td>movw</td>
+<td></td>
+<td style="text-align: left;">Move word</td>
+</tr>
+<tr>
+<td>movl</td>
+<td></td>
+<td style="text-align: left;">Move double word</td>
+</tr>
+<tr>
+<td>movq</td>
+<td></td>
+<td style="text-align: left;">Move quad word</td>
+</tr>
+<tr>
+<td>movabsq <span class="arithmatex">\(I,R\)</span></td>
+<td><span class="arithmatex">\(R \leftarrow I\)</span></td>
+<td style="text-align: left;">Move absolute quad word</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">零扩展数据传输指令<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Effect</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MOVZ <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D \leftarrow \mathsf{ZeroExtend}(S)\)</span></td>
+<td style="text-align: left;">Move with zero extension</td>
+</tr>
+<tr>
+<td>movzbw</td>
+<td></td>
+<td style="text-align: left;">Move zero-extended byte to word</td>
+</tr>
+<tr>
+<td>movzbl</td>
+<td></td>
+<td style="text-align: left;">Move zero-extended byte to double word</td>
+</tr>
+<tr>
+<td>movzwl</td>
+<td></td>
+<td style="text-align: left;">Move zero-extended word to double word</td>
+</tr>
+<tr>
+<td>movzbq</td>
+<td></td>
+<td style="text-align: left;">Move zero-extended byte to quad word</td>
+</tr>
+<tr>
+<td>movzwq</td>
+<td></td>
+<td style="text-align: left;">Move zero-extended word to quad word</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">符号扩展数据传输指令<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Effect</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MOVS <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D \leftarrow \mathsf{SignExtend}(S)\)</span></td>
+<td style="text-align: left;">Move with sign extension</td>
+</tr>
+<tr>
+<td>movsbw</td>
+<td></td>
+<td style="text-align: left;">Move sign-extended byte to word</td>
+</tr>
+<tr>
+<td>movsbl</td>
+<td></td>
+<td style="text-align: left;">Move sign-extended byte to double word</td>
+</tr>
+<tr>
+<td>movswl</td>
+<td></td>
+<td style="text-align: left;">Move sign-extended word to double word</td>
+</tr>
+<tr>
+<td>movsbq</td>
+<td></td>
+<td style="text-align: left;">Move sign-extended byte to quad word</td>
+</tr>
+<tr>
+<td>movswq</td>
+<td></td>
+<td style="text-align: left;">Move sign-extended word to quad word</td>
+</tr>
+<tr>
+<td>movslq</td>
+<td></td>
+<td style="text-align: left;">Move sign-extended double word to quad word</td>
+</tr>
+<tr>
+<td>ctlq</td>
+<td><span class="arithmatex">\(\mathsf{\%rax}\leftarrow\mathsf{SignExtend(\%eax)}\)</span></td>
+<td style="text-align: left;">Sign-extended %eax to %rax</td>
+</tr>
+</tbody>
+</table>
+<h3 id="334">3.3.4 压入与弹出栈数据<a class="headerlink" href="#334" title="Permanent link">&para;</a></h3>
+<h4 id="_9">压栈与出栈指令<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>只有一个操作数</li>
+<li>push 指令的操作数可以为一个<strong>寄存器</strong>、<strong>内存地址</strong>或<strong>立即数</strong></li>
+<li>pop 指令的操作数可以为一个<strong>寄存器</strong>或<strong>内存地址</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Effect</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pushq <span class="arithmatex">\(S\)</span></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rsp]}\leftarrow\mathsf{R[\%rsp]}-8\)</span></td>
+<td>Push quad word</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(\mathsf{M[\%rsp]}\leftarrow S\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>popq <span class="arithmatex">\(S\)</span></td>
+<td><span class="arithmatex">\(D \leftarrow \mathsf{M[\%rsp]}\)</span></td>
+<td>Pop quad word</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rsp]}\leftarrow\mathsf{R[\%rsp]}+8\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">指令等价<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>push %rbp指令可与如下指令等价</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">pushq</span><span class="w"> </span><span class="nv">%rbp</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">subq</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="nv">%rsp</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nf">movq</span><span class="w"> </span><span class="nv">%rbp</span><span class="p">,(</span><span class="nv">%rsp</span><span class="p">)</span>
+</code></pre></div>
+<p>pop %rbp指令同理</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">popq</span><span class="w"> </span><span class="nv">%rbp</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nf">movq</span><span class="w"> </span><span class="p">(</span><span class="nv">%rsp</span><span class="p">),</span><span class="nv">%rbp</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">addq</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="nv">%rsp</span>
+</code></pre></div>
+<h2 id="34">3.4 算数与逻辑运算<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
+<p>算术和逻辑运算可分为四组：</p>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Effect</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加载有效地址</td>
+<td></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td>leaq <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow \&amp;S\)</span></td>
+<td style="text-align: left;">Load Effective address</td>
+</tr>
+<tr>
+<td>一元运算</td>
+<td></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td>INC <span class="arithmatex">\(D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D+1\)</span></td>
+<td style="text-align: left;">Increment</td>
+</tr>
+<tr>
+<td>DEC <span class="arithmatex">\(D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D-1\)</span></td>
+<td style="text-align: left;">Decrement</td>
+</tr>
+<tr>
+<td>NEG <span class="arithmatex">\(D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow -D\)</span></td>
+<td style="text-align: left;">Negate</td>
+</tr>
+<tr>
+<td>NOT <span class="arithmatex">\(D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow\  \sim D\)</span></td>
+<td style="text-align: left;">Complement</td>
+</tr>
+<tr>
+<td>二元运算</td>
+<td></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td>ADD <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D+S\)</span></td>
+<td style="text-align: left;">Add</td>
+</tr>
+<tr>
+<td>SUB <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D-S\)</span></td>
+<td style="text-align: left;">Subtract</td>
+</tr>
+<tr>
+<td>IMUL <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D* S\)</span></td>
+<td style="text-align: left;">Mutiply</td>
+</tr>
+<tr>
+<td>XOR <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D^{\wedge}S\)</span></td>
+<td style="text-align: left;">Exclusive-or</td>
+</tr>
+<tr>
+<td>OR <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D\mid S\)</span></td>
+<td style="text-align: left;">Or</td>
+</tr>
+<tr>
+<td>AND <span class="arithmatex">\(S,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D\&amp;S\)</span></td>
+<td style="text-align: left;">And</td>
+</tr>
+<tr>
+<td>移位运算</td>
+<td></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td>SAL <span class="arithmatex">\(k,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D&lt;&lt;k\)</span></td>
+<td style="text-align: left;">Left shift</td>
+</tr>
+<tr>
+<td>SHL <span class="arithmatex">\(k,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D&lt;&lt;k\)</span></td>
+<td style="text-align: left;">Left shift (same as sal)</td>
+</tr>
+<tr>
+<td>SAR <span class="arithmatex">\(k,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D&gt;&gt;_Ak\)</span></td>
+<td style="text-align: left;">Arithmetic right shift</td>
+</tr>
+<tr>
+<td>SHR <span class="arithmatex">\(k,D\)</span></td>
+<td><span class="arithmatex">\(D\leftarrow D&gt;&gt;_Lk\)</span></td>
+<td style="text-align: left;">Logical right shift</td>
+</tr>
+</tbody>
+</table>
+<h3 id="341">3.4.1 加载有效地址<a class="headerlink" href="#341" title="Permanent link">&para;</a></h3>
+<ul>
+<li>源操作数是<strong>内存地址</strong>,目标操作数<strong>只能为寄存器</strong></li>
+<li>效果是<strong>将源操作数计算出的有效地址放入目标操作数中</strong></li>
+<li>也可以用来<strong>描述普通的计算操作</strong>，例如 leaq 7 (%rdx,%rdx, 5)，%rax 将寄存器 %rax 的值设置为 <span class="arithmatex">\(5x+7\)</span></li>
+</ul>
+<h3 id="342">3.4.2 一元和二元运算<a class="headerlink" href="#342" title="Permanent link">&para;</a></h3>
+<h4 id="_11">一元运算<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>只有一个操作数，同时作为源操作数和目标操作数、</li>
+<li>操作数为一个<strong>寄存器</strong>或<strong>内存地址</strong></li>
+</ul>
+<h4 id="_12">二元运算<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>有两个操作数，分为源操作数和目标数</li>
+<li>源操作数为一个<strong>寄存器</strong>、<strong>内存地址</strong>或<strong>立即数</strong></li>
+<li>目标操作数为一个<strong>寄存器</strong>或<strong>内存地址</strong></li>
+</ul>
+<h3 id="343">3.4.3 移位运算<a class="headerlink" href="#343" title="Permanent link">&para;</a></h3>
+<ul>
+<li>有两个操作数</li>
+<li>源操作数为一个<strong>立即数</strong></li>
+<li>目标操作数为一个<strong>寄存器</strong>或<strong>内存地址</strong></li>
+</ul>
+<h3 id="344">3.4.4 特殊的算术运算<a class="headerlink" href="#344" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Effect</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>imulq <span class="arithmatex">\(S\)</span></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rdx]:R[\%rax]}\leftarrow S\times \mathsf{R[\%rax]}\)</span></td>
+<td>Signed full multiply</td>
+</tr>
+<tr>
+<td>mulq <span class="arithmatex">\(S\)</span></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rdx]:R[\%rax]}\leftarrow S\times \mathsf{R[\%rax]}\)</span></td>
+<td>Unsigned full multiply</td>
+</tr>
+<tr>
+<td>cqto</td>
+<td><span class="arithmatex">\(\mathsf{R[\%rdx]: R[\%rax]}\leftarrow \mathsf{SignExtend(R[\%rax])}\)</span></td>
+<td>Convert to oct word</td>
+</tr>
+<tr>
+<td>idivq <span class="arithmatex">\(S\)</span></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rdx]}\leftarrow\mathsf{R[\%rdx]: R[\%rax]} \ mod \ S\)</span></td>
+<td>Signed divide</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rax]}\leftarrow\mathsf{R[\%rdx]: R[\%rax]} \div S\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>divq <span class="arithmatex">\(S\)</span></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rdx]}\leftarrow\mathsf{R[\%rdx]: R[\%rax]} \ mod \ S\)</span></td>
+<td>Unsigned divide</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(\mathsf{R[\%rax]}\leftarrow\mathsf{R[\%rdx]: R[\%rax]} \div S\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月27日 20:47:17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月27日 20:48:01</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月27日 20:47:17</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月27日 20:48:01</span>
       
     
   </small>

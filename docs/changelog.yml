@@ -1,4 +1,7 @@
 - "2024":
+  - "2024-3-30":
+    - newpage:
+        text: CTF > Knowledge > Stack Overflow > 新增 Format String
   - "2024-3-27":
     - pageupdate:
         text: CTF > Knowledge > Stack Overflow > 新增 ret2syscall

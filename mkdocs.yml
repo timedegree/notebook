@@ -158,7 +158,7 @@ nav:
       - CCBC1314: CTF/WriteUp/CCBC13.md
       - GanCTF: CTF/WriteUp/GanCTF.md
       - VenomCTF: CTF/WriteUp/VCTF.md
-      - XYCTF Week1: CTF/WriteUp/XYCTF-week1.md
+      #- XYCTF Week1: CTF/WriteUp/XYCTF-week1.md
       #- MoeCTF: CTF/WriteUp/MoeCTF2023.md
     - Knowledge:
       - Stack Overflow: CTF/Knowledge/Stack_Overflow.md

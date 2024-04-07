@@ -1,6 +1,10 @@
 - "2024":
   - "2024-3-30":
     - newpage:
+        text: CTF > Knowledge > Stack Overflow > 新增 XYCTF Week1
+        href: /CTF/WriteUp/XYCTF-week1
+  - "2024-3-30":
+    - newpage:
         text: CTF > Knowledge > Stack Overflow > 新增 Format String
         href: /CTF/Knowledge/Format_String
   - "2024-3-27":

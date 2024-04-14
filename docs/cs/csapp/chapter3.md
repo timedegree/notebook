@@ -243,3 +243,230 @@ addq 8,%rsp
 |             | $\mathsf{R[\%rax]}\leftarrow\mathsf{R[\%rdx]: R[\%rax]} \div S$       |                        |
 | divq $S$    | $\mathsf{R[\%rdx]}\leftarrow\mathsf{R[\%rdx]: R[\%rax]} \ mod \ S$    | Unsigned divide        |
 |             | $\mathsf{R[\%rax]}\leftarrow\mathsf{R[\%rdx]: R[\%rax]} \div S$       |                        |
+
+## 3.5 控制
+
+### 3.5.1 条件码
+
+- 是一位寄存器
+- 描述最近的算术或逻辑运算属性
+- 常用于执行条件分支指令
+
+#### 常用条件码
+
+- CF 进位标志： 运算使得最高位产生进位，可检测无符号操作的溢出
+- ZF 零标志：运算结果为 0 
+- SF 符号标志：运算结果为负数
+- OF 溢出标志：运算使得补码溢出，负溢出和正溢出均可
+
+#### 特殊情况
+
+1. leaq 指令不改变条件码
+2. xor 指令会将 CF 和 OF 置为 0
+3. 移位运算会将 CF 置为最后一个被移出的位，OF 置为 0
+4. inc 和 dec 不会改变 CF 但会设置 ZF 和 OF
+
+#### CMP 与 TEST 指令
+
+除算术或逻辑运算外，存在 CMP 与 TEST 两类指令也会**设置条件码**，但它们**不改变寄存器的值**。
+
+| Instruction    | Based on   | Description         |
+| -------------- | ---------- | ------------------- |
+| CMP $S_1,S_2$  | $S_2-S_1$  | Compare             |
+| cmpb           |            | Compare byte        |
+| cmpw           |            | Compare word        |
+| cmpl           |            | Compare double word |
+| cmpq           |            | Compare quad word   |
+| TEST $S_1,S_2$ | $S_1\&S_2$ | Test                |
+| testb          |            | Test byte           |
+| testw          |            | Test word           |
+| testl          |            | Test double word    |
+| testq          |            | Test quad word      |
+
+### 3.5.2 访问条件码
+
+除了自己读去条件码，还有三种使用条件码的一般方式
+
+1. 根据一些条件码的混合来设置单独一位 0 或 1
+2. 条件跳转到程序的其他部分
+3. 条件传输
+
+SET 指令常用以实现第一种使用方式，表如下
+
+| Instruction | Synonym | Effect                                                               | Set condition                   |
+| ----------- | ------- | -------------------------------------------------------------------- | :------------------------------ |
+| sete $D$    | setz    | $D\leftarrow\mathrm{ZF}$                                             | Equal / zero                    |
+| setne $D$   | setnz   | $D\leftarrow\ \sim\mathrm{ZF}$                                       | Not equal / not zero            |
+| sets $D$    |         | $D\leftarrow\mathrm{SF}$                                             | Negative                        |
+| setns $D$   |         | $D\leftarrow\ \sim\mathrm{SF}$                                       | Nonnegative                     |
+| setg $D$    | setnle  | $D\leftarrow\ \sim(\mathrm{SF\text{\text{\textasciicircum}} OF})\&\sim\mathrm{ZF}$ | Greater (signed $>$)            |
+| setge $D$   | setnl   | $D\leftarrow\ \sim (\mathrm{SF\text{\textasciicircum} OF})$                 | Greater or equal (signed $\ge$) |
+| setl $D$    | setnge  | $D\leftarrow\mathrm{SF\text{\textasciicircum} OF}$                          | Less (signed <)                 |
+| setle $D$   | setng   | $D\leftarrow(\mathrm{SF\text{\textasciicircum} OF})\mid\mathrm{ZF}$         | Less or equal (signed $\le$)    |
+| seta $D$    | setnbe  | $D\leftarrow\ \sim\mathrm{CF}\&\sim\mathrm{ZF}$                      | Above (unsigned >)              |
+| setae $D$   | setnb   | $D\leftarrow\ \sim\mathrm{CF}$                                       | Above or equal (unsigned $\ge$) |
+| setb $D$    | setnae  | $D\leftarrow\mathrm{CF}$                                             | Below (unsigned <)              |
+| setbe $D$   | setna   | $D\leftarrow\mathrm{CF}\mid\mathrm{ZF}$                              | Below or equal (unsigned $\le$) |
+
+### 3.5.3 条件跳转
+
+在一般的程序执行中，指令以列出的顺序来运行。jump 指令可以使程序切换到一个全新的位置执行。
+跳转的目的地一般在汇编代码中以 **label** 的形式显式的标出。但在 **jmp** 指令时，可不使用 label 而通过 **oprand** 来进行**间接跳转**。
+表如下：
+
+|  Instruction   | Synonym | Jump condition                                          | Description                     |
+|:--------------:| ------- | ------------------------------------------------------- |:------------------------------- |
+|  jmp $Label$   |         | 1                                                       | Direct jump                     |
+| jmp $*Operand$ |         | 1                                                       | Indirect jump                   |
+|   je $Label$   | jz      | $\mathrm{ZF}$                                           | Equal / zero                    |
+|  jne $Label$   | jnz     | $\sim\mathrm{ZF}$                                       | Not equal / not zero            |
+|   js $Label$   |         | $\mathrm{SF}$                                           | Negative                        |
+|  jns $Label$   |         | $\sim\mathrm{SF}$                                       | Nonnegative                     |
+|   jg $Label$   | jnle    | $\sim(\mathrm{SF\text{\textasciicircum} OF})\&\sim\mathrm{ZF}$ | Greater (signed >)              |
+|  jge $Label$   | jnl     | $\sim (\mathrm{SF\text{\textasciicircum} OF})$                 | Greater or equal (signed $\ge$) |
+|   jl $Label$   | jnge    | $\mathrm{SF\text{\textasciicircum} OF}$                        | Less (signed <)                 |
+|  jle $Label$   | jng     | $(\mathrm{SF\text{\textasciicircum} OF})\mid\mathrm{ZF}$       | Less or equal (signed $\le$)    |
+|   ja $Label$   | jnbe    | $\sim\mathrm{CF}\&\sim\mathrm{ZF}$                      | Above (unsigned >)              |
+|  jae $Label$   | jnb     | $\sim\mathrm{CF}$                                       | Above or equal (unsigned $\ge$) |
+|   jb $Label$   | jnae    | $\mathrm{CF}$                                           | Below (unsigned <)              |
+|      jbe       | jna     | $\mathrm{CF}\mid\mathrm{ZF}$                            | Below or equal (unsigned $\le$) |
+
+### 3.5.4 使用条件控制实现条件分支
+
+将 C 中的条件语句翻译为汇编代码的传统方法是通过**控制**的条件转移。通常汇编代码中的分支结构类似于 C 中的 goto 风格代码。C 中的 if-else 语句模板一般为：
+
+~~~c
+if(test-expr)
+	then-statement
+else
+	else-statement
+~~~
+
+而汇编通常会将其翻译为类似如下的 C 代码形式：
+
+~~~c
+	t = test-expr
+	if(!t)
+		goto false;
+	then-statement
+	goto done;
+false:
+	else-statement
+done:
+~~~
+
+例如：
+
+- 原始 C 代码
+
+```c
+long lt_cnt = 0;
+long ge_cnt = 0;
+
+long absdiff_se(long x,long y)
+{
+	long result;
+	if(x < y){
+		lt_cnt++;
+		result = x - y;
+	}
+	else {
+		ge_cnt++;
+		result = x - y;
+	}
+	return result;
+}
+```
+
+- 等价的 goto 版本
+
+~~~c
+long gotodiff_se(long x,long y)
+{
+	long result;
+	if(x >= y)
+		goto x_ge_y;
+	lt_cnt++;
+	result = y - x;
+	return result;
+x_ge_y:
+	ge_cnt++;
+	result = x - y;
+	return result;
+}
+~~~
+
+- 产生的汇编代码
+
+~~~x86-asm
+absdiff_se:
+	cmpq %rsi, %rdi
+	jge .L2
+	addq $1, lt_cnt(%rip)
+	movq %rsi, %rax
+	subq %rdi, %rax
+	ret
+.L2:
+	addq $1, ge_cnt(%rip)
+	movq %rdi, %rax
+	subq %rsi, %rax
+	ret
+~~~
+
+### 3.5.5  使用条件传送来实现条件分支
+
+另一种替代的策略是使用数据的条件转移。通过计算一个操作的两种结果，然后再根据条件从其中选取一个。
+
+#### 条件传送指令
+
+- 源操作数和目的操作数可以是 16、32 或 64 位长。不支持单字节条件传送
+- 汇编器通过目标寄存器推断出条件传送指令的操作数长度
+- 处理器无需预测测试结果就可以执行条件传送
+
+| Instruction  | Synonym | Move Condition                                                  | Description                     |
+| ------------ | ------- | --------------------------------------------------------------- | :------------------------------ |
+| cmove $S,R$  | cmovz   | $\mathsf{ZF}$                                                   | Equal / zero                    |
+| cmovne $S,R$ | cmovnz  | $\sim\mathsf{ZF}$                                               | Not equal / not zero            |
+| cmovs $S,R$  |         | $\mathsf{SF}$                                                   | Negative                        |
+| cmovns $S,R$ |         | $\sim\mathsf{SF}$                                               | Nonnegative                     |
+| cmovg $S,R$  | cmovnle | $\sim(\mathsf{SF}\text{\textasciicircum}\mathsf{OF})\&\sim\mathsf{ZF}$ | Greater (signed >)              |
+| cmovge $S,R$ | cmovnl  | $\sim(\mathsf{SF}\text{\textasciicircum}\mathsf{OF})$                  | Greater or equal (signed $\ge$) |
+| cmovl $S,R$  | cmovnge | $(\mathsf{SF}\text{\textasciicircum}\mathsf{OF})$                      | Less (signed <)                 |
+| cmovle $S,R$ | cmovng  | $\sim(\mathsf{SF}\text{\textasciicircum}\mathsf{OF})\mid\mathsf{ZF}$   | Less or equal (signed $\le$)    |
+| cmova $S,R$  | cmovnbe | $\sim\mathsf{CF}\&\sim\mathsf{ZF}$                              | Above (unsigned >)              |
+| cmovae $S,R$ | cmovnb  | $\sim\mathsf{CF}$                                               | Above or equal (unsigned $\ge$) |
+| cmovb $S,R$  | cmovnae | $\mathsf{CF}$                                                   | Below (unsigned <)              |
+| cmovbe $S,R$ | cmovna  | $\mathsf{CF}\mid\mathsf{ZF}$                                    | Below or equal (unsigned $\le$) |
+C 中的条件赋值即三目运算符，如下：
+
+~~~c
+v = test-expr ? then-expr : else-expr
+~~~
+
+使用条件转移编译会得到如下形式代码：
+
+~~~c
+	if(!test-expr)
+		goto false;
+	v = then-expr
+	goto done;
+false:
+	v = else-expr;
+done:
+~~~
+
+同 3.5.4 的 C 代码，使用条件传送的汇编代码如下：
+
+~~~x86-asm
+absdiff:
+	movq %rsi, %rax
+	subq %rdi, %rax
+	movq %rdi, %rdx
+	subq %rsi, %rdx
+	cmpq %rsi, %rdi
+	cmovge %rdx, %rax
+	ret
+~~~
+
+并非所有条件表达式都可以使用条件传送来编译。由于给出的代码会对 then-expr 和 else-expr 都求值，若任意一个产生错误条件或副作用，就会产生非法的行为。
+

@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-4-14":
+    - pageupdate:
+          text: Computer Science > CSAPP > Machine-Level Representation of Programs > 新增 控制
+          href: /cs/csapp/chapter3
   # - "2024-3-30":
   #   - newpage:
   #       text: CTF > Knowledge > Stack Overflow > 新增 XYCTF Week1

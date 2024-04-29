@@ -1,12 +1,16 @@
 - "2024":
+  - "2024-4-29":
+    - newpage:
+          text: CTF > Knowledge > 新增 Stack Pivoting
+          href: /CTF/Knowledge/Stack_Pivoting
   - "2024-4-14":
     - pageupdate:
           text: Computer Science > CSAPP > Machine-Level Representation of Programs > 新增 控制
           href: /cs/csapp/chapter3
-  # - "2024-3-30":
-  #   - newpage:
-  #       text: CTF > Knowledge > Stack Overflow > 新增 XYCTF Week1
-  #       href: /CTF/WriteUp/XYCTF-week1
+  - "2024-4-7":
+     - newpage:
+         text: CTF > WriteUp > Stack Overflow > 新增 XYCTF Week1
+         href: /CTF/WriteUp/XYCTF-week1
   - "2024-3-30":
     - newpage:
         text: CTF > Knowledge > Stack Overflow > 新增 Format String

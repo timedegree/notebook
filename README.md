@@ -2,4 +2,4 @@
 
 https://note.timedegree.cc/
 
-- 部分代码来自 [TonyCrane/]
+- 部分代码来自 [TonyCrane/note](https://github.com/TonyCrane/note)

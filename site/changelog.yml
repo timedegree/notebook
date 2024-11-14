@@ -9,6 +9,9 @@
     - newpage:
         text: Mathematic > Probability Theory > 新增 Random Variable and Distribution
         href: /math/proth/rvd
+    - newpage:
+        text: Mathematic > Probability Theory > 新增 Multivariate Random Variable and Distribution
+        href: /math/proth/mrvd
     - pageupdate:
         text: Computer Science > CSAPP > Machine-Level Representation of Programs > 勘误
         href: /cs/csapp/chapter3

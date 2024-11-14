@@ -1,4 +1,17 @@
 - "2024":
+  - "2024-11-14":
+    - newpage:
+        text: Mathematic > 新增 Probability Theory
+        href: /math/proth
+    - newpage:
+        text: Mathematic > Probability Theory > 新增 Basic Concept
+        href: /math/proth/bc
+    - newpage:
+        text: Mathematic > Probability Theory > 新增 Random Variable and Distribution
+        href: /math/proth/rvd
+    - pageupdate:
+        text: Computer Science > CSAPP > Machine-Level Representation of Programs > 勘误
+        href: /cs/csapp/chapter3
   - "2024-4-29":
     - newpage:
           text: CTF > Knowledge > 新增 Set Questions

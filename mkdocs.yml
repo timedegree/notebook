@@ -151,6 +151,11 @@ nav:
     - Concrete Mathematics:
       - math/conm/index.md
       - Recurrent Problems: math/conm/recpro.md
+    - Probability Theory:
+      - math/proth/index.md
+      - Basic Concept: math/proth/bc.md
+      - Random Variable and Distribution: math/proth/rvd.md
+      - Multivariate Random Variables and Distribution: math/proth/mrvd.md
   - CTF:
     - CTF/index.md
     - WriteUp:

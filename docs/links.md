@@ -36,7 +36,7 @@ comment: True
 </div>
 
 <div class="flink-list-item">
-    <a href="https://matheart.github.io/matheart-note/" title="Matheart's Note" target="_blank">
+    <a href="https://matheart.github.io/" title="Matheart's Note" target="_blank">
         <div class="flink-item-icon">
             <img src="../assets/Matheart.jpg" alt="">
         </div>
@@ -62,6 +62,16 @@ comment: True
         </div>
         <div class="flink-item-name heti-skip">Fran's Note</div>
         <div class="flink-item-desc">Fran笔记好全</div>
+    </a>
+</div>
+
+<div class="flink-list-item">
+    <a href="https://wings236.github.io/" title="Wings's Blog" target="_blank">
+        <div class="flink-item-icon">
+            <img src="../assets/Wings.jpg" alt="">
+        </div>
+        <div class="flink-item-name heti-skip">Wings's Blog</div>
+        <div class="flink-item-desc">Math，AI，CS，全都要！</div>
     </a>
 </div>
 

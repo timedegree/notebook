@@ -75,4 +75,14 @@ comment: True
     </a>
 </div>
 
+<div class="flink-list-item">
+    <a href="https://yan-zero.github.io/" title="Yan's Blog" target="_blank">
+        <div class="flink-item-icon">
+            <img src="../assets/Yan.jpg" alt="">
+        </div>
+        <div class="flink-item-name heti-skip">Yan's Blog</div>
+        <div class="flink-item-desc">一只大笨蛋</div>
+    </a>
+</div>
+
 </div>

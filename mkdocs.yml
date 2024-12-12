@@ -87,8 +87,16 @@ markdown_extensions:
 
 extra:
  social:
+    - icon: fontawesome/solid/marker
+      link: https://blog.timedegree.cc/
     - icon: fontawesome/brands/github
       link: https://github.com/timedegree
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/10077094
+    - icon: fontawesome/solid/envelope
+      link: mailto://timedegree12@gmail.com
+    - icon: fontawesome/solid/rss
+      link: feed_rss_created.xml
 
 extra_css:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css

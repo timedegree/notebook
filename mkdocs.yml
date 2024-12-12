@@ -35,6 +35,7 @@ theme:
     - navigation.top
     #- navigation.instant
     - header.autohide
+    - navigation.footer
   font:
     text: JetBrains Mono
     code: JetBrains Mono
@@ -102,10 +103,10 @@ extra_css:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  #- css/tasklist.css
+  - css/tasklist.css
   - css/custom.css
   - css/flink.css
-  #- css/card.css
+  - css/card.css
 
 extra_javascript:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
@@ -114,6 +115,9 @@ extra_javascript:
 plugins:
   - rss
   - search
+  - toc:
+      enabled: true
+      ignore_commits: []
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Shanghai
@@ -169,18 +173,13 @@ nav:
       - Multivariate Random Variables and Distribution: math/proth/mrvd.md
   - CTF:
     - CTF/index.md
-    - WriteUp:
-      - CTF/WriteUp/index.md
-      - CCBC1314: CTF/WriteUp/CCBC13.md
-      - GanCTF: CTF/WriteUp/GanCTF.md
-      - VenomCTF: CTF/WriteUp/VCTF.md
-      - XYCTF Week1: CTF/WriteUp/XYCTF-week1.md
       #- MoeCTF: CTF/WriteUp/MoeCTF2023.md
-    - Knowledge:
+    - Pwn:
       - Stack Overflow: CTF/Knowledge/Stack_Overflow.md
       - Stack Pivoting: CTF/Knowledge/Stack_Pivoting.md
       - Denfense: CTF/Knowledge/Defense.md
       - Format String: CTF/Knowledge/Format_String.md
+    - Other:
       - Set Questions: CTF/Knowledge/Docker.md
   #- Book List:
   #  - bkl/index.md
@@ -190,6 +189,15 @@ nav:
   #    - bkl/phi/index.md
   #  - Mathematic and Computer:
   #    - bkl/macs/index.md
+  - WriteUp:
+    - WriteUp/index.md
+    #- Training:
+    - 2023:
+      - CCBC1314: WriteUp/2023/CCBC13.md
+      - GanCTF: WriteUp/2023/GanCTF.md
+    - 2024:
+      - VenomCTF: WriteUp/2024/VCTF.md
+      - XYCTF Week1: WriteUp/2024/XYCTF-week1.md
   - Miscellaneous: 
     - sd/index.md
     - Hymmnos: sd/hymmnos.md

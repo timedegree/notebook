@@ -25,7 +25,7 @@ Runner.instance_.setSpeed(10)
 
 把速度调低，让游戏结束刷新分数
 
-![VCTF-checkin](./assets/VCTF-checkin.png)
+![VCTF-checkin](../assets/VCTF-checkin.png)
 
     flag{We1c0m3_VCTF_2024}
 
@@ -122,7 +122,7 @@ for i in div:
 
 将附件丢入IDA,查看main函数，整理后如下：
 
-![ezre-mai](./assets/ezre-main.png)
+![ezre-mai](../assets/ezre-main.png)
 
 程序先要求我们输入flag，然后得到flag和加密前的key的长度，再通过**sub_1492**对key进行修改得到新的key，使用修改后的key进入**sub_16B2**加密flag，最后对进行一次base64加密。
 
@@ -149,6 +149,6 @@ unsigned char changed_key[] =
 
 再看**sub_16B2**函数
 
-![ezre-sub16B2](./assets/ezre-sub16B2.png)
+![ezre-sub16B2](../assets/ezre-sub16B2.png)
 
 可以看出是先对修改后的key做了某些操作，再对flag异或了某个值，由于布尔环，所以也可以得到脚本，但最后没有实现成功XD，所以不放出来了。

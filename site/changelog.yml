@@ -1,4 +1,6 @@
 - "2024":
+  - "2024-12-14":
+    - function: 大幅度修改页面样式，将 WriteUp 分离为单独页面
   - "2024-11-14":
     - newpage:
         text: Mathematic > 新增 Probability Theory

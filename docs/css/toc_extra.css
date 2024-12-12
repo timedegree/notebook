@@ -1,0 +1,22 @@
+@media screen and (max-width: 510px) {
+    .note-tag {
+        border: 5px solid #e6ad5b;
+        color: #e6ad5b;
+        border-radius: 0.9em;
+        font-size: 0.9em;
+        padding: 0px 0px;
+    }
+    .lab-tag {
+        border: 5px solid #3f6ec6;
+        color: #3f6ec6;
+        border-radius: 0.9em;
+        font-size: 0.9em;
+        padding: 0px 0px;
+    }
+    .note-tag::before {
+        content: none;
+    }
+    .lab-tag::before {
+        content: none;
+    }
+}

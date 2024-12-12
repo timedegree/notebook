@@ -10,8 +10,8 @@ copyright: Copyright &copy; 2022-2024 <a href="https://github.com/timedegree"  t
 theme:
   name: 'material'
   language: 'zh'
-  favicon: /assets/Hymmn0s.png
-  logo: /assets/Hymmn0s.png
+  favicon: /assets/logo-Hymmn0s-fit.png
+  logo: /assets/logo-Hymmn0s.png
   icon: 
     admonition:
       note: octicons/tag-16

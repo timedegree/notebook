@@ -11,8 +11,8 @@ theme:
   name: 'material'
   language: 'zh'
   favicon: /assets/Hymmn0s.png
+  logo: /assets/Hymmn0s.png
   icon: 
-    logo: material/notebook-outline
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16

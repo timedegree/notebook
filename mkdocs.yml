@@ -171,6 +171,7 @@ nav:
       - Basic Concept: math/proth/bc.md
       - Random Variable and Distribution: math/proth/rvd.md
       - Multivariate Random Variables and Distribution: math/proth/mrvd.md
+      - Random Variable numerical characteristics: math/proth/rvnc.md
   - CTF:
     - CTF/index.md
       #- MoeCTF: CTF/WriteUp/MoeCTF2023.md

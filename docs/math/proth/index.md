@@ -4,4 +4,5 @@
 
 - [x] [Basic Concept 基本概念](bc.md)
 - [x] [Random Variable and Distribution 随机变量与分布](rvd.md)
-- [x] [Multivariate Random Variables and Distribution 多维随机变量及其分布]()
+- [x] [Multivariate Random Variables and Distribution 多维随机变量及其分布](mrvd.md)
+- [x] [Random Variable Number Characteristic 随机变量的数字特征](rvnc.md)

@@ -57,7 +57,7 @@
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
-    background-color: var(--md-timeline-bg-color);
+    background-color: var(--md-primary-fg-color);
     left: -10px;
     top: calc(50% - 10px);
 }
@@ -70,7 +70,7 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: var(--md-timeline-bg-color);
+    background-color: var(--md-primary-fg-color);
     background-clip: border-box;
     border-radius: .25rem;
     padding-top: 10px;
@@ -130,18 +130,4 @@
 }
 .changelog-type-newpage::before {
     content: "新增页面";
-}
-
-.changelog-type-refactor {
-    background-color: #c63f94b0;
-}
-.changelog-type-refactor::before {
-    content: "文档重构";
-}
-
-.changelog-type-buildsite {
-    background-color: #3db872;
-}
-.changelog-type-buildsite::before {
-    content: "建站";
 }

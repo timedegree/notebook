@@ -119,7 +119,7 @@ $$
 
     $$
     \begin{align*}
-    D(X+Y) &= E[(X+Y)-E(X+Y)]^2\\ &= E[(X-EX)+(Y-EY)]^2 \\ &= E[(X-EX)^2+2(X-EX)(Y-EY)+(Y-EY)^2] \\ &=E(X-EX)^2 + E(Y-EY)^2 + 2E(X-EX)(Y-EY) \\ &= DX + DY + 2E(X-EX)
+    D(X+Y) &= E[(X+Y)-E(X+Y)]^2\\ &= E[(X-EX)+(Y-EY)]^2 \\ &= E[(X-EX)^2+2(X-EX)(Y-EY)+(Y-EY)^2] \\ &=E(X-EX)^2 + E(Y-EY)^2 + 2E(X-EX)(Y-EY) \\ &= DX + DY + 2E(X-EX)(Y-EY)
     \end{align*} 
     $$
 
@@ -154,7 +154,7 @@ $$
 !!! tip
       - $\mathrm{Cov}(X,Y)$ 刻画了 $X$ 和 $Y$ 线性关系的强弱
       - 协方差的计算公式：$\mathrm{Cov}(X,Y) = EXY - EXEY$
-      - $D(X\pm Y) = DX + DY \pm \mathrm{Cov}(X,Y)$
+      - $D(X\pm Y) = DX + DY \pm 2\mathrm{Cov}(X,Y)$
 
 #### 性质
 

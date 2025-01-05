@@ -1,3 +1,12 @@
+- "2025":
+  - "2025-01-05":
+    - newpage:
+        text: Mathematic > Probability Theory > 新增 Law of Large Numbers and Central Limit Theorem
+        href: /math/proth/lln-clt
+    - newpage:
+        text: Mathematic > Probability Theory > 新增 Sample and Sampling Distribution
+        href: /math/proth/ssd
+
 - "2024":
   - "2024-12-15":
     - newpage:

@@ -137,7 +137,6 @@ nav:
   - Computer Science: 
     - cs/index.md
     - Programming Language:
-      - cs/pl/index.md
  #     - Python:
  #       - cs/pl/python/index.md
  #       - Fundamental Grammar: cs/pl/python/basic.md
@@ -160,14 +159,11 @@ nav:
   - Mathematic:
     - math/index.md
     - Mathematical Analysis:
-      - math/maa/index.md
       - Universal Concept: math/maa/uc.md
       - Real Number: math/maa/rn.md
     - Concrete Mathematics:
-      - math/conm/index.md
       - Recurrent Problems: math/conm/recpro.md
     - Probability Theory:
-      - math/proth/index.md
       - Basic Concept: math/proth/bc.md
       - Random Variable and Distribution: math/proth/rvd.md
       - Multivariate Random Variables and Distribution: math/proth/mrvd.md

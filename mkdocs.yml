@@ -4,7 +4,7 @@ repo_name: TimeDegree/note
 repo_url: https://github.com/timedegree/notebook
 edit_uri: tree/main/docs
 site_description: 时度度（TimeDegree）的笔记本
-copyright: Copyright &copy; 2022-2024 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+copyright: Copyright &copy; 2022-2025 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
 
 
 theme:
@@ -29,6 +29,8 @@ theme:
   #custom_dir: docs/resourses
   features:
     - content.code.annotate
+    - content.code.select
+    - content.code.copy
     - navigation.tracking
     - navigation.tabs
     - navigation.indexes
@@ -107,6 +109,8 @@ extra_css:
   - css/custom.css
   - css/flink.css
   - css/card.css
+  - css/admonition.css
+  - css/table.css
 
 extra_javascript:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js

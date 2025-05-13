@@ -85,4 +85,14 @@ comment: True
     </a>
 </div>
 
+<div class="flink-list-item">
+    <a href="https://lifecheckpoint.github.io/" title="Lchpt's Blog" target="_blank">
+        <div class="flink-item-icon">
+            <img src="../assets/LDD.png" alt="">
+        </div>
+        <div class="flink-item-name heti-skip">Lchpt's Blog</div>
+        <div class="flink-item-desc">两个 DD 之间的相遇（？）</div>
+    </a>
+</div>
+
 </div>

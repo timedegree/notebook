@@ -181,7 +181,6 @@ nav:
   - WriteUp:
     - WriteUp/index.md
     - 2023:
-      - CCBC1314: WriteUp/2023/CCBC13.md
       - GanCTF: WriteUp/2023/GanCTF.md
     - 2024:
       - XYCTF Week1: WriteUp/2024/XYCTF-week1.md

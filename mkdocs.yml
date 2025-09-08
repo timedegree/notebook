@@ -174,8 +174,6 @@ nav:
       - Stack Pivoting: CTF/Knowledge/Stack_Pivoting.md
       - Denfense: CTF/Knowledge/Defense.md
       - Format String: CTF/Knowledge/Format_String.md
-      - Integer Overflow: CTF/Knowledge/Integer_Overflow.md
-      - Random Number: CTF/Knowledge/Random_Number.md
     - Other:
       - Docker Setup: CTF/Knowledge/Docker.md
   - WriteUp:

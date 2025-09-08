@@ -160,8 +160,6 @@ nav:
     - Mathematical Analysis:
       - Universal Concept: math/maa/uc.md
       - Real Number: math/maa/rn.md
-    - Concrete Mathematics:
-      - Recurrent Problems: math/conm/recpro.md
     - Probability Theory:
       - Basic Concept: math/proth/bc.md
       - Random Variable and Distribution: math/proth/rvd.md

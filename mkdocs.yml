@@ -174,8 +174,10 @@ nav:
       - Stack Pivoting: ctf/knowledge/Stack_Pivoting.md
       - Denfense: ctf/knowledge/Defense.md
       - Format String: ctf/knowledge/Format_String.md
+      - Integer Overflow: ctf/knowledge/Integer_Overflow.md
+      - Random Number: ctf/knowledge/Random_Number.md
     - Other:
-      - Set Questions: ctf/knowledge/Docker.md
+      - Docker Setup: ctf/knowledge/Docker.md
   - WriteUp:
     - wp/index.md
     - 2023:

@@ -168,20 +168,20 @@ nav:
       - Law of Large Numbers and Central Limit Theorem: math/proth/lln-clt.md
       - Sample and Sampling Distribution: math/proth/ssd.md
   - CTF:
-    - CTF/index.md
+    - ctf/index.md
     - Pwn:
-      - Stack Overflow: CTF/Knowledge/Stack_Overflow.md
-      - Stack Pivoting: CTF/Knowledge/Stack_Pivoting.md
-      - Denfense: CTF/Knowledge/Defense.md
-      - Format String: CTF/Knowledge/Format_String.md
+      - Stack Overflow: ctf/knowledge/Stack_Overflow.md
+      - Stack Pivoting: ctf/knowledge/Stack_Pivoting.md
+      - Denfense: ctf/knowledge/Defense.md
+      - Format String: ctf/knowledge/Format_String.md
     - Other:
-      - Set Questions: CTF/Knowledge/Docker.md
+      - Set Questions: ctf/knowledge/Docker.md
   - WriteUp:
-    - WriteUp/index.md
+    - wp/index.md
     - 2023:
-      - GanCTF: WriteUp/2023/GanCTF.md
+      - GanCTF: wp/2023/GanCTF.md
     - 2024:
-      - XYCTF Week1: WriteUp/2024/XYCTF-week1.md
+      - XYCTF Week1: wp/2024/XYCTF-week1.md
   - Miscellaneous: 
     - sd/index.md
     - Hymmnos: sd/hymmnos.md

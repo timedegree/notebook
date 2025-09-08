@@ -19,7 +19,7 @@ comment: True
 
 再一眼**base16**,还是一样的做法得到:
 
-![](../assets/sign_in.png)
+![](../../assets/sign_in.png)
 
 flag：
 
@@ -29,7 +29,7 @@ flag：
 
 给了一张图
 
-![](../assets/fences_of_light.png)
+![](../../assets/fences_of_light.png)
 
 没什么好说的，纯看眼力，这段文本内容为：
 
@@ -51,7 +51,7 @@ flag：
 
 给了一个exe文件，但打不开，尝试使用记事本打开，有若干段base64，有趣的是直接对base64解码，可以发现都是J-POP的歌曲，但重点不在这里。
 
-![base64-question](../assets/base64-question.png)
+![base64-question](../../assets/base64-question.png)
 
 可以查到这是个base64隐写,在网上随意找了个脚本运行,返回了
 
@@ -59,7 +59,7 @@ flag：
 
 还是**base16**,
 
-![base64](../assets/base64.png)
+![base64](../../assets/base64.png)
 
 flag：
 
@@ -69,13 +69,13 @@ flag：
 
 给了个压缩包，打开**010editor**查看
 
-![ez_zip1](../assets/ez_zip1-1.png)
+![ez_zip1](../../assets/ez_zip1-1.png)
 
-可以看到两个加密标记位都是奇数，但改成00后，发现是伪加密。提取文件，其中还有一个压缩包"flag.zip"，还是先查看伪加密，发现不是尝试爆破，爆破成功。![ez_zip1-2](../assets/ez_zip1-2.png)
+可以看到两个加密标记位都是奇数，但改成00后，发现是伪加密。提取文件，其中还有一个压缩包"flag.zip"，还是先查看伪加密，发现不是尝试爆破，爆破成功。![ez_zip1-2](../../assets/ez_zip1-2.png)
 
 将密码**0913**填入，解压查看**flag.txt**
 
-![ez_zip-flag](../assets/ez_zip1-flag.png)
+![ez_zip-flag](../../assets/ez_zip1-flag.png)
 
 flag：
 
@@ -89,7 +89,7 @@ flag：
 
 爆破！
 
-![ez_zip2-1](../assets/ez_zip2-1.png)
+![ez_zip2-1](../../assets/ez_zip2-1.png)
 
 如图，重复6次得到：
 
@@ -97,7 +97,7 @@ flag：
 
 解压，还有一层**flag.zip**，卡了我几天，后面终于找到**bkcrack**爆破。由于bkcrack爆破需要知道内容至少**12**字节的内容，可知zip内部为**flag.png**。打开010editor构造文件头，如下：
 
-![ez_zip2-2](../assets/ez_zip2-2.png)
+![ez_zip2-2](../../assets/ez_zip2-2.png)
 
 再爆破出key，
 
@@ -105,11 +105,11 @@ flag：
 
 但这个key并不是真正的key，我们得用这个key构建一个与原压缩包内容相同的新压缩包，但密码由自己设定：
 
-![ez_zip2-3](../assets/ez_zip2-3.png)
+![ez_zip2-3](../../assets/ez_zip2-3.png)
 
 在这里我设成了ez，最后解压打开**flag.png**.
 
-![ez_zip2-flag](../assets/ez_zip2-flag.png)
+![ez_zip2-flag](../../assets/ez_zip2-flag.png)
 
 flag:
 
@@ -119,7 +119,7 @@ flag:
 
 打开压缩包，存有一个**pcapng**文件，用**wireshark**打开,发现其中都为**HID Data**
 
-![ez_usb-1](../assets/ez_usb-1.png)
+![ez_usb-1](../../assets/ez_usb-1.png)
 
 再用**wireshark**提取数据，存为**usbdata.txt**,编写脚本解码敲击码
 
@@ -139,7 +139,7 @@ print(flag)
 
 得到：
 
-![ez_usb-2](../assets/ez_usb-2.png)
+![ez_usb-2](../../assets/ez_usb-2.png)
 
 flag:
 
@@ -158,13 +158,13 @@ flag:
 
 每个闯关有一部分flag，说是不能作弊实际只是不能开创造模式，所以过关方法很多。
 
-![ez_mc-flag1](../assets/ez_mc-flag1.png)
+![ez_mc-flag1](../../assets/ez_mc-flag1.png)
 
-![ez_mc-flag2](../assets/ez_mc-flag2.png)
+![ez_mc-flag2](../../assets/ez_mc-flag2.png)
 
-![ez_mc-flag3](../assets/ez_mc-flag3.png)
+![ez_mc-flag3](../../assets/ez_mc-flag3.png)
 
-![ez_mc-flag4](../assets/ez_mc-flag4.png)
+![ez_mc-flag4](../../assets/ez_mc-flag4.png)
 
 flag：
 
@@ -172,13 +172,13 @@ flag：
 
 ### 找呀找呀找朋友
 
-![photo](../assets/photo.jpg)
+![photo](../../assets/photo.jpg)
 
 社工题，给了张图，查询其中**声临阿加莎**可以发现是一个剧目，在上海市的茉莉花剧院，打开**大麦app**，查看场照和座位表：
 
-![friend-1](../assets/friend-1.jpg)
+![friend-1](../../assets/friend-1.jpg)
 
-![friend-2](../assets/friend-2.jpg)
+![friend-2](../../assets/friend-2.jpg)
 
 结合flag格式可解
 
@@ -192,7 +192,7 @@ flag:
 
 给了一张图片和一段描述
 
-![pixel_game](../assets/pixel_game.png)
+![pixel_game](../../assets/pixel_game.png)
 
 > 好怪,在一堆像素里面能放进什么信息呢?
 >
@@ -200,7 +200,7 @@ flag:
 
 说与像素有关,用python的**PIL**写了个脚本查看像素RGB值，发现
 
-![pixel_game-1](../assets/pixel_game-1.png)
+![pixel_game-1](../../assets/pixel_game-1.png)
 
 RGB中除0外只存在**33 40 41 43 91 93**六个数字，当作ascii码,即为**+ ( ) [ ] !**这几个字符,推断为**jjcode**,编写脚本
 
@@ -223,11 +223,11 @@ for i in pixel:
 
 得到
 
-![pixel_game-res](../assets/pixel_game-res.png)
+![pixel_game-res](../../assets/pixel_game-res.png)
 
 放入浏览器控制台，可解出
 
-![pixel_game-flag](../assets/pixel_game-flag.png)
+![pixel_game-flag](../../assets/pixel_game-flag.png)
 
 flag:
 
@@ -404,7 +404,7 @@ flag：
 
 
 
-![testnc-flag](../assets/testnc-flag.png)
+![testnc-flag](../../assets/testnc-flag.png)
 
 flag:
 
@@ -416,7 +416,7 @@ flag:
 
 
 
-![what_is_tac-flag](../assets/what_is_tac-flag.png)
+![what_is_tac-flag](../../assets/what_is_tac-flag.png)
 
 flag:
 
@@ -449,7 +449,7 @@ r.interactive()
 
 结果如下
 
-![calc-flag](../assets/calc-flag.png)
+![calc-flag](../../assets/calc-flag.png)
 
 flag:
 
@@ -459,7 +459,7 @@ flag:
 
 如标题，连接靶机，输入负数即可。
 
-![negtive-flag](../assets/negtive-flag.png)
+![negtive-flag](../../assets/negtive-flag.png)
 
 flag:
 
@@ -469,17 +469,17 @@ flag:
 
 连接靶机，选择难度开始游戏
 
-![game-1](../assets/game-1.png)
+![game-1](../../assets/game-1.png)
 
 通关后却啥也没有，于是我们使用IDA查看程序文件,发现**pwngame**函数中有**system("/bin/sh")**,我们的任务便是触发这个函数，又在**Menu**中发现输入**996**时会调用**pwngame**
 
-![game-pwngame](../assets/game-pwngame.png)
+![game-pwngame](../../assets/game-pwngame.png)
 
-![game-menu](../assets/game-Menu.png)
+![game-menu](../../assets/game-Menu.png)
 
 所以我们连接靶机，执行操作
 
-![game-flag](../assets/game-flag.png)
+![game-flag](../../assets/game-flag.png)
 
 flag:
 
@@ -489,13 +489,13 @@ flag:
 
 栈溢出题，先checksec一下,发现**NX**开启
 
-![](../assets/ret2text-checksec.png)
+![](../../assets/ret2text-checksec.png)
 
 然后观察IDA，发现**backdoor**函数中含有**system("/bin/sh")**，以及**vuln**函数通过gets读取数据，长度为**64**字节，64位程序，所以偏移位为**64+8=72**
 
-![ret2text-backdoor](../assets/ret2text-backdoor.png)
+![ret2text-backdoor](../../assets/ret2text-backdoor.png)
 
-![ret2text-vuln](../assets/ret2text-vuln.png)
+![ret2text-vuln](../../assets/ret2text-vuln.png)
 
 编写脚本
 
@@ -513,7 +513,7 @@ r.interactive()
 
 运行结果如下
 
-![ret2text-flag](../assets/ret2text-flag.png)
+![ret2text-flag](../../assets/ret2text-flag.png)
 
 flag:
 
@@ -537,7 +537,7 @@ r.interactive()
 
 运行结果如下
 
-![mips-flag](../assets/mips-flag.png)
+![mips-flag](../../assets/mips-flag.png)
 
 flag:
 
@@ -561,11 +561,11 @@ flag:
 
 登录页面，显示如下
 
-![ez_search-logined](../assets/ez_search-logined.png)
+![ez_search-logined](../../assets/ez_search-logined.png)
 
 查看源代码中**rain.js**发现flag
 
-![ez_search-flag](../assets/ez_search-flag.png)
+![ez_search-flag](../../assets/ez_search-flag.png)
 
 flag：
 
@@ -575,7 +575,7 @@ flag：
 
 这题是我在ipad上做的，还是打开**robots.txt**，但这次内容变成了一段话带一堆文件名
 
-![ez_search2-robots](../assets/ez_search2-robots.png)
+![ez_search2-robots](../../assets/ez_search2-robots.png)
 
 我们编写python脚本
 
@@ -620,11 +620,11 @@ for i in urls:
 
 返回内容
 
-![ez_search2-password](../assets/ez_search2-password.PNG)
+![ez_search2-password](../../assets/ez_search2-password.PNG)
 
 登录后还是flagrain,查看源码
 
-![ez_search2-flag](../assets/ez_search2-flag.png)
+![ez_search2-flag](../../assets/ez_search2-flag.png)
 
 flag:
 
@@ -634,7 +634,7 @@ flag:
 
 查看源码**all.js**在开头发现flag
 
-![ninja-flag](../assets/ninja-flag.png)
+![ninja-flag](../../assets/ninja-flag.png)
 
 flag:
 
@@ -659,7 +659,7 @@ else{
 
 可知cat、system等一系列命令都被过滤了，我们构造如下请求绕过
 
-![ez_RCe](../assets/ez_RCe.png)
+![ez_RCe](../../assets/ez_RCe.png)
 
 flag:
 
@@ -684,11 +684,11 @@ flag:
 
 可知存在后门命令执行漏洞，放入重放器中进行攻击,添加**User-Agentt**字段
 
-![ikun-ls](../assets/ikun-ls.png)
+![ikun-ls](../../assets/ikun-ls.png)
 
-![ikun-fake_flag](../assets/ikun-fake_flag.png)
+![ikun-fake_flag](../../assets/ikun-fake_flag.png)
 
-![ikun-flag](../assets/ikun-flag.png)
+![ikun-flag](../../assets/ikun-flag.png)
 
 flag:
 
@@ -728,7 +728,7 @@ else{
 
 可知是弱比较和数组绕过，构造如下请求
 
-![array_master-flag](../assets/array_master-flag.png)
+![array_master-flag](../../assets/array_master-flag.png)
 
 flag:
 
@@ -740,7 +740,7 @@ flag:
 
 **f12**和**右键**无法使用,但是我们还可以使用**Ctrl+U**
 
-![qd-first](../assets/qd-first.png)
+![qd-first](../../assets/qd-first.png)
 
 进入第二关
 
@@ -767,7 +767,7 @@ POST传入后，出现一个视频，告诉我们
 
 我们不使用burpsuite直接f12查看网络发现(我在抓综合渗透题的包时也发现了这个flag，暴打出题人)
 
-![qd-flag](../assets/qd-flag.png)
+![qd-flag](../../assets/qd-flag.png)
 
 flag:
 
@@ -803,7 +803,7 @@ flag:
 
 上传，再次查看路径，成功
 
-![collector-info](../assets/collector-info.png)
+![collector-info](../../assets/collector-info.png)
 
 构造如下语句,查看文件目录
 
@@ -811,7 +811,7 @@ flag:
 <script language="php">system("ls /")</script>
 ```
 
-![collector-nav](../assets/collector-nav.png)
+![collector-nav](../../assets/collector-nav.png)
 
 构造语句，取得flag
 
@@ -819,7 +819,7 @@ flag:
 <script language="php">system("cat /flag")</script>
 ```
 
-![collector-flag](../assets/collector-flag.png)
+![collector-flag](../../assets/collector-flag.png)
 
 flag:
 
@@ -918,7 +918,7 @@ else{
 
 结合**dirsearch**的结果，查看**/user.php**文件,得到flag
 
-![web1-flag](../assets/web1-flag.png)
+![web1-flag](../../assets/web1-flag.png)
 
 flag:
 
@@ -981,7 +981,7 @@ username=123&password=132
 
 获得表名
 
-![web2-dbs](../assets/web2-dbs.png)
+![web2-dbs](../../assets/web2-dbs.png)
 
 构造
 
@@ -989,7 +989,7 @@ username=123&password=132
 
 得到
 
-![web2-col](../assets/web2-col.png)
+![web2-col](../../assets/web2-col.png)
 
 构造
 
@@ -997,7 +997,7 @@ username=123&password=132
 
 获取字段**flag**中的内容，得到
 
-![web2-flag](../assets/web2-flag.png)
+![web2-flag](../../assets/web2-flag.png)
 
 flag：
 
@@ -1007,9 +1007,9 @@ flag：
 
 通过sqlmap在ctfer下的user表中获取到username和password
 
-![web-user-tab](../assets/web-user-tab.png)
+![web-user-tab](../../assets/web-user-tab.png)
 
-![web-user-item](../assets/web-user-item.png)
+![web-user-item](../../assets/web-user-item.png)
 
 发现管理员密码被加密，使用**SSRF**漏洞获取源码
 
@@ -1097,7 +1097,7 @@ $uploadDir = dirname(__FILE__)."/../upload/";
 
 得到管理员密码，登录，发现在管理员页面下，文章上传处图片上传开启，尝试文件包含，注入一句话木马，蚁剑连接成功。
 
-![web3-antsword](../assets/web3-antsword.png)
+![web3-antsword](../../assets/web3-antsword.png)
 
 在根目录尝试查看flag失败，权限不足。不会提权，试了一天，遂放弃。
 
@@ -1129,7 +1129,7 @@ flag：
 
 直接丢入IDA查看main函数
 
-![ez_xor-main](../assets/ez_xor-main.png)
+![ez_xor-main](../../assets/ez_xor-main.png)
 
 逻辑很简单，输入flag然后对flag的字符与其下标异或，编写脚本
 
@@ -1145,7 +1145,7 @@ print(res)
 
 结果如下
 
-![ez_xor-flag](../assets/ez_xor-flag.png)
+![ez_xor-flag](../../assets/ez_xor-flag.png)
 
 flag：
 
@@ -1155,7 +1155,7 @@ flag：
 
 同标题，先upx解包，再进入ida，这次我们先看汇编，发现了个很神奇的地方。
 
-![ez_upx](../assets/ez_upx.png)
+![ez_upx](../../assets/ez_upx.png)
 
 传入rax的值，写作小端法，高位变成
 
@@ -1221,7 +1221,7 @@ int main(){
 
 得到
 
-![try_reverse_it](../assets/try_reverse_it.png)
+![try_reverse_it](../../assets/try_reverse_it.png)
 
 flag:
 
@@ -1271,7 +1271,7 @@ for i in decrypted_data[::-1]:
 
 结果如下
 
-![python-flag](../assets/python-flag.png)
+![python-flag](../../assets/python-flag.png)
 
 flag：
 
@@ -1281,7 +1281,7 @@ flag：
 
 打开IDA，观察main函数
 
-![ez_maze-main](../assets/ez_maze-main.png)
+![ez_maze-main](../../assets/ez_maze-main.png)
 
 结合标题发现这是一个走迷宫的程序，**v6**为6x5的地图，**wasd**为上下左右，**@**为起点，**#**为终点
 
@@ -1297,7 +1297,7 @@ flag：
 
 可以知道路径为**dssdsdssa**，运行程序验证成功
 
-![ez_maze-flag](../assets/ez_maze-flag.png)
+![ez_maze-flag](../../assets/ez_maze-flag.png)
 
 flag：
 

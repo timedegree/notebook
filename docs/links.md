@@ -95,4 +95,14 @@ comment: True
     </a>
 </div>
 
+<div class="flink-list-item">
+    <a href="https://su-team.cn/about/" title="SU's Site" target="_blank">
+        <div class="flink-item-icon">
+            <img src="../assets/SU.png" alt="">
+        </div>
+        <div class="flink-item-name heti-skip">SUer's Site</div>
+        <div class="flink-item-desc">我的联合战队,欢迎加入！</div>
+    </a>
+</div>
+
 </div>

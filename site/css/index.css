@@ -1,51 +1,242 @@
-/* Assuming this style tag is placed in the head section of your HTML or in an external CSS file */
+/* Reset & Base */
+.md-content__inner {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
 
-/* Reset default margin and padding to avoid inconsistencies across browsers */
-body,
-html {
-    min-height: 100vh; 
-    height: 100vh;
+/* Hide default H1 as we use custom hero */
+.md-content h1 {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2vh 0 4vh;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0 0 1rem;
+    background: linear-gradient(135deg, var(--md-primary-fg-color), #a0dffa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    font-family: 'JetBrains Mono', system-ui, -apple-system, sans-serif;
+}
+
+.hero-desc {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--md-typeset-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-2rem, -2.5rem);
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    text-decoration: none !important;
+    color: var(--md-typeset-color) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+    border-color: var(--md-primary-fg-color);
+    background: var(--md-default-bg-color);
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--md-primary-fg-color);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--md-primary-fg-color);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(160, 223, 250, 0.1);
+    border-radius: 12px;
+}
+
+[data-md-color-scheme="slate"] .card-icon {
+    background: rgba(255, 255, 255, 0.05);
+    color: #a0dffa; /* Light blue for icons in dark mode */
+}
+
+[data-md-color-scheme="slate"] .feature-card {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .feature-card:hover {
+    border-color: #a0dffa;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Fix button visibility in dark mode */
+[data-md-color-scheme="slate"] .md-button--primary {
+    background-color: #a0dffa;
+    color: #000000;
+    border-color: #a0dffa;
+}
+
+[data-md-color-scheme="slate"] .md-button--primary:hover {
+    background-color: #8acfe8;
+    border-color: #8acfe8;
+}
+
+[data-md-color-scheme="slate"] .md-button:not(.md-button--primary) {
+    color: #a0dffa;
+    border-color: #a0dffa;
+}
+
+[data-md-color-scheme="slate"] .md-button:not(.md-button--primary):hover {
+    background-color: rgba(160, 223, 250, 0.1);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+/* Info Box / Self Intro Styling */
+.intro-box {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: var(--md-code-bg-color); 
+    border-left: 4px solid var(--md-primary-fg-color);
+}
+
+/* Statistics Panel (Hidden by default) */
+#statistics {
+    max-height: 0;
+    opacity: 0;
     margin: 0;
     padding: 0;
+    border: none;
+    overflow: hidden;
+    background: var(--md-code-bg-color);
+    border-radius: 12px;
+    transition: 
+        max-height 0.5s ease,
+        opacity 0.5s ease,
+        margin 0.5s ease,
+        padding 0.5s ease,
+        transform 0.5s ease;
+    transform: translateY(20px);
 }
 
-b {
-    /* text-decoration: underline #ff6a1a; */
-    border-bottom: 2px solid var(--md-greet-color);
-}
-/* Style for the container that will center its content */
-.center-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    /* Change back to 'flex-start' */
-    align-items: flex-start;
-    /* Change back to 'flex-start' */
-    height: 100%;
-    color: var(--md-greet-color);
-    font-weight: bold;
-    position: relative;
-    margin-top: 45vh;
-    /* Adjust the top margin as per your preference */
-    /* margin-bottom: 0px; */
-    /* Adjust the bottom margin as per your preference */
+#statistics.show {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    transform: translateY(0);
 }
 
-/* Style for the note text */
-.note-text {
-    font-size: clamp(3em, 7vw, 10em);
-    font-weight: extra-bold;
-    font-family: 'apple-system', 'Noto Sans SC', 'Arial', 'sans-serif';
-    margin-left: 0;
-    /* Add this line */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0px;
-    /* Add some space from the left and bottom edges */
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 2vh 0 2vh;
+        gap: 2rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        flex: 0 0 auto;
+        width: 200px;
+        transform: none;
+    }
 }
 
-/* Additional style to hide the H1 element */
-.md-content h1 {
-    font-size: 0;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

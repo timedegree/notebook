@@ -1,4 +1,6 @@
 - "2025":
+  - "2025-12-08":
+    - function: 重新设计首页布局
   - "2025-01-05":
     - newpage:
         text: Mathematic > Probability Theory > 新增 Law of Large Numbers and Central Limit Theorem

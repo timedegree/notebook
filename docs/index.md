@@ -8,36 +8,71 @@ hide:
 home: true
 statistics: true
 ---
-<!-- #主页 -->
 
 <link rel="stylesheet" href="css/index.css">
-<div class="center-container">
-    <span class="note-text">Hi! _(:ɜ⌋∠)_</span>
+
+<div class="hero-section">
+    <div class="hero-text">
+        <h1 class="hero-title">Hi! _(:ɜ⌋∠)_</h1>
+        <p class="hero-desc">
+            这里是 <strong>时度度 (TimeDegree)</strong> 的笔记本。<br>
+            用于存放 CS、Math 和 CTF 相关的专业笔记，与 <a href="https://blog.timedegree.cc">博客</a> 区分开来。
+        </p>
+        <div class="hero-actions">
+            <a href="https://blog.timedegree.cc/about" class="md-button md-button--primary">关于我</a>
+            <a href="https://github.com/timedegree" class="md-button">GitHub</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="assets/logo-Hymmn0s.png" alt="TimeDegree Logo">
+    </div>
 </div>
 
-!!! info "site.info"
-    这里是时度度捏。
-    
-    这个笔记本会用来存些专业性较强的笔记。以便于和自己的[博客](https://blog.timedegree.cc)区分开来。
-    ??? info "site.author"
-        20岁，事大学生，事哔哩哔哩摸鱼区 up 主 [@可爱养不起的时度度](https://space.bilibili.com/10077094)
+<div class="dashboard-grid">
+    <a href="changelog" class="feature-card">
+        <div class="card-icon">
+            <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+            </span>
+        </div>
+        <div class="card-title">最近更新</div>
+        <div class="card-desc">
+            查看笔记本的变更日志与修订历史。
+        </div>
+    </a>
 
-        - 博客：https://blog.timedegree.cc/
-        - GitHub：https://github.com/timedegree/
+    <a href="links" class="feature-card">
+        <div class="card-icon">
+            <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.42l-.47.48a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42Z"/></svg>
+            </span>
+        </div>
+        <div class="card-title">朋友们！</div>
+        <div class="card-desc">
+            友情链接、致谢以及那些有趣的人。
+        </div>
+    </a>
 
-<!-- [:octicons-info-16: 关于我](about/) /  -->
-[:material-clock-time-two-outline: 最近更新](changelog.md) / 
-[:octicons-link-16: 朋友们!](links.md) / 
-[:material-chart-line: 站点统计](javascript:toggle_statistics();)
-
-
-<div id="statistics" markdown="1" class="card" style="width: 27em; border-color: transparent; opacity: 0; font-size: 75%">
-<div style="padding-left: 1em;" markdown="1">
-页面总数：{{pages}}  
-总字数：{{words}}  
-代码块行数：{{codes}}  
-网站运行时间：<span id="web-time"></span>
+    <a href="javascript:toggle_statistics();" class="feature-card">
+        <div class="card-icon">
+            <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h18v2M10 17l-5-5 5-5v10m4 0V7l5 5-5 5Z"/></svg>
+            </span>
+        </div>
+        <div class="card-title">站点统计</div>
+        <div class="card-desc">
+            点击查看本站的文章数、代码行数及运行时间。
+        </div>
+    </a>
 </div>
+
+<div id="statistics">
+    <div style="padding-left: 1em;" markdown="1">
+        页面总数：{{pages}}  
+        总字数：{{words}}  
+        代码块行数：{{codes}}  
+        网站运行时间：<span id="web-time"></span>
+    </div>
 </div>
 
 <script>
@@ -61,12 +96,9 @@ function updateTime() {
     setTimeout(updateTime, 1000 * 60);
 }
 updateTime();
+
 function toggle_statistics() {
     var statistics = document.getElementById("statistics");
-    if (statistics.style.opacity == 0) {
-        statistics.style.opacity = 1;
-    } else {
-        statistics.style.opacity = 0;
-    }
+    statistics.classList.toggle("show");
 }
 </script>

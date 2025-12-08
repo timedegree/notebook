@@ -67,11 +67,11 @@ statistics: true
 </div>
 
 <div id="statistics">
-    <div style="padding-left: 1em;" markdown="1">
-        页面总数：{{pages}}  
-        总字数：{{words}}  
-        代码块行数：{{codes}}  
-        网站运行时间：<span id="web-time"></span>
+    <div class="statistics-wrapper">
+        <div class="stat-item">页面总数：{{pages}}</div>
+        <div class="stat-item">总字数：{{words}}</div>
+        <div class="stat-item">代码块行数：{{codes}}</div>
+        <div class="stat-item">网站运行时间：<span id="web-time"></span></div>
     </div>
 </div>
 

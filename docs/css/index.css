@@ -240,3 +240,25 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* Statistics Internal Layout */
+.statistics-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.stat-item {
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+    .statistics-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}

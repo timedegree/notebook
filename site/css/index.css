@@ -258,7 +258,7 @@
 @media screen and (max-width: 768px) {
     .statistics-wrapper {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 0.8rem;
     }
 }

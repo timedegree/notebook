@@ -2,7 +2,7 @@ site_name: 时度度的笔记本
 site_url: https://note.timedegree.cc/
 repo_name: TimeDegree/note
 repo_url: https://github.com/timedegree/notebook
-edit_uri: tree/main/docs
+edit_uri: edit/main/docs/
 site_description: 时度度（TimeDegree）的笔记本
 copyright: Copyright &copy; 2022-2025 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
 
@@ -26,6 +26,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+      annotation: material/arrow-right-circle
   #custom_dir: docs/resourses
   features:
     - content.code.annotate
@@ -35,9 +36,12 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - navigation.top
+    - content.footnote.tooltips
     #- navigation.instant
     - header.autohide
     - navigation.footer
+    - content.action.edit
+    - content.action.view
   font:
     text: JetBrains Mono
     code: JetBrains Mono
@@ -67,6 +71,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.snippets
@@ -85,6 +90,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.arithmatex:
       generic: true
 
@@ -185,4 +192,5 @@ nav:
   - Miscellaneous: 
     - sd/index.md
     - Hymmnos: sd/hymmnos.md
+    - Japanese: sd/jp.md
   

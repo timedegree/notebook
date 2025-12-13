@@ -1,3 +1,15 @@
+/* Hide content actions (Edit / View source) on homepage only */
+body[data-md-url=""] a.md-content__button.md-icon,
+body[data-md-url="index/"] a.md-content__button.md-icon,
+body[data-md-url="index.html"] a.md-content__button.md-icon,
+body[data-md-url="."] a.md-content__button.md-icon,
+body[data-md-url="./"] a.md-content__button.md-icon,
+body[data-md-url^="index"] a.md-content__button.md-icon,
+/* Fallback: if this page contains the hero section, treat as homepage */
+.md-content__inner:has(.hero-section) > a.md-content__button.md-icon {
+    display: none !important;
+}
+
 /* Reset & Base */
 .md-content__inner {
     padding-top: 0;

@@ -7,4 +7,5 @@
 {{ BEGIN_TOC }}
 - 语言:
   - Hymmnos: hymmnos/
+  - Japanese: jp/
 {{ END_TOC }}

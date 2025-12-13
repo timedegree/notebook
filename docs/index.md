@@ -1,6 +1,7 @@
 ---
 title: Home
 hide:
+    - content.code
     - date
     - toc
     - title

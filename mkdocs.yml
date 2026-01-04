@@ -196,6 +196,6 @@ nav:
       - XYCTF Week1: wp/2024/XYCTF-week1.md
   - Miscellaneous: 
     - sd/index.md
-    - Hymmnos: sd/hymmnos.md
-    - Japanese: sd/jp.md
-  
+    - Language:
+      - Hymmnos: sd/hymmnos.md
+      - Japanese: sd/jp.md

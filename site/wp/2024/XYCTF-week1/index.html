@@ -26,7 +26,7 @@
         <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
       
       <link rel="icon" href="/assets/logo-Hymmn0s-fit.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -34,7 +34,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -141,6 +141,8 @@
       <link rel="stylesheet" href="../../../css/custom.css">
     
       <link rel="stylesheet" href="../../../css/flink.css">
+    
+      <link rel="stylesheet" href="../../../css/trajectory.css">
     
       <link rel="stylesheet" href="../../../css/card.css">
     
@@ -395,7 +397,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../CTF/" class="md-tabs__link">
+        <a href="../../../ctf/" class="md-tabs__link">
           
   
   
@@ -575,14 +577,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../links/" class="md-nav__link">
+      <a href="../../../trajectory/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    友链
+    轨迹
   
 
     
@@ -603,14 +605,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../changelog/" class="md-nav__link">
+      <a href="../../../links/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    更新记录
+    友链
   
 
     
@@ -1715,7 +1717,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../CTF/" class="md-nav__link ">
+            <a href="../../../ctf/" class="md-nav__link ">
               
   
   
@@ -1819,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CTF/Knowledge/Stack_Overflow/" class="md-nav__link">
+      <a href="../../../ctf/knowledge/Stack_Overflow/" class="md-nav__link">
         
   
   
@@ -1847,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CTF/Knowledge/Stack_Pivoting/" class="md-nav__link">
+      <a href="../../../ctf/knowledge/Stack_Pivoting/" class="md-nav__link">
         
   
   
@@ -1875,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CTF/Knowledge/Defense/" class="md-nav__link">
+      <a href="../../../ctf/knowledge/Defense/" class="md-nav__link">
         
   
   
@@ -1903,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CTF/Knowledge/Format_String/" class="md-nav__link">
+      <a href="../../../ctf/knowledge/Format_String/" class="md-nav__link">
         
   
   
@@ -1993,7 +1995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CTF/Knowledge/Docker/" class="md-nav__link">
+      <a href="../../../ctf/knowledge/Docker/" class="md-nav__link">
         
   
   
@@ -3018,27 +3020,27 @@
 <h3 id="zzl">zzl的护理小课堂<a class="headerlink" href="#zzl" title="Permanent link">&para;</a></h3>
 <p>打开靶机，直接看源代码部分，可以发现不用做题，只需要构造POST请求flag即可</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;quizForm&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;submit&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'quizForm'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"> </span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">formData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">FormData</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span><span class="w"> </span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;getScore.php&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'POST'</span><span class="p">,</span><span class="w"> </span><span class="s1">'getScore.php'</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                    </span><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">score</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;scoreDisplay&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;你的分数是: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;/100 杂鱼,怎么才100分啊&quot;</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'scoreDisplay'</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"你的分数是: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"/100 杂鱼,怎么才100分啊"</span><span class="p">;</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;scoreDisplay&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;你的分数是: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;/100 noooooob!!&quot;</span><span class="p">;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'scoreDisplay'</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"你的分数是: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"/100 noooooob!!"</span><span class="p">;</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                        </span><span class="kd">var</span><span class="w"> </span><span class="nx">flagXhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span><span class="w"> </span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                        </span><span class="nx">flagXhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;flag.php&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                        </span><span class="nx">flagXhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span><span class="w"> </span><span class="s1">'flag.php'</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">                        </span><span class="nx">flagXhr</span><span class="p">.</span><span class="nx">onreadystatechange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">                            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">flagXhr</span><span class="p">.</span><span class="nx">readyState</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">flagXhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">                                </span><span class="kd">var</span><span class="w"> </span><span class="nx">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">flagXhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                                </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;scoreDisplay&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Flag: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">flag</span><span class="p">;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                                </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'scoreDisplay'</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Flag: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">flag</span><span class="p">;</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">                            </span><span class="p">}</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">                        </span><span class="p">};</span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                        </span><span class="nx">flagXhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span><span class="w"> </span><span class="c1">// 发送请求获取 flag</span>
@@ -3061,11 +3063,11 @@
 <p>代码如下：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">65</span><span class="p">):</span><span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="o">+</span><span class="p">(</span><span class="mi">25</span><span class="o">-</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">)}</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">enc_flag</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;CBXGU</span><span class="si">{ORF_BV_NVR_BLF_CRZL_QQ}</span><span class="s2">&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">enc_flag</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"CBXGU</span><span class="si">{ORF_BV_NVR_BLF_CRZL_QQ}</span><span class="s2">"</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">enc_flag</span><span class="p">:</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">&quot;{&quot;</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">&quot;}&quot;</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">&quot;_&quot;</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">"{"</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">"}"</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">"_"</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">#XYCTF{LIU_YE_MEI_YOU_XIAO_JJ}</span>
 </span></code></pre></div>
@@ -3081,8 +3083,8 @@
 <p>32位，无壳，找到加密函数</p>
 <p><img alt="SmartDeliver-encrypt" src="../../../assets/SmartDeliver-encrypt.png" /></p>
 <p>简单的单表替代，脚本如下</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">enc_flag</span> <span class="o">=</span> <span class="s2">&quot;oujp{H0d_TwXf_Lahyc0_14_e3ah_Rvy0ac@wc!}&quot;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">flag</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">enc_flag</span> <span class="o">=</span> <span class="s2">"oujp{H0d_TwXf_Lahyc0_14_e3ah_Rvy0ac@wc!}"</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">flag</span> <span class="o">=</span> <span class="s2">""</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">enc_flag</span><span class="p">:</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">if</span> <span class="mi">65</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">ord</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">90</span><span class="p">:</span>
@@ -3121,7 +3123,7 @@
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">enc_flag</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">^=</span> <span class="n">enc_flag</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">enc_flag</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">^=</span> <span class="n">enc_flag</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">chr</span><span class="p">,</span><span class="n">enc_flag</span><span class="p">)),</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="c1">#xyctf{you_know_8086}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">chr</span><span class="p">,</span><span class="n">enc_flag</span><span class="p">)),</span><span class="n">sep</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="c1">#xyctf{you_know_8086}</span>
 </span></code></pre></div>
 <h3 id="debugme">DebugMe<a class="headerlink" href="#debugme" title="Permanent link">&para;</a></h3>
 <p>apk丢入JEB，查看MainActivity</p>
@@ -3192,7 +3194,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年9月8日 20:49:00</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年9月8日 20:49:00 CST">2025年9月8日 20:49:00</span>
   </span>
 
     
@@ -3202,7 +3204,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月7日 17:06:20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2024年4月7日 17:06:20 CST">2024年4月7日 17:06:20</span>
   </span>
 
     
@@ -3277,7 +3279,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022-2025 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+      Copyright &copy; 2022-2026 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
     </div>
   
   
@@ -3358,10 +3360,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.annotate", "content.code.select", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.footnote.tooltips", "header.autohide", "navigation.footer", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.annotate", "content.code.select", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.footnote.tooltips", "header.autohide", "navigation.footer", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       

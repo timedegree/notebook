@@ -4,7 +4,7 @@ repo_name: TimeDegree/note
 repo_url: https://github.com/timedegree/notebook
 edit_uri: edit/main/docs/
 site_description: 时度度（TimeDegree）的笔记本
-copyright: Copyright &copy; 2022-2025 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+copyright: Copyright &copy; 2022-2026 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
 
 
 theme:
@@ -120,6 +120,7 @@ extra_css:
   - css/tasklist.css
   - css/custom.css
   - css/flink.css
+  - css/trajectory.css
   - css/card.css
   - css/admonition.css
   - css/table.css
@@ -145,11 +146,15 @@ plugins:
       page_check_metadata: stas
   - changelog:
 
+hooks:
+  - hooks/friends.py
+  - hooks/trajectory.py
+
 nav:
   - Home:
     - index.md
+    - trajectory.md
     - links.md
-    - changelog.md
   - Computer Science: 
     - cs/index.md
     - Programming Language:
@@ -180,14 +185,14 @@ nav:
       - Law of Large Numbers and Central Limit Theorem: math/proth/lln-clt.md
       - Sample and Sampling Distribution: math/proth/ssd.md
   - CTF:
-    - CTF/index.md
+    - ctf/index.md
     - Pwn:
-      - Stack Overflow: CTF/Knowledge/Stack_Overflow.md
-      - Stack Pivoting: CTF/Knowledge/Stack_Pivoting.md
-      - Denfense: CTF/Knowledge/Defense.md
-      - Format String: CTF/Knowledge/Format_String.md
+      - Stack Overflow: ctf/knowledge/Stack_Overflow.md
+      - Stack Pivoting: ctf/knowledge/Stack_Pivoting.md
+      - Denfense: ctf/knowledge/Defense.md
+      - Format String: ctf/knowledge/Format_String.md
     - Other:
-      - Docker Setup: CTF/Knowledge/Docker.md
+      - Docker Setup: ctf/knowledge/Docker.md
   - WriteUp:
     - wp/index.md
     - 2023:

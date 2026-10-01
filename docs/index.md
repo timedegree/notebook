@@ -30,15 +30,15 @@ statistics: true
 </div>
 
 <div class="dashboard-grid">
-    <a href="changelog" class="feature-card">
+    <a href="trajectory" class="feature-card">
         <div class="card-icon">
             <span class="twemoji">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
             </span>
         </div>
-        <div class="card-title">最近更新</div>
+        <div class="card-title">轨迹</div>
         <div class="card-desc">
-            查看笔记本的变更日志与修订历史。
+            查看更新记录、个人足迹与战绩。
         </div>
     </a>
 
@@ -54,26 +54,36 @@ statistics: true
         </div>
     </a>
 
-    <a href="javascript:toggle_statistics();" class="feature-card">
-        <div class="card-icon">
-            <span class="twemoji">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h18v2M10 17l-5-5 5-5v10m4 0V7l5 5-5 5Z"/></svg>
-            </span>
+    <button type="button" class="feature-card stat-card" id="stat-card" aria-expanded="false">
+        <div class="card-front">
+            <div class="card-icon">
+                <span class="twemoji">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h18v2M10 17l-5-5 5-5v10m4 0V7l5 5-5 5Z"/></svg>
+                </span>
+            </div>
+            <div class="card-title">站点统计</div>
+            <div class="card-desc">
+                点击查看本站的文章数、代码行数及运行时间。
+            </div>
         </div>
-        <div class="card-title">站点统计</div>
-        <div class="card-desc">
-            点击查看本站的文章数、代码行数及运行时间。
+        <div class="card-stats">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-num">{{pages}}</div>
+                    <div class="stat-label">页面</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">{{words}}</div>
+                    <div class="stat-label">字数</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">{{codes}}</div>
+                    <div class="stat-label">代码行</div>
+                </div>
+            </div>
+            <div class="stat-uptime">运行 <span id="web-time"></span></div>
         </div>
-    </a>
-</div>
-
-<div id="statistics">
-    <div class="statistics-wrapper">
-        <div class="stat-item">页面总数：{{pages}}</div>
-        <div class="stat-item">总字数：{{words}}</div>
-        <div class="stat-item">代码块行数：{{codes}}</div>
-        <div class="stat-item">网站运行时间：<span id="web-time"></span></div>
-    </div>
+    </button>
 </div>
 
 <script>
@@ -98,8 +108,8 @@ function updateTime() {
 }
 updateTime();
 
-function toggle_statistics() {
-    var statistics = document.getElementById("statistics");
-    statistics.classList.toggle("show");
-}
+document.getElementById("stat-card").addEventListener("click", function () {
+    var open = this.classList.toggle("is-open");
+    this.setAttribute("aria-expanded", open ? "true" : "false");
+});
 </script>

@@ -63,6 +63,11 @@
   --md-greet-color: #8e8e8e;
 }
 
+.timeline-card,
+.timeline-content::before {
+  background-color: var(--md-timeline-bg-color);
+}
+
 input.md-search__input {
   background-color: #fff;
 }
@@ -253,4 +258,11 @@ strong {
 
 a.markdown-link {
   color: var(--md-typeset-a-color); /* 设置Markdown链接的颜色 */
+}
+
+.changelog-type-refactor {
+    background-color: #c63f94b0;
+}
+.changelog-type-refactor::before {
+    content: "文档重构";
 }

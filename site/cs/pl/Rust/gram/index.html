@@ -26,7 +26,7 @@
         <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="/assets/logo-Hymmn0s-fit.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -34,7 +34,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -141,6 +141,8 @@
       <link rel="stylesheet" href="../../../../css/custom.css">
     
       <link rel="stylesheet" href="../../../../css/flink.css">
+    
+      <link rel="stylesheet" href="../../../../css/trajectory.css">
     
       <link rel="stylesheet" href="../../../../css/card.css">
     
@@ -397,7 +399,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../CTF/" class="md-tabs__link">
+        <a href="../../../../ctf/" class="md-tabs__link">
           
   
   
@@ -575,14 +577,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../links/" class="md-nav__link">
+      <a href="../../../../trajectory/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    友链
+    轨迹
   
 
     
@@ -603,14 +605,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../changelog/" class="md-nav__link">
+      <a href="../../../../links/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    更新记录
+    友链
   
 
     
@@ -1959,7 +1961,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../CTF/" class="md-nav__link ">
+            <a href="../../../../ctf/" class="md-nav__link ">
               
   
   
@@ -2063,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CTF/Knowledge/Stack_Overflow/" class="md-nav__link">
+      <a href="../../../../ctf/knowledge/Stack_Overflow/" class="md-nav__link">
         
   
   
@@ -2091,7 +2093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CTF/Knowledge/Stack_Pivoting/" class="md-nav__link">
+      <a href="../../../../ctf/knowledge/Stack_Pivoting/" class="md-nav__link">
         
   
   
@@ -2119,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CTF/Knowledge/Defense/" class="md-nav__link">
+      <a href="../../../../ctf/knowledge/Defense/" class="md-nav__link">
         
   
   
@@ -2147,7 +2149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CTF/Knowledge/Format_String/" class="md-nav__link">
+      <a href="../../../../ctf/knowledge/Format_String/" class="md-nav__link">
         
   
   
@@ -2237,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CTF/Knowledge/Docker/" class="md-nav__link">
+      <a href="../../../../ctf/knowledge/Docker/" class="md-nav__link">
         
   
   
@@ -3088,14 +3090,14 @@
 <p>变量存在但没有使用也会警告，但可以在变量前加单下划线<code>_</code>来忽略警告。</p>
 <h3 id="13">1.3 变量解构与结构式赋值<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
 <p>与python中的解包类似
-<div class="language-Rust highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>: <span class="p">(</span><span class="kt">bool</span><span class="p">,</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="c1">// a = true,不可变; b = false，可变</span>
+<div class="language-Rust highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">b</span><span class="p">):</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">,</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="c1">// a = true,不可变; b = false，可变</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="c1">// a = 1;b = 2</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">[</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="o">..</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span><span class="w"> </span><span class="c1">// c = 1; d = 4</span>
 </span></code></pre></div></p>
 <h3 id="14">1.4 常量<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
 <p>常量使用const来声明，命名规则使用全大写蛇底式，且不允许在const后加mut,可以在任意作用域下声明。
-<div class="language-Rust highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="n">PI</span>: <span class="kt">f32</span> <span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+<div class="language-Rust highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="n">PI</span><span class="p">:</span><span class="w"> </span><span class="kt">f32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
 </span></code></pre></div></p>
 <h3 id="15">1.5 变量遮蔽<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
 <p>Rust 允许声明相同的变量名，在后面声明的变量会遮蔽掉前面声明的变量，在可变性中已经提到过。即：
@@ -3112,7 +3114,7 @@
 <li>字面量结尾可以接类型，例如<code class="language-rust highlight"><span class="mi">10</span><span class="k">i32</span><span class="p">,</span><span class="w"> </span><span class="mi">10_</span><span class="k">i32</span></code></li>
 <li>字面量，十六进制 0x...、八进制 0o...、二进制 0b...、字节（仅 u8）b'A'</li>
 <li>整型默认使用 i32 类型</li>
-<li>使用 as 来转换类型，例如 <code class="language-rust highlight"><span class="kd">let</span><span class="w"> </span><span class="n">a</span>: <span class="kt">u16</span> <span class="o">=</span><span class="w"> </span><span class="mi">1_</span><span class="k">u8</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u16</span><span class="p">;</span></code></li>
+<li>使用 as 来转换类型，例如 <code class="language-rust highlight"><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="kt">u16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1_</span><span class="k">u8</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u16</span><span class="p">;</span></code></li>
 </ul>
 <p>debug 模式编译时产生溢出会 panic，而在 release 模式下则不会 panic，按照补码循环溢出。但不能依赖这种行为，想要这样的效果应该标准库的一些方法：</p>
 <ul>
@@ -3141,11 +3143,11 @@
 <h3 id="24">2.4 序列<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
 <p>Rust 提供了一个非常简洁的方式，用来生成连续的数值，但序列只允许用于数字或字符类型。
 <div class="language-Rust highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">..=</span><span class="mi">5</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="o">..=</span><span class="sc">&#39;z&#39;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sc">'a'</span><span class="o">..=</span><span class="sc">'z'</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <h3 id="25">2.5 字符型<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
@@ -3174,7 +3176,7 @@
 </span></code></pre></div></li>
 </ul>
 <h3 id="28">2.8 函数<a class="headerlink" href="#28" title="Permanent link">&para;</a></h3>
-<div class="language-Rust highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">fn</span> <span class="nf">add</span><span class="p">(</span><span class="n">i</span>: <span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">j</span>: <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">i32</span> <span class="p">{</span><span class="w"> </span><span class="c1">//以fn声明函数,括号内写参数及其类型，后用箭头表示返回值</span>
+<div class="language-Rust highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//以fn声明函数,括号内写参数及其类型，后用箭头表示返回值</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">   </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="c1">//与return i + j等效</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
@@ -3186,10 +3188,10 @@
 <li>通过 ; 结尾的表达式返回一个 ()</li>
 <li>中途返回可以使用 return 关键字（带不带分号均可）</li>
 <li>永不返回的函数类型为 !（相当于 python 类型标注中的 NoReturn），称为发散函数，一般用于一定会抛出 panic 的函数或者无限循环：
-<div class="language-Rust highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">fn</span> <span class="nf">dead_end</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="o">!</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="fm">panic!</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);</span>
+<div class="language-Rust highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">dead_end</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="o">!</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="fm">panic!</span><span class="p">(</span><span class="s">"..."</span><span class="p">);</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">fn</span> <span class="nf">forever</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="o">!</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">fn</span><span class="w"> </span><span class="nf">forever</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="o">!</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="k">loop</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">};</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
 </span></code></pre></div></li>
@@ -3217,7 +3219,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年5月26日 21:17:09</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2024年5月26日 21:17:09 CST">2024年5月26日 21:17:09</span>
   </span>
 
     
@@ -3227,7 +3229,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年8月26日 23:28:48</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2022年8月26日 23:28:48 CST">2022年8月26日 23:28:48</span>
   </span>
 
     
@@ -3302,7 +3304,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022-2025 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
+      Copyright &copy; 2022-2026 <a href="https://github.com/timedegree"  target="_blank" rel="noopener">TimeDegree</a>
     </div>
   
   
@@ -3383,10 +3385,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.code.select", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.footnote.tooltips", "header.autohide", "navigation.footer", "content.action.edit", "content.action.view"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate", "content.code.select", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.footnote.tooltips", "header.autohide", "navigation.footer", "content.action.edit", "content.action.view"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       

@@ -39,11 +39,11 @@
   - "2024-4-29":
     - newpage:
           text: CTF > Knowledge > 新增 Set Questions
-          href: /CTF/Knowledge/Docker
+          href: /ctf/knowledge/Docker
   - "2024-4-29":
     - newpage:
           text: CTF > Knowledge > 新增 Stack Pivoting
-          href: /CTF/Knowledge/Stack_Pivoting
+          href: /ctf/knowledge/Stack_Pivoting
   - "2024-4-14":
     - pageupdate:
           text: Computer Science > CSAPP > Machine-Level Representation of Programs > 新增 控制
@@ -51,39 +51,39 @@
   - "2024-4-7":
      - newpage:
          text: CTF > WriteUp > Stack Overflow > 新增 XYCTF Week1
-         href: /CTF/WriteUp/XYCTF-week1
+         href: /wp/2024/XYCTF-week1/
   - "2024-3-30":
     - newpage:
         text: CTF > Knowledge > Stack Overflow > 新增 Format String
-        href: /CTF/Knowledge/Format_String
+        href: /ctf/knowledge/Format_String
   - "2024-3-27":
     - pageupdate:
         text: CTF > Knowledge > Stack Overflow > 新增 ret2syscall
-        href: /CTF/Knowledge/Stack_Overflow
+        href: /ctf/knowledge/Stack_Overflow
     - newpage:
         text: Computer Science > CSAPP > 新增 Machine-Level Representation of Programs
         href: /cs/csapp/chapter3
   - "2024-3-17":
     - newpage:
         text: CTF > Knowledge > 新增 Defense
-        href: /CTF/Knowledge/Defense
+        href: /ctf/knowledge/Defense
     - newpage:
         text: CTF > WriteUp > 新增 VenomCTF
-        href: /CTF/Knowledge/VCTF
+        href: /wp/
   - "2024-3-16":
     - pageupdate:
         text: CTF > Knowledge > Stack Overflow > 新增 ret2csu
-        href: /CTF/Knowledge/Stack_Overflow
+        href: /ctf/knowledge/Stack_Overflow
   - "2024-3-10":
     - newpage:
         text: CTF > Knowledge > 新增 Stack Overflow
-        href: /CTF/Knowledge/Stack_Overflow
+        href: /ctf/knowledge/Stack_Overflow
 
 - "2023":
   - "2023-12-19":
     - newpage:
         text: CTF > WriteUp > 新增 GanCTF WriteUp
-        href: /CTF/WriteUp/GanCTF
+        href: /wp/2023/GanCTF/
   - "2023-11-9":
     - newpage:
         text: Computer Science > Data Structure and Algorithm > 新增 Binary Search
@@ -112,14 +112,14 @@
   - "2023-09-11":
     - newpage:
         text: Computer Science > 新增 WriteUp
-        href: /cs/wp/
+        href: /wp/
     - newpage:
         text: Computer Science > 新增 Data Structure and Algorithm
         href: /cs/ald/
   - "2023-09-09":
     - newpage:
         text: Mathematic > Concrete Mathematics > 新增 Recurrent Problem
-        href: /math/conm/recpro/
+        href: /math/
   - "2023-09-06":
     - function: 新增网页统计功能
     - function: 新增更新记录功能
@@ -137,17 +137,15 @@
         href: /sd/hymmnos/
     - newpage:
         text: CTF > WriteUp > 新增 2个新页面 MoeCTF CCBC
-        href: /CTF/WriteUP/
+        href: /wp/
   - "2023-05-01":
     - newpage:
         text: Miscellaneous > 新增页面 Hymmnos
         href: /sd/hymmnos/
     - newpage:
         text: Mathematic > 新增 Concrete Mathematics
-        href: /math/conm/
-    - newpage: 
-        text: 新增页面 Book List
-        href: /bkl/
+        href: /math/
+    - function: 新增页面 Book List（已移除）
 
 - "2022":
   - "2022-11-12":

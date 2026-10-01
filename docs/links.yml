@@ -1,0 +1,47 @@
+- title: 战队
+  items:
+    - name: SUer's Site
+      url: https://su-team.cn/page/about/
+      avatar: assets/SU.png
+      desc: 我的联合战队，欢迎加入！
+    - name: 风信子FXZ
+      avatar: assets/FXZ.png
+      desc: 风信子战队，欢迎加入！
+- title: 朋友们
+  items:
+    - name: GaoZQi's Note
+      url: https://gaozqi.github.io/note/
+      avatar: assets/GaoZQi.jpg
+      desc: 老糕无敌！
+    - name: AUGPath's Note
+      url: https://shzaiz.github.io
+      avatar: assets/AUGPath.jpg
+      desc: AUG 膜膜
+    - name: TonyCrane's Home
+      url: https://tonycrane.cc/
+      avatar: assets/TonyCrane.jpg
+      desc: xgnb！
+    - name: Matheart's Note
+      url: https://matheart.github.io/
+      avatar: assets/Matheart.jpg
+      desc: 事阿数！好耶！
+    - name: GZTime's Blog
+      url: https://blog.gztime.cc/
+      avatar: assets/GZTime.jpg
+      desc: GZ！网安佬
+    - name: Fran's Note
+      url: https://zmx0142857.github.io/note/
+      avatar: assets/Fran.jpg
+      desc: Fran笔记好全
+    - name: Wings's Blog
+      url: https://wings236.github.io/
+      avatar: assets/Wings.jpg
+      desc: Math，AI，CS，全都要！
+    - name: Yan's Blog
+      url: https://yan-zero.github.io/
+      avatar: assets/Yan.jpg
+      desc: 一只大笨蛋
+    - name: Lchpt's Blog
+      url: https://lifecheckpoint.github.io/
+      avatar: assets/LDD.png
+      desc: 两个 DD 之间的相遇（？）

@@ -1,0 +1,39 @@
+# 足迹 / timeline
+# 字段：date, title, text(可选), tags(可选，列表)。
+# 会自动按 date 倒序排列（新的在上），填写顺序随意；左右布局按最终顺序交替。
+# 取消下面注释即可启用：
+# timeline:
+#   - date: 2022-08-22
+#     title: 建站
+#     text: 用 MkDocs Material 搭起「时度度的笔记本」，开始记录 CS / Math / CTF 的笔记。
+#     tags: [Start]
+#   - date: 2022-08-26
+#     title: 编程语言
+#     text: 新增 Rust 学习笔记。
+#     tags: [CS]
+timeline:
+   - date: 2022-08-22
+     title: 建站
+     text: 正式启用 TimeDegree/Hymmn0s 的笔记本
+     tags: [Start]
+   - date: 2025-01-15
+     title: 联队
+     text: 正式进入 SU 
+     tags: [Team]
+
+# 战绩 / awards
+# 字段：date, event, note(可选), rank, level。
+# level 取值：g 金 / s 银 / b 铜 / n 其它。
+# 同样自动按 date 倒序排列。
+# 取消下面注释即可启用：
+# awards:
+#   - date: 2025-05
+#     event: 全国大学生信息安全竞赛 · 决赛
+#     note: 可选的备注
+#     rank: 一等奖
+#     level: g
+#   - date: 2025-03
+#     event: CTF 分站赛
+#     rank: 二等奖
+#     level: s
+awards: []

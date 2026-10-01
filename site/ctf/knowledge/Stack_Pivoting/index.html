@@ -134,8 +134,6 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
       <link rel="stylesheet" href="../../../css/custom.css">
@@ -191,7 +189,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="时度度的笔记本" class="md-header__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -481,7 +479,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="时度度的笔记本" class="md-nav__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     时度度的笔记本
@@ -2750,18 +2748,18 @@
 <li>leave ret 的地址</li>
 </ul>
 <p>调试发现</p>
-<p><img alt="baby_stack-stack1" src="../assets/baby_stack-stack1.png" /></p>
+<p><img alt="baby_stack-stack1" src="../assets/baby_stack-stack1.png.webp" loading="eager" decoding="async" width="1242" height="932"></p>
 <p>rbp 指向的 old rbp 位置与输入的 payload 的 offset 为 0x150</p>
 <p>exp2:
 <div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">payload2</span> <span class="o">=</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">func_address</span><span class="p">)</span> <span class="o">+</span> <span class="sa">b</span><span class="s1">'a'</span><span class="o">*</span><span class="mh">0x130</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">old_rbp</span><span class="o">-</span><span class="mh">0x150</span><span class="p">)</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">leave_ret</span><span class="p">)</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">p</span><span class="o">.</span><span class="n">sendafter</span><span class="p">(</span><span class="s1">'again:</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span><span class="n">payload2</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p>详细来讲一下这个 payload 产生的栈迁移的过程，我们都知道栈的结构为：</p>
-<p><img alt="stack_pivoting-stack1" src="../assets/stack_pivoting-stack1.png" /></p>
+<p><img alt="stack_pivoting-stack1" src="../assets/stack_pivoting-stack1.png.webp" loading="lazy" decoding="async" width="166" height="77"></p>
 <p>当我将上面的 payload 写入后，栈就变成这样</p>
-<p><img alt="stack_pivoting-stack2" src="../assets/stack_pivoting-stack2.png" /></p>
+<p><img alt="stack_pivoting-stack2" src="../assets/stack_pivoting-stack2.png.webp" loading="lazy" decoding="async" width="342" height="115"></p>
 <p>则当你第一次退栈后，栈就会改变为：</p>
-<p><img alt="stack_pivoting-stack3" src="../assets/stack_pivoting-stack3.png" /></p>
+<p><img alt="stack_pivoting-stack3" src="../assets/stack_pivoting-stack3.png.webp" loading="lazy" decoding="async" width="174" height="77"></p>
 <p>此时 func 的起始地址成为返回地址，于是在再次退栈后，rip 就会指向 func 的起始地址，从而达到再次进入func且进入一块新栈区的效果。</p>
 <p>此时我们可以进行第三步，泄露 libc 基址，查看发现新栈区的 rbp - 0xf0 处有libc上的地址</p>
 <p>exp3：</p>
@@ -2772,7 +2770,7 @@
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"libc_base:"</span><span class="p">,</span><span class="nb">hex</span><span class="p">(</span><span class="n">libc_base</span><span class="p">))</span> 
 </span></code></pre></div>
 <p>最后构造栈迁移 + orw ROP链，和第二步类似但我们需要构造的栈内容如下：</p>
-<p><img alt="stack_pivoting-stack4" src="../assets/stack_pivoting-stack4.png" /></p>
+<p><img alt="stack_pivoting-stack4" src="../assets/stack_pivoting-stack4.png.webp" loading="lazy" decoding="async" width="308" height="495"></p>
 <ol>
 <li>构造open("./flag",0,0) 读取 flag 内容</li>
 <li>构造read(3,0xFF,address) 将 flag 内容放入可写可读地址，我们这里直接选择 payload 的起始地址，3指的是 flag 的文件描述符</li>

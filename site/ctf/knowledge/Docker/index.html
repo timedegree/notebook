@@ -134,8 +134,6 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
       <link rel="stylesheet" href="../../../css/custom.css">
@@ -191,7 +189,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="时度度的笔记本" class="md-header__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -481,7 +479,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="时度度的笔记本" class="md-nav__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     时度度的笔记本
@@ -2643,17 +2641,17 @@
 <p>简单学习了一下如何使用docker出pwn题，使用的模板是<a href="https://github.com/CTF-Archives/ctf-docker-template">ctf-docker-template</a></p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/CTF-Archives/ctf-docker-template.git
 </span></code></pre></div>
-<p><img alt="" src="../assets/template.png" /></p>
+<p><img alt="" src="../assets/template.png" loading="eager" decoding="async" width="1113" height="144"></p>
 <p>目录下有各种容器，我们选择需要使用的版本即可，我这里选择22.04</p>
-<p><img alt="" src="../assets/template-src.png" /></p>
+<p><img alt="" src="../assets/template-src.png" loading="lazy" decoding="async" width="596" height="51"></p>
 <p>在22.04的目录下存在这些文件，我们目前只需要知道src用以存放elf文件，我们编译好丢入程序，再使用如下指令创建镜像和容器</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>build<span class="w"> </span><span class="o">[</span>name<span class="o">]</span><span class="w"> </span>.
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="s2">"0.0.0.0:[Port]:9999"</span><span class="w"> </span>-h<span class="w"> </span><span class="s2">"[name]"</span><span class="w"> </span>--name<span class="o">=</span><span class="s2">"[name]"</span><span class="w"> </span><span class="o">[</span>name<span class="o">]</span>
 </span></code></pre></div>
 <p>容器开启后如下</p>
-<p><img alt="" src="../assets/docker-container.png" /></p>
+<p><img alt="" src="../assets/docker-container.png" loading="lazy" decoding="async" width="1128" height="66"></p>
 <p>还可以进行nc连接</p>
-<p><img alt="" src="../assets/docker-nc.png" /></p>
+<p><img alt="" src="../assets/docker-nc.png" loading="lazy" decoding="async" width="295" height="56"></p>
 <p>此时就可以正常攻击了，但只有本地可连接且flag为静态。我们先解决flag静态的问题，我这里想着flag一般为uuid，所以就使用了uuidgen指令，这个需要安装在docker容器上，所以需要修改Dockerfile和service里的文件</p>
 <p>Dockerfile:</p>
 <div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>......
@@ -2699,22 +2697,22 @@
 </span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>sleep<span class="w"> </span>infinity
 </span></code></pre></div>
 <p>最后flag就会是一个动态uuid，每次开启容器时自动生成</p>
-<p><img alt="" src="../assets/dynamic-flag.png" /></p>
+<p><img alt="" src="../assets/dynamic-flag.png" loading="lazy" decoding="async" width="642" height="542"></p>
 <h2 id="_3">部署<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>部署到服务器首先需要一台服务器，然后打开ftp服务，ftp服务可以参考云服务提供商的文档，比较冗长就不写了。</p>
-<p><img alt="" src="../assets/ftp.png" /></p>
+<p><img alt="" src="../assets/ftp.png" loading="lazy" decoding="async" width="492" height="190"></p>
 <p>能这样连上且具有发送权限就算成功了，接着我们需要导出docker容器</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span><span class="c1">#查看container信息</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="o">[</span>CONTAINER<span class="w"> </span>ID<span class="o">]</span><span class="w"> </span>&gt;<span class="w"> </span><span class="o">[</span>name<span class="o">]</span>.tar
 </span></code></pre></div>
 <p>导出后会看到一个tar文件</p>
-<p><img alt="" src="../assets/export.png" /></p>
+<p><img alt="" src="../assets/export.png" loading="lazy" decoding="async" width="705" height="45"></p>
 <p>ftp连上服务器发送这个文件即可</p>
-<p><img alt="" src="../assets/ftp-send.png" /></p>
+<p><img alt="" src="../assets/ftp-send.png" loading="lazy" decoding="async" width="502" height="78"></p>
 <p>接着连接进服务器，在服务器的ftp目录下使用这两个指令开启docker容器即可</p>
-<p><img alt="" src="../assets/service-container.png" /></p>
+<p><img alt="" src="../assets/service-container.png" loading="lazy" decoding="async" width="1111" height="40"></p>
 <p>最后还有一步就是打开云服务器的端口，随后就能通过服务器的公网ip进行nc连接了</p>
-<p><img alt="" src="../assets/service-nc.png" /></p>
+<p><img alt="" src="../assets/service-nc.png" loading="lazy" decoding="async" width="362" height="61"></p>
 
 
 

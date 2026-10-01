@@ -134,8 +134,6 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
       <link rel="stylesheet" href="../../../css/custom.css">
@@ -191,7 +189,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="时度度的笔记本" class="md-header__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -481,7 +479,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="时度度的笔记本" class="md-nav__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     时度度的笔记本
@@ -2915,9 +2913,9 @@
 <p>控制程序执行 shellcode 代码，需要对应的 binary 在运行时，shellcode 所在的区域具有可执行权限。</p>
 <h3 id="_3">例子<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>以[HNCTF 2022 Week1]ret2shellcode为例，先<strong>checksec</strong>一下</p>
-<p><img alt="ret2shellcode-checksec" src="../assets/ret2shellcode-checksec.png" /></p>
+<p><img alt="ret2shellcode-checksec" src="../assets/ret2shellcode-checksec.png.webp" loading="eager" decoding="async" width="323" height="95"></p>
 <p>开了NX，丢入IDA分析</p>
-<p><img alt="ret2shellcode-main" src="../assets/ret2shellcode-main.png" /></p>
+<p><img alt="ret2shellcode-main" src="../assets/ret2shellcode-main.png.webp" loading="lazy" decoding="async" width="654" height="197"></p>
 <p>看到函数<strong>mprotect</strong>把内存变得可写，可执行，然后输入<strong>s</strong>，把<strong>s</strong>复制给<strong>buff</strong>。函数<strong>read</strong>存在栈溢出漏洞，偏移量为<strong>0x100</strong>。所以我们只要栈溢出传入<strong>shellcode</strong>使<strong>buff</strong>执行这个<strong>shellcode</strong>即可</p>
 <p>exploit:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -2942,9 +2940,9 @@
 <p>控制程序执行系统调用，获取 shell。我们需要知道调用函数的对应的系统调用号和参数，接着寻找对应的寄存器构造ROPchain，例如execve函数的系统调用号为59，有3个参数，所以我们就会用到rdi,rsi,rdx三个寄存器。通常系统调用号放在<strong>rax</strong>寄存器中。</p>
 <h3 id="_5">例子<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>以CISCN 2023 初赛的烧烤摊儿为例，先进行checksec</p>
-<p><img alt="ret2syscall-checksec" src="../assets/ret2syscall-checksec.png" /></p>
+<p><img alt="ret2syscall-checksec" src="../assets/ret2syscall-checksec.png.webp" loading="lazy" decoding="async" width="541" height="115"></p>
 <p>64位程序，开了NX和Canary，查看IDA</p>
-<p><img alt="ret2syscall" src="../assets/ret2syscall-main.png" /></p>
+<p><img alt="ret2syscall" src="../assets/ret2syscall-main.png.webp" loading="lazy" decoding="async" width="831" height="514"></p>
 <p>使用了switch写了一个菜单，分别是购买啤酒、购买串、查看余额、承包店铺、改名，发现几点</p>
 <ul>
 <li>承包店铺需要100000金币，且购买时<strong>未检测负数输入</strong>，可以此来增加金币</li>
@@ -2953,7 +2951,7 @@
 <li>程序中存在<strong>syscall调用</strong></li>
 <li>改名函数中会将输入的内容放入<strong>name</strong>变量，可以将<strong>/bin/sh</strong>放入用来构造rop</li>
 </ul>
-<p><img alt="ret2syscall-gaiming" src="../assets/ret2syscall-gaiming.png" /></p>
+<p><img alt="ret2syscall-gaiming" src="../assets/ret2syscall-gaiming.png.webp" loading="lazy" decoding="async" width="516" height="201"></p>
 <p>所以可以通过逻辑漏洞承包店铺，再进入改名函数通过栈溢出执行系统调用，这里我们选择调用execve('/bin/sh',0,0)来获得shell，所以我们需要构造的rop为</p>
 <ul>
 <li>在name中放入'/bin/sh'</li>
@@ -2962,7 +2960,7 @@
 <li>rsi = rdx = 0</li>
 </ul>
 <p>使用ROPgadget寻找gedget</p>
-<p><img alt="ret2syscall-gadget" src="../assets/ret2syscall-gadget.png" /></p>
+<p><img alt="ret2syscall-gadget" src="../assets/ret2syscall-gadget.png.webp" loading="lazy" decoding="async" width="838" height="649"></p>
 <p>exp如下：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -2989,15 +2987,15 @@
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>运行结果：</p>
-<p><img alt="ret2syscall-flag" src="../assets/ret2syscall-flag.png" /></p>
+<p><img alt="ret2syscall-flag" src="../assets/ret2syscall-flag.png.webp" loading="lazy" decoding="async" width="842" height="495"></p>
 <h2 id="ret2libc">ret2libc<a class="headerlink" href="#ret2libc" title="Permanent link">&para;</a></h2>
 <h3 id="_6">原理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>控制函数的执行 libc 中的函数，通常是返回至某个函数的 plt 处或者函数的具体位置。一般会选择system('/bin/sh')</p>
 <h3 id="_7">例子<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>以CISCN 2019 东北的Pwn2为例，先<strong>checksec</strong>一下</p>
-<p><img alt="ret2libc-checksec" src="../assets/ret2libc-checksec.png" /></p>
+<p><img alt="ret2libc-checksec" src="../assets/ret2libc-checksec.png.webp" loading="lazy" decoding="async" width="334" height="100"></p>
 <p>开了NX以及ALSR，再把附件丢入IDA分析</p>
-<p><img alt="ret2libc-1" src="../assets/ret2libc-1.png" /></p>
+<p><img alt="ret2libc-1" src="../assets/ret2libc-1.png.webp" loading="lazy" decoding="async" width="566" height="595"></p>
 <p>逻辑很简单</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1.Encrypt
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2.Decrypt
@@ -3005,10 +3003,10 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Input your choice!
 </span></code></pre></div>
 <p>先从3个选项里面选择，若选择1，则进入函数<strong>Encrypt</strong>；选择2，要求重新输入；选择3，退出程序。查看<strong>Encrypt</strong>函数</p>
-<p><img alt="ret2libc-encrypt" src="../assets/ret2libc-encrypt.png" /></p>
+<p><img alt="ret2libc-encrypt" src="../assets/ret2libc-encrypt.png.webp" loading="lazy" decoding="async" width="427" height="549"></p>
 <p>函数先<strong>gets</strong>一个变量<strong>s</strong>,再对<strong>s</strong>进行加密，输出加密后的<strong>s</strong>,最后返回<strong>main</strong>函数，我们看到<strong>gets</strong>时没有限定长度，所以存在<strong>栈溢出漏洞</strong>，可以看出溢出的偏移量应该是<strong>0x50+0x8</strong>。由于没有找到后门函数，也没有发现system和/bin/sh，所以得自己构造ROP链，通过<strong>泄露got表</strong>来得到libc的基址。</p>
 <p>我们先通过<strong>ROPgadget</strong>获得<strong>ret</strong>和<strong>pop rdi;ret</strong>的地址</p>
-<p><img alt="ret2libc-ROPgadget" src="../assets/ret2libc-ROPgadget.png" /></p>
+<p><img alt="ret2libc-ROPgadget" src="../assets/ret2libc-ROPgadget.png.webp" loading="lazy" decoding="async" width="1211" height="411"></p>
 <p>开始构建exploit1:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
@@ -3031,9 +3029,9 @@
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nb">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">puts_addr</span><span class="p">))</span>
 </span></code></pre></div>
 <p>运行后得到：</p>
-<p><img alt="ret2libc-libc" src="../assets/ret2libc-libc.png" /></p>
+<p><img alt="ret2libc-libc" src="../assets/ret2libc-libc.png.webp" loading="lazy" decoding="async" width="1229" height="405"></p>
 <p>通过<a href="https://libc.blukat.me/">libc database search</a>查询libc版本</p>
-<p><img alt="ret2libc-libcsearch" src="../assets/ret2libc-libcsearch.png" /></p>
+<p><img alt="ret2libc-libcsearch" src="../assets/ret2libc-libcsearch.png.webp" loading="lazy" decoding="async" width="1248" height="667"></p>
 <p>构建exploit2:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">base_addr</span> <span class="o">=</span> <span class="n">puts_addr</span> <span class="o">-</span> <span class="mh">0x0809c0</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">system_addr</span> <span class="o">=</span> <span class="n">base_addr</span> <span class="o">+</span> <span class="mh">0x04f440</span>
@@ -3046,7 +3044,7 @@
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>运行得到<strong>flag</strong></p>
-<p><img alt="ret2libc-flag.png" src="../assets/ret2libc-flag.png" /></p>
+<p><img alt="ret2libc-flag.png" src="../assets/ret2libc-flag.png.webp" loading="lazy" decoding="async" width="589" height="540"></p>
 <p>完整exploit:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
@@ -3140,10 +3138,10 @@
 </ul>
 <h3 id="_9">例子<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>以[HNCTF 2022 WEEK2]ret2csu为例，首先checksec一下</p>
-<p><img alt="ret2csu-checksec" src="../assets/ret2csu-checksec.png" /></p>
+<p><img alt="ret2csu-checksec" src="../assets/ret2csu-checksec.png.webp" loading="lazy" decoding="async" width="1208" height="162"></p>
 <p>64位，只开了NX</p>
 <p>丢入IDA查看</p>
-<p><img alt="ret2csu-vuln" src="../assets/ret2csu-vuln.png" /></p>
+<p><img alt="ret2csu-vuln" src="../assets/ret2csu-vuln.png.webp" loading="lazy" decoding="async" width="339" height="120"></p>
 <p>有一个简单的栈溢出，但没有<strong>system函数地址</strong>和<strong>/bin/sh字符串</strong>，但存在<strong>write</strong>，我们能通过泄露libc，然后自己构造。</p>
 <p>思路：</p>
 <ol>
@@ -3200,7 +3198,7 @@
 </span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a><span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>运行结果：</p>
-<p><img alt="ret2csu-flag" src="../assets/ret2csu-flag.png" /></p>
+<p><img alt="ret2csu-flag" src="../assets/ret2csu-flag.png.webp" loading="lazy" decoding="async" width="527" height="533"></p>
 
 
 

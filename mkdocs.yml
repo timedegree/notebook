@@ -116,7 +116,6 @@ extra:
 extra_css:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
-  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   - css/tasklist.css
   - css/custom.css
   - css/flink.css
@@ -149,6 +148,7 @@ plugins:
 hooks:
   - hooks/friends.py
   - hooks/trajectory.py
+  - hooks/images.py
 
 nav:
   - Home:

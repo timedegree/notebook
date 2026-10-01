@@ -134,8 +134,6 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
       <link rel="stylesheet" href="../../../css/custom.css">
@@ -191,7 +189,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="时度度的笔记本" class="md-header__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -481,7 +479,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="时度度的笔记本" class="md-nav__button md-logo" aria-label="时度度的笔记本" data-md-component="logo">
       
-  <img src="/assets/logo-Hymmn0s.png" alt="logo">
+  <img src="/assets/logo-Hymmn0s.png.webp" alt="logo">
 
     </a>
     时度度的笔记本
@@ -2679,7 +2677,7 @@
 <h2 id="canary">Canary<a class="headerlink" href="#canary" title="Permanent link">&para;</a></h2>
 <h3 id="_2">原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>开启Canary防护后，栈结构如下</p>
-<p><img alt="Canary-stack" src="../assets/Canary-stack.png" /></p>
+<p><img alt="Canary-stack" src="../assets/Canary-stack.png.webp" loading="eager" decoding="async" width="700" height="920"></p>
 <p>程序会取寄存器fs的0x28位置的值，放入rbp-0x8的位置</p>
 <div class="language-asm highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">mov</span><span class="w">    </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="no">qword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="no">fs</span><span class="p">:[</span><span class="mi">0x28</span><span class="p">]</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">mov</span><span class="w">    </span><span class="no">qword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="mi">8</span><span class="p">],</span><span class="w"> </span><span class="no">rax</span>
@@ -2695,10 +2693,10 @@
 <p>Canary的值以<strong>'\x00'</strong>结尾，保证其能够截断字符串，所以我们可以覆盖Canary的低位，来获得Canary的剩余部分，最后通过栈溢出来取得权限。</p>
 <h5 id="_4">例子<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
 <p>以[2021 鹤城杯]littleof为例，先进行checksec</p>
-<p><img alt="littleof-checksec" src="../assets/littleof-checksec.png" /></p>
+<p><img alt="littleof-checksec" src="../assets/littleof-checksec.png.webp" loading="lazy" decoding="async" width="510" height="137"></p>
 <p>开启了NX,Canary保护</p>
 <p>再查看IDA，发现函数<strong>sub_4006E2</strong>中的<strong>read</strong>有栈溢出漏洞</p>
-<p><img alt="littleof-sub4006E2" src="../assets/littleof-sub4006E2.png" /></p>
+<p><img alt="littleof-sub4006E2" src="../assets/littleof-sub4006E2.png.webp" loading="lazy" decoding="async" width="400" height="235"></p>
 <p><strong>read</strong>读取最大长度为<strong>0x100</strong>，而buf的最大长度为<strong>0x50</strong>。</p>
 <p>题目开了<strong>Canary</strong>不能直接进行栈溢出，但第11行的<strong>printf</strong>会输出我们输入的内容，所以可以通过覆盖Canary的最低位<strong>'/x00'</strong>，来让程序泄露Canary值，从而在后面的溢出中将 Canary 填入到相应的溢出位置,绕过防护。</p>
 <p>同时，程序没有<strong>system</strong>和<strong>/bin/sh</strong>的地址，我们可以通过泄露puts的got来得到libc基址，然后再次返回main进入sh</p>
@@ -2744,7 +2742,7 @@
 </span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>运行结果:</p>
-<p><img alt="littleof-flag" src="../assets/littleof-flag.png" /></p>
+<p><img alt="littleof-flag" src="../assets/littleof-flag.png.webp" loading="lazy" decoding="async" width="644" height="459"></p>
 
 
 
